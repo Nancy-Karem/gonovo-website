@@ -26,7 +26,7 @@ function Header() {
       <div className="flex gap-4 items-center">
         <Link
           href="/"
-          className="bg-white rounded-full py-[13px] px-[18px] text-[17px] font-medium"
+          className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium"
         >
           + Become a Client
         </Link>

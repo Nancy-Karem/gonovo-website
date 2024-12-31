@@ -1,19 +1,19 @@
 const navLinks = [
   {
     name: "About Us",
-    path: "/aboutus",
+    path: "/",
   },
   {
     name: "Cases",
-    path: "/cases",
+    path: "/",
   },
   {
     name: "Reviews",
-    path: "/reviews",
+    path: "/",
   },
   {
     name: "Contact Us",
-    path: "/aboutus",
+    path: "/",
   },
 ];
 export default navLinks;
