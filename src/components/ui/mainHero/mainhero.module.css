@@ -1,0 +1,13 @@
+.main_hero_container {
+  margin: 16px;
+  border-radius: 40px;
+  background: linear-gradient(
+    90deg,
+    #cdc6ee 0%,
+    #d7d3ea 41.47%,
+    #e6e2f9 73.62%,
+    #eeeaff 97.41%
+  );
+  padding: 32px 48px;
+  height: 833px;
+}

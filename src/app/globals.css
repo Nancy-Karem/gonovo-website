@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --headlinks-color: #2e2f30;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-inter), sans-serif;
+}
+ul {
+  list-style: none;
+  display: flex;
+}
