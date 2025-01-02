@@ -4,6 +4,9 @@
 
 :root {
   --headlinks-color: #2e2f30;
+  --lightpurple-color: #96b0fc;
+  --lightgray-color: #595959;
+  --lightyellow-color: #feff76;
 }
 * {
   margin: 0;
@@ -16,4 +19,42 @@ body {
 ul {
   list-style: none;
   display: flex;
+}
+.point {
+  animation-name: pointAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.point_bottom {
+  animation-name: pointAnimationRev;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  /* animation-direction: reverse; */
+  animation-fill-mode: forwards;
+  margin-left: auto;
+}
+@keyframes pointAnimation {
+  0% {
+    scale: 1.5;
+    opacity: 0.7;
+    transform: translate3d(-80px, -80px, -80px);
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes pointAnimationRev {
+  0% {
+    scale: 1.5;
+    opacity: 0.7;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    transform: translate3d(80px, 80px, 80px);
+  }
 }

@@ -10,6 +10,9 @@ export default {
     extend: {
       colors: {
         linksColor: "var(--headlinks-color)",
+        purpleLight: "var(--lightpurple-color)",
+        grayLight: "var(--lightgray-color)",
+        yellowLight: "var(--lightyellow-color)",
       },
     },
   },
