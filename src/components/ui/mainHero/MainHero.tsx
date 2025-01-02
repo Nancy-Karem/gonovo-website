@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./mainhero.module.css";
 import Header from "../header/Header";
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
+import Image from "next/image";
 
 function MainHero() {
   return (
@@ -50,6 +51,36 @@ function MainHero() {
         <div
           className={`point_bottom w-[19px] h-[19px] rounded-full bg-yellowLight`}
         ></div>
+      </div>
+      <div className="absolute flex top-[600px] gap-[10px]">
+        <div
+          className="relative w-[275px] h-[201px] rounded-ss-[20px] rounded-se-[4px] rounded-ee-[21px] rounded-es-[23px] overflow-hidden"
+          style={{
+            backgroundImage:
+              " linear-gradient(90deg, #8F5CE3 0%, #D9CAF4 55.89%, #E3DEF7 97.41%)",
+          }}
+        >
+          <Image
+            src="/svgs/mobile.svg"
+            alt="mobile image"
+            width={133}
+            height={268}
+            className="absolute right-0 top-16 scale-150"
+          />
+        </div>
+        <div
+          className="rounded-2xl w-[157px] h-[201px] px-4 py-6 flex flex-col justify-between"
+          style={{
+            background: "linear-gradient(90deg, #EDE7FF 0%, #F2EEFF 100%)",
+          }}
+        >
+          <p className="text-xl text-linksColor leading-6 h-1/2  border-b border-b-linksColor">
+            Digital Marketing
+          </p>
+          <p className="text-xl text-linksColor leading-6">
+            Software Development
+          </p>
+        </div>
       </div>
     </section>
   );

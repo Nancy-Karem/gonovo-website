@@ -36,7 +36,7 @@ ul {
 }
 @keyframes pointAnimation {
   0% {
-    scale: 1.5;
+    scale: 2;
     opacity: 0.7;
     transform: translate3d(-80px, -80px, -80px);
   }
@@ -48,7 +48,7 @@ ul {
 }
 @keyframes pointAnimationRev {
   0% {
-    scale: 1.5;
+    scale: 2;
     opacity: 0.7;
     transform: translate3d(0, 0, 0);
   }
