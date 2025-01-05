@@ -2,6 +2,7 @@ import navLinks from "@/app/data/links";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import LinkNavigation from "../link/LinkNavigation";
 
 function Header() {
   return (
@@ -24,13 +25,7 @@ function Header() {
         </ul>
       </div>
       <div className="flex gap-4 items-center">
-        <Link
-          href="/"
-          className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-        >
-          + Become a Client
-        </Link>
-
+        <LinkNavigation text="+ Become a Client" link="/" />
         <button className="relative w-[50px] h-[50px]">
           <Image src="/svgs/burger.svg" alt="burger icon" fill />
         </button>

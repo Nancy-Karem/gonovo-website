@@ -4,11 +4,17 @@
 
 :root {
   --headlinks-color: #2e2f30;
-  --lightpurple-color: #96b0fc;
+  --secondaryblack-color: #252525;
+  --darkgray-color: #475467;
   --lightgray-color: #595959;
-  --lightyellow-color: #feff76;
+  --bgdrop-color: #bfbfbf4d;
+  --ringlight-color: #ffffff80;
+  --offwhite-color: #ffffff4d;
   --semiblue-color: #4541f1;
+  --lightpurple-color: #96b0fc;
+  --lightyellow-color: #feff76;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -35,6 +41,7 @@ ul {
   animation-fill-mode: forwards;
   margin-left: auto;
 }
+
 @keyframes pointAnimation {
   0% {
     scale: 2;
