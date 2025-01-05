@@ -6,7 +6,7 @@ import React from "react";
 function Header() {
   return (
     <header className="h-[50px] flex justify-between items-center">
-      <Link href="/" className="relative w-[133px] h-[50px] inline-block">
+      <Link href="/" className="relative w-[215px] h-[32px] inline-block">
         <Image src="/svgs/logo.svg" alt="logo of website" fill />
       </Link>
       <div>

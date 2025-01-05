@@ -13,6 +13,7 @@ export default {
         purpleLight: "var(--lightpurple-color)",
         grayLight: "var(--lightgray-color)",
         yellowLight: "var(--lightyellow-color)",
+        semiblue: "var(--semiblue-color)",
       },
     },
   },

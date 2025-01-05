@@ -5,10 +5,15 @@ interface IImageProps {
   height: string;
   src: string;
   alt: string;
+  background?: string;
+  radius?:string;
 }
-function ImageComponent({ width, height, src, alt }: IImageProps) {
+function ImageComponent({ width, height, src, alt, background,radius }: IImageProps) {
   return (
-    <div style={{ width, height }} className="relative">
+    <div
+      style={{ width, height, backgroundColor: background,borderRadius:radius }}
+      className="relative"
+    >
       <Image src={src} alt={alt} fill />
     </div>
   );
