@@ -10,7 +10,7 @@ interface IPLink {
 function LinkNavigation({ text, bg, link, color, ring }: IPLink) {
   return (
     <Link
-      href="/"
+      href={link}
       style={{ backgroundColor: bg, color }}
       className={`${
         ring ? "ring-1 ring-black" : ""
