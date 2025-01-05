@@ -56,6 +56,6 @@ ul {
   100% {
     scale: 1;
     opacity: 1;
-    transform: translate3d(80px, 80px, 80px);
+    transform: translate3d(120px, 20px, 120px);
   }
 }
