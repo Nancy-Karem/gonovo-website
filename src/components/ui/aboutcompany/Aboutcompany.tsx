@@ -11,7 +11,7 @@ function Aboutcompany() {
       <h1 className="text-[60px] font-semibold  mt-8 w-fit mx-auto">
         WHO WE ARE !
       </h1>
-      <p className="max-w-[1216px] text-2xl mx-auto text-center text-secondaryblack leading-[43px] mt-6">
+      <p className="max-w-[1216px] text-[23px] mx-auto text-center text-secondaryblack leading-[43px] mt-6">
         GONOVO Tech is founded by driven computer scientists, researchers and
         developers that combined their decade of expertise in multiple facets of
         computer science and digital marketing with their passion for client
@@ -104,7 +104,7 @@ function Aboutcompany() {
             }}
           >
             <div
-              className="ring-1 ring-ringLight rounded-[20px] px-6 pb-8 pt-6 w-fit absolute left-[50%] translate-x-[-50%] bottom-6 bg-offwight"
+              className="ring-1 ring-ringLight rounded-[20px] px-6 pb-8 pt-6 w-fit absolute left-[50%] translate-x-[-50%] bottom-6 bg-offwight "
               style={{ backdropFilter: "blur(24px)" }}
             >
               <p className="w-[348px] text-white text-lg">

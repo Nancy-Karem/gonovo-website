@@ -6,12 +6,24 @@ interface IImageProps {
   src: string;
   alt: string;
   background?: string;
-  radius?:string;
+  radius?: string;
 }
-function ImageComponent({ width, height, src, alt, background,radius }: IImageProps) {
+function ImageComponent({
+  width,
+  height,
+  src,
+  alt,
+  background,
+  radius,
+}: IImageProps) {
   return (
     <div
-      style={{ width, height, backgroundColor: background,borderRadius:radius }}
+      style={{
+        width,
+        height,
+        backgroundColor: background,
+        borderRadius: radius,
+      }}
       className="relative"
     >
       <Image src={src} alt={alt} fill />

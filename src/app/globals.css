@@ -5,13 +5,17 @@
 :root {
   --headlinks-color: #2e2f30;
   --secondaryblack-color: #252525;
+  --lightblack-color: #404040;
   --darkgray-color: #475467;
+  --darkring-color: #344054;
   --lightgray-color: #595959;
   --bgdrop-color: #bfbfbf4d;
   --ringlight-color: #ffffff80;
+  --dotlight-color: #ffffff8c;
   --offwhite-color: #ffffff4d;
   --semiblue-color: #4541f1;
   --lightpurple-color: #96b0fc;
+  --semilightpurple-color: #aca0f8;
   --lightyellow-color: #feff76;
 }
 
