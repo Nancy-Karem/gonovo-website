@@ -101,6 +101,9 @@ function Footer() {
                     <Link
                       href={listItem?.link}
                       className="flex gap-2 text-thingray"
+                      target={`${
+                        genindex === 2 || genindex === 1 ? "_blank" : "_self"
+                      }`}
                     >
                       {listItem.text}
                       {genindex === 2 && (

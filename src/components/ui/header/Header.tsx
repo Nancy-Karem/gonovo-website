@@ -1,10 +1,16 @@
+"use client";
 import navLinks from "@/app/data/links";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import LinkNavigation from "../link/LinkNavigation";
+import Aside from "../aside/Aside";
 
 function Header() {
+  const [open, setOpen] = useState(false);
+  const handleToggle = () => {
+    setOpen(!open);
+  };
   return (
     <header className="h-[50px] flex justify-between items-center">
       <Link href="/" className="relative w-[215px] h-[32px] inline-block">
@@ -26,10 +32,13 @@ function Header() {
       </div>
       <div className="flex gap-4 items-center">
         <LinkNavigation text="+ Become a Client" link="/" />
-        <button className="relative w-[50px] h-[50px]">
+        <button onClick={handleToggle} className="relative w-[50px] h-[50px]">
           <Image src="/svgs/burger.svg" alt="burger icon" fill />
         </button>
       </div>
+      {open && (
+        <Aside handleOpen={handleToggle}/>
+      )}
     </header>
   );
 }
