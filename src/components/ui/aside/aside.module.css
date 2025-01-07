@@ -1,6 +1,6 @@
 .bottom_top {
   animation-name: bottom-top;
-  animation-duration: 1s;
+  animation-duration: 500ms;
   animation-iteration-count: 1;
   animation-fill-mode: backwards;
   background-color: #2722df;
@@ -10,7 +10,7 @@
 
 .top_bottom {
   animation-name: top-bottom;
-  animation-duration: 1s;
+  animation-duration: 500ms;
   animation-iteration-count: 1;
   animation-fill-mode: backwards;
   background-color: #4541f1;
