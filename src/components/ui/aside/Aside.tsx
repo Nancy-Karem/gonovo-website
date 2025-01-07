@@ -88,7 +88,7 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
                 <LinkNavigation link="/" text="+ Become a client" />
                 <button onClick={handleOpen}>
                   <ImageComponent
-                    src="/svgs/closeicon.svg"
+                    src="/svgs/closeIcon.svg"
                     alt="close icon"
                     width="48px"
                     height="48px"
