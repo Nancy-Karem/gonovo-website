@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/ui/footer/Footer";
 
 const InterFont = Inter({
   variable: "--font-inter",
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${InterFont.variable}`}>{children}</body>
+      <body className={`${InterFont.variable}`}>
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
