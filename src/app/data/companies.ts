@@ -5,7 +5,7 @@ const companies = [
   },
   {
     logo: "/svgs/lightbox.svg",
-    width: "170px",
+    width: "394px",
   },
   {
     logo: "/svgs/featherdev.svg",
@@ -19,10 +19,10 @@ const companies = [
     logo: "/svgs/globalbank.svg",
     width: "197px",
   },
-  {
-    logo: "/svgs/neitzsche.svg",
-    width: "182px",
-  },
+  // {
+  //   logo: "/svgs/neitzsche.svg",
+  //   width: "182px",
+  // },
 ];
 
 export default companies;

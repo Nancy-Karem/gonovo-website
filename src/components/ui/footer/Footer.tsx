@@ -52,7 +52,7 @@ function Footer() {
       elements: [
         {
           text: "Linkedin",
-          link: "/",
+          link: "https://www.linkedin.com/company/gonovo/",
         },
         {
           text: "Instagram",
