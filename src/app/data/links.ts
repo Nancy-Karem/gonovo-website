@@ -1,14 +1,14 @@
 const navLinks = [
   {
-    name: "About Us",
+    name: "Home",
     path: "/",
   },
   {
-    name: "Cases",
+    name: "Software Development",
     path: "/",
   },
   {
-    name: "Reviews",
+    name: "Digital Marketing",
     path: "/",
   },
   {

@@ -17,7 +17,7 @@ function Header() {
         <Image src="/svgs/logo.svg" alt="logo of website" fill />
       </Link>
       <div>
-        <ul className="w-[574px] py-[13px] px-[52px] bg-white flex justify-between gap-3 rounded-full">
+        <ul className="w-[651px] py-[13px] px-[52px] bg-white flex justify-between gap-10 rounded-full">
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link
@@ -36,9 +36,7 @@ function Header() {
           <Image src="/svgs/burger.svg" alt="burger icon" fill />
         </button>
       </div>
-      {open && (
-        <Aside handleOpen={handleToggle}/>
-      )}
+      {open && <Aside handleOpen={handleToggle} />}
     </header>
   );
 }
