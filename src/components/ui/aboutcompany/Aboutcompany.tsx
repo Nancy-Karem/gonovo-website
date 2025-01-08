@@ -1,24 +1,22 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
 import LinkNavigation from "../link/LinkNavigation";
+import Badge from "../common/Badge";
 
 function Aboutcompany() {
   return (
     <section className="my-12">
-      <p className="font-medium w-fit mx-auto px-3 text-sm ring-2 ring-black rounded-full">
-        #ABOUT THE COMPANY#
-      </p>
-      <h1 className="text-[60px] font-semibold  mt-8 w-fit mx-auto">
-        WHO WE ARE !
-      </h1>
-      <p className="max-w-[1216px] text-[23px] mx-auto text-center text-secondaryblack leading-[43px] mt-6">
-        GONOVO Tech is founded by driven computer scientists, researchers and
+      <Badge
+        text="#ABOUT THE COMPANY#"
+        title="WHO WE ARE !"
+        desc="GONOVO Tech is founded by driven computer scientists, researchers and
         developers that combined their decade of expertise in multiple facets of
         computer science and digital marketing with their passion for client
         success, to create bespoke strategies and solutions for success in the
         digital age. At GONOVO we build software and provide digital marketing
-        strategy
-      </p>
+        strategy"
+      />
+
       <div className="mx-10 my-12 grid grid-cols-[416px,442px,442px] items-end gap-5">
         <div className="flex flex-col z-10">
           <ImageComponent

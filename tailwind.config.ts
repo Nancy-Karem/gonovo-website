@@ -27,6 +27,8 @@ export default {
         thirdblack: "var(--thirdblack-color)",
         lightborder: "var(--lightgrayborder-color)",
         semidarkgray: "var(--semidarkgray-color)",
+        badgecolor: "var(--graybadge-color)",
+        textbadge: "var(--textbadge-color)",
       },
     },
   },

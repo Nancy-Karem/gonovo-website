@@ -5,8 +5,10 @@ import Link from "next/link";
 import React, { useState } from "react";
 import LinkNavigation from "../link/LinkNavigation";
 import Aside from "../aside/Aside";
-
+import { usePathname } from "next/navigation";
 function Header() {
+  const pathname = usePathname();
+  console.log(pathname);
   const [open, setOpen] = useState(false);
   const handleToggle = () => {
     setOpen(!open);
@@ -22,7 +24,9 @@ function Header() {
             <li key={index}>
               <Link
                 href={link.path}
-                className="font-semibold text-[15px] text-linksColor"
+                className={`font-semibold text-[15px] text-linksColor ${
+                  link.path === pathname && pathname !== "/" && "activeLink"
+                }`}
               >
                 {link.name}
               </Link>
@@ -31,7 +35,17 @@ function Header() {
         </ul>
       </div>
       <div className="flex gap-4 items-center">
-        <LinkNavigation text="+ Become a Client" link="/" />
+        {pathname === "/softwaredevelopment" ? (
+          <LinkNavigation
+            text="+ Become a Client"
+            link="/"
+            bg="#4541F1"
+            color="#FFF"
+          />
+        ) : (
+          <LinkNavigation text="+ Become a Client" link="/" />
+        )}
+
         <button onClick={handleToggle} className="relative w-[50px] h-[50px]">
           <Image src="/svgs/burger.svg" alt="burger icon" fill />
         </button>

@@ -5,7 +5,7 @@ const navLinks = [
   },
   {
     name: "Software Development",
-    path: "/",
+    path: "/softwaredevelopment",
   },
   {
     name: "Digital Marketing",

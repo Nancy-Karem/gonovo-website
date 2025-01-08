@@ -21,6 +21,8 @@
   --thirdblack-color: #101828;
   --lightgrayborder-color: #989898;
   --semidarkgray-color: #d0d5dd;
+  --graybadge-color: #f1f3f5;
+  --textbadge-color: #2b2c2e;
 }
 
 * {
@@ -49,7 +51,9 @@ ul {
   animation-fill-mode: forwards;
   margin-left: auto;
 }
-
+.activeLink {
+  color: #4541f1;
+}
 @keyframes pointAnimation {
   0% {
     scale: 2;
