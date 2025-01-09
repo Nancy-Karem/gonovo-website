@@ -1,6 +1,8 @@
 import Devsolution from "@/components/ui/devsolution/Devsolution";
 import Header from "@/components/ui/header/Header";
 import Ouroffers from "@/components/ui/ouroffers/Ouroffers";
+import Oursteps from "@/components/ui/oursteps/Oursteps";
+import Products from "@/components/ui/products/Products";
 import React from "react";
 
 function page() {
@@ -9,6 +11,8 @@ function page() {
       <Header />
       <Devsolution />
       <Ouroffers />
+      <Products />
+      <Oursteps />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import cardsservicesdata from "@/app/data/services";
 
 function Ouroffers() {
   return (
-    <section className="py-16">
+    <section className="py-12">
       <Badge
         text="#What We Offer#"
         title="Products Provide For You"

@@ -3,7 +3,7 @@ import React from "react";
 
 function Devsolution() {
   return (
-    <section className="my-16">
+    <section className="relative my-16 max-w-[1310px] mx-auto">
       <div className="grid grid-cols-[1fr_637px]">
         <div className="flex">
           <div className="flex justify-between flex-col">
@@ -31,9 +31,11 @@ function Devsolution() {
               />
             </div>
           </div>
-          <div className="flex flex-col justify-around">
-            <p className="-rotate-90">@2025</p>
-            <p className="-rotate-90">All Right Reserved</p>
+          <div className="relative">
+            <p className="-rotate-90 absolute top-40 right-[-40px]">@2025</p>
+            <p className="-rotate-90 bottom-40 absolute w-max right-[-90px]">
+              All Right Reserved
+            </p>
           </div>
         </div>
         <div
@@ -105,6 +107,14 @@ function Devsolution() {
             </ul>
           </div>
         </div>
+      </div>
+      <div className="absolute top-[-60px] left-[50%] translate-x-[-52%]">
+        <ImageComponent
+          src="/svgs/iPhone15Pro.svg"
+          width="1070px"
+          height="802px"
+          alt="iPhone mobile"
+        />
       </div>
     </section>
   );

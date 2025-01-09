@@ -29,6 +29,7 @@ export default {
         semidarkgray: "var(--semidarkgray-color)",
         badgecolor: "var(--graybadge-color)",
         textbadge: "var(--textbadge-color)",
+        semiyellow: "var(--semiyellow-color)",
       },
     },
   },
