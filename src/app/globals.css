@@ -55,6 +55,7 @@ ul {
 .activeLink {
   color: #4541f1;
 }
+
 @keyframes pointAnimation {
   0% {
     scale: 2;

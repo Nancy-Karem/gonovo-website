@@ -23,8 +23,9 @@ function ImageComponent({
         height,
         backgroundColor: background,
         borderRadius: radius,
+        backgroundSize: "cover",
       }}
-      className="relative"
+      className="relative overflow-hidden"
     >
       <Image src={src} alt={alt} fill />
     </div>

@@ -9,7 +9,7 @@ const navLinks = [
   },
   {
     name: "Digital Marketing",
-    path: "/",
+    path: "/digitalmarketing",
   },
   {
     name: "Contact Us",
