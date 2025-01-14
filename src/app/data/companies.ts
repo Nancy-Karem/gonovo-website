@@ -9,8 +9,9 @@ const companies = [
   },
 
   {
-    logo: "/assets/google.webp",
-    width: "198px",
+    logo: "/assets/mml.png",
+    width: "143px",
+    height:"130px"
   },
   {
     logo: "/assets/amazon.webp",

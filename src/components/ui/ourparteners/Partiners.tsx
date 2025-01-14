@@ -10,14 +10,14 @@ function Partiners() {
           Join 4,000+ clients already growing
         </p>
         <div
-          className={`${styles.images_responsive_cont} flex justify-center gap-y-8 gap-x-6  sm:gap-8 flex-wrap`}
+          className={`${styles.images_responsive_cont} flex justify-center gap-y-8 gap-x-6  sm:gap-8 flex-wrap items-center`}
         >
           {companies.map((item, index) => (
             <ImageComponent
               key={index}
               src={item.logo}
               width={item.width}
-              height="48px"
+              height={item.height ? item.height : "48px"}
               alt="partener company"
             />
           ))}
