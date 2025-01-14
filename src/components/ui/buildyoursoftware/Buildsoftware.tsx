@@ -1,4 +1,3 @@
-import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
 import React from "react";
 import LinkNavigation from "../link/LinkNavigation";
@@ -28,17 +27,19 @@ function Buildsoftware() {
     },
   ];
   return (
-    <section className="py-16">
+    <section className="py-4 md:py-16">
       <div className="bg-semipurple py-16">
-        <div className="max-w-[829px] m-auto flex flex-col gap-5">
-          <h1 className="text-[60px] leading-[72px] flex justify-between items-center">
-            Lets Build Your Software !
-            <ImageComponent
-              src="/svgs/angels.svg"
-              width="58px"
-              height="58px"
-              alt="angels"
-            />
+        <div className="max-w-[full] mx-9 lg:max-w-[829px] lg:m-auto flex flex-col gap-5">
+          <h1 className="text-[30px] lg:text-[60px] leading-[38px] lg:leading-[72px] sm:flex  justify-center font-semibold lg:justify-between items-center block text-center">
+            Lets Build Your Software!
+            <span className="relative w-[30px]  h-[30px] lg:w-[58px] lg:h-[58px] inline-block">
+              <Image
+                src="/svgs/angels.svg"
+                fill
+                alt="tools icon"
+                className="mt-1 lg:mt-0"
+              />
+            </span>
           </h1>
           <p className="text-lightblack leading-[28px] font-medium text-center">
             GONOVO provides a complete end to end solution for your needs. Our
@@ -46,7 +47,7 @@ function Buildsoftware() {
             products
           </p>
         </div>
-        <div className="max-w-[766px] mx-auto flex justify-between mt-6">
+        <div className="max-w-full mx-9 md:max-w-[766px]  md:mx-auto flex  justify-center lg:justify-between mt-6 gap-4 flex-wrap">
           {skills.map((item, index) => (
             <p
               key={index}
@@ -58,25 +59,33 @@ function Buildsoftware() {
             </p>
           ))}
         </div>
-        <div className="w-[87%] ml-[8%] mr-[5%] grid grid-cols-2 mt-16  items-center justify-items-center">
-          <div className="relative">
+        <div className="w-[88%] mx-auto lg:w-[87%] lg:ml-[8%] lg:mr-[5%] grid grid-cols-1 xl:grid-cols-2 mt-16  items-center justify-items-center">
+          <div className="relative w-full  md:w-[auto]">
             <div
               style={{ backdropFilter: "blur(24px)" }}
-              className="w-[566px] h-[381px] bg-offwight rounded-[20px] overflow-hidden p-6 flex gap-2 ring-1 ring-ringLight"
+              className="w-[337px] h-[277px] sm:top-[50px] mx-auto md:w-[566px] md:h-[381px] bg-offwight rounded-[20px] overflow-hidden p-6 flex gap-2 ring-1 ring-ringLight"
             >
               <p className="h-[13px] w-[13px] rounded-full bg-white"></p>
               <p className="h-[13px] w-[13px] rounded-full bg-dotlight"></p>
               <p className="h-[13px] w-[13px] rounded-full bg-ringLight"></p>
             </div>
 
-            <div className="grid grid-cols-3 gap-3 absolute top-[68px] left-[-70px] w-max">
+            <div className="grid grid-cols-3 gap-1 md:gap-3 top-16 absolute md:top-[68px] md:left-[-70px] md:translate-x-0 left-[50%] translate-x-[-50%] w-max">
               {data.map((item, index) => (
                 <div
                   key={index}
-                  className={`relative w-[221px] h-[290px] rounded-xl  overflow-hidden ${
+                  className={`relative h-[184px] w-[126px] md:w-[221px] md:h-[290px] rounded-xl  overflow-hidden ${
                     index === 1 && "ring-1 ring-offwight"
                   }`}
                 >
+                  <Image
+                    src={item.image}
+                    fill
+                    alt="view"
+                    className={`md:hidden ${
+                      index === 2 && "object-[50%_72%] object-cover"
+                    }`}
+                  />
                   <Image
                     src={item.image}
                     width={221}
@@ -90,21 +99,23 @@ function Buildsoftware() {
                     }}
                     className={`object-cover ${
                       index === 2 && "object-[50%_58%]"
-                    }`}
+                    } hidden md:block `}
                   />
 
                   <div
-                    className="ring-1 ring-ringLight rounded-lg p-3 w-[201px] absolute left-[50%] translate-x-[-50%] bottom-3 bg-bgdrop"
+                    className="ring-1 ring-ringLight rounded-lg p-3 w-[90%] md:w-[201px] absolute left-[50%]   translate-x-[-50%] bottom-3 bg-bgdrop"
                     style={{ backdropFilter: "blur(24px)" }}
                   >
-                    <p className="text-white text-lg">{item.title}</p>
+                    <p className="text-white text-[12px] md:text-lg">
+                      {item.title}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <div className="flex gap-5 mt-10 flex-col ms-20 justify-end">
-            <h1 className="text-3xl font-semibold">
+          <div className="flex gap-5 mt-10 flex-col  md:ms-20 justify-end">
+            <h1 className="text-lg md:text-3xl font-semibold">
               Our Software Development Services
             </h1>
             <p className="leading-[28px] text-lightblack">

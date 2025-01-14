@@ -67,8 +67,8 @@ function Footer() {
   ];
 
   return (
-    <footer className="bg-semiblue pt-[100px] pb-7 mt-[-40px] flex flex-col gap-16">
-      <div className="w-[1216px] m-auto grid grid-cols-[0.9fr_1.1fr] ">
+    <footer className="bg-semiblue pt-[100px] pb-7 mt-[-40px] flex flex-col gap-10 sm:gap-16">
+      <div className="w-[96%] xl:w-[1216px] gap-16 xl:gap-0 m-auto grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr]">
         <div className="flex flex-col gap-10">
           <ImageComponent
             src="/svgs/logolight.svg"
@@ -90,12 +90,12 @@ function Footer() {
             inline={true}
           />
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-wrap gap-8">
           {columns.map((list, genindex) => (
             <div key={genindex}>
               <p className="mb-4 text-sm text-semidarkgray">{list.title}</p>
 
-              <ul className="flex flex-col gap-4 w-[170px]">
+              <ul className="flex flex-col gap-3 sm:gap-4 w-[170px]">
                 {list.elements.map((listItem, index) => (
                   <li key={index}>
                     <Link
@@ -122,11 +122,11 @@ function Footer() {
           ))}
         </div>
       </div>
-      <div className="w-[1216px] m-auto border-t border-lightborder">
+      <div className="w-[96%] xl:w-[1216px] m-auto border-t border-lightborder">
         <h1 className="text-xl font-semibold text-white leading-8 mt-4 mb-2">
           Move faster with GONOVO
         </h1>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-wrap gap-3">
           <p className="text-thingray">
             Save countless hours of design and ship great looking designs
             faster.

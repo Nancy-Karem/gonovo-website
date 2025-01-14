@@ -31,6 +31,10 @@ export default {
         textbadge: "var(--textbadge-color)",
         semiyellow: "var(--semiyellow-color)",
       },
+      // screens: {
+      //   custom: { max: "1384px" },
+      //   // mid:{}
+      // },
     },
   },
   plugins: [],

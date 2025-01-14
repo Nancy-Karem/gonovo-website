@@ -4,7 +4,7 @@ import Partiners from "../ui/ourparteners/Partiners";
 import Aboutcompany from "../ui/aboutcompany/Aboutcompany";
 import Buildsoftware from "../ui/buildyoursoftware/Buildsoftware";
 import Reviews from "../ui/clientsreviews/Reviews";
-// import Portfolio from "../ui/portfolio/Portfolio";
+//  import Portfolio from "../ui/portfolio/Portfolio";
 
 function HomePage() {
   return (

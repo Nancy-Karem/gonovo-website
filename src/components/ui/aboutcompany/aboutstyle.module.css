@@ -1,0 +1,230 @@
+.about_main_Wrapper {
+  position: relative;
+  width: 1361px;
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.about_main_Wrapper .left_side {
+  position: relative;
+  /* width: ; */
+}
+
+.about_main_Wrapper .left_side .clip_cont {
+  position: absolute;
+  z-index: 9;
+  top: 40px;
+}
+.left_side .text {
+  max-width: 461px;
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.about_main_Wrapper .right_side {
+  display: flex;
+  gap: 40px;
+  position: relative;
+  width: 924px;
+}
+.about_main_Wrapper .right_side > div {
+  width: 442px;
+
+  /* overflow: hidden; */
+  position: relative;
+}
+.right_side .divide_th_part {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.right_side .divide_th_part .text_third {
+  max-width: 191px;
+}
+.right_side .divide_th_part .line_top {
+  position: relative;
+  display: flex;
+  gap: 16px;
+  padding-bottom: 8px;
+}
+.right_side .divide_th_part .line_bottom {
+  padding-top: 8px;
+  line-height: 19px;
+  border-top: 1px solid;
+}
+.view2_cont,
+.third_view {
+  border-radius: 40px;
+}
+.right_side .third_view {
+  height: 563px;
+}
+.blur_box1 {
+  border-width: 1px;
+  border-color: var(--ringlight-color);
+  border-radius: 20px;
+  padding: 24px 24px 32px;
+  width: fit-content;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 24px;
+  background-color: var(--offwhite-color);
+  backdrop-filter: blur(24px);
+  color: white;
+  width: 396px;
+}
+
+.blur_box1 p {
+  font-size: 18px;
+}
+.blure_box2 {
+  width: 257px;
+  height: 120px;
+  background-color: var(--bgdrop-color);
+  color: white;
+  position: absolute;
+  top: 35px;
+  right: 35px;
+  padding: 12px 24px 24px;
+  border-radius: 20px;
+  backdrop-filter: blur(24px);
+}
+
+.blure_box2 h1 {
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.blure_box2 p {
+  margin-top: 4px;
+  font-size: 18px;
+  font-weight: 500;
+}
+@media (max-width: 1400px) {
+  .about_main_Wrapper {
+    flex-wrap: wrap;
+    width: calc(100% - 32px);
+    justify-content: center;
+  }
+  .sec_clip {
+    display: block;
+    transform: scale(2.5);
+    bottom: 100px;
+    left: 5px;
+  }
+  .right_side {
+    order: 0;
+  }
+  .left_side {
+    order: 1;
+  }
+  .text {
+    margin: 16px !important;
+    max-width: 900px !important;
+  }
+  .clip_cont {
+    display: none;
+  }
+}
+@media (max-width: 1160px) {
+  .sec_clip {
+    transform: scale(1.5);
+    bottom: 100px;
+    left: 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .about_main_Wrapper .right_side > div {
+    width: 342px;
+  }
+  .right_side {
+    width: 724px !important;
+    height: 500px;
+  }
+  .blur_box1 p {
+    font-size: 16px;
+  }
+  .blur_box1 {
+    width: 302px;
+  }
+}
+
+@media (max-width: 800px) {
+  .about_main_Wrapper .right_side .view2_cont {
+    width: 202px;
+    height: 304px;
+  }
+  .sec_clip {
+    transform: scale(1);
+    left: -20px;
+    bottom: 10px;
+  }
+  .blure_box2,
+  .blur_box1 {
+    width: 90%;
+    border-radius: 12px;
+    height: auto;
+    right: auto;
+    margin: auto;
+  }
+  .blure_box2 {
+    padding: 12px;
+    top: 12px;
+    position: relative;
+  }
+  .blur_box1 {
+    bottom: 12px;
+    padding: 8px;
+  }
+  .blure_box2 h1 {
+    font-size: 18px;
+  }
+  .blure_box2 p {
+    font-size: 14px;
+  }
+  .blur_box1 p {
+    font-size: 12px;
+  }
+  .view2_cont,
+  .third_view {
+    border-radius: 12px;
+  }
+  .right_side {
+    width: fit-content !important;
+    height: auto;
+    gap: 4px !important;
+  }
+  .right_side .divide_th_part {
+    width: 163px !important;
+    height: 304px;
+  }
+  .right_side .divide_th_part .line_top {
+    gap: 8px;
+    padding-bottom: 4px;
+    font-size: 10px;
+  }
+  .right_side .divide_th_part .text_third {
+    max-width: 112px;
+  }
+  .right_side .divide_th_part .responsive {
+    width: 12px;
+    height: 12px;
+  }
+  .right_side .divide_th_part .line_bottom {
+    padding-top: 4px;
+    line-height: 12px;
+    font-size: 10px;
+  }
+  .target_res {
+    width: 43px;
+    height: 51px;
+  }
+}
+@media (max-width: 400px) {
+  .sec_clip {
+    left: -8px;
+  }
+}

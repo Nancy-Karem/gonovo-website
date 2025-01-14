@@ -1,0 +1,5 @@
+@media (max-width: 520px) {
+  .images_responsive_cont div:not(:last-child) {
+    width: 160px !important;
+  }
+}

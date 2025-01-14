@@ -38,45 +38,11 @@ ul {
   list-style: none;
   display: flex;
 }
-.point {
-  animation-name: pointAnimation;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-}
-.point_bottom {
-  animation-name: pointAnimationRev;
-  animation-duration: 5s;
-  animation-iteration-count: 1;
-  /* animation-direction: reverse; */
-  animation-fill-mode: forwards;
-  margin-left: auto;
-}
+
+
 .activeLink {
   color: #4541f1;
 }
 
-@keyframes pointAnimation {
-  0% {
-    scale: 2;
-    opacity: 0.7;
-    transform: translate3d(-80px, -80px, -80px);
-  }
-  100% {
-    scale: 1;
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-@keyframes pointAnimationRev {
-  0% {
-    scale: 2;
-    opacity: 0.7;
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    scale: 1;
-    opacity: 1;
-    transform: translate3d(120px, 20px, 120px);
-  }
-}
+
+

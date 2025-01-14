@@ -56,8 +56,12 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
   )}`;
   return (
     <aside>
-      <div className="fixed w-full top-0 left-0 z-50 h-[100vh] bg-white grid grid-cols-[352px_1fr] overflow-hidden">
-        <div className=" relative p-12 flex flex-col justify-between">
+      <div
+        className={`${styles.main_responsive} fixed w-full top-0 left-0 z-50 h-[100vh] bg-white grid grid-cols-[352px_1fr] overflow-hidden`}
+      >
+        <div
+          className={`${styles.left_container} relative p-12 flex flex-col justify-between`}
+        >
           <div className={`${styles.bottom_top} absolute`}></div>
           <Link href="/" onClick={handleOpen}>
             <ImageComponent
@@ -79,13 +83,27 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
             </p>
           </div>
         </div>
-        <div className="relative p-12">
+        <div className="relative py-12 px-4 sm:p-12">
           <div className={`${styles.top_bottom}  absolute`}></div>
-          <div className="relative flex flex-col justify-between h-full">
-            <div className="flex justify-between items-center">
+          <div
+            className={`${styles.links_cont} relative flex flex-col justify-between h-full`}
+          >
+            <div
+              className={`${styles.logo_responsive} flex justify-between items-center`}
+            >
               <p className="text-thingray">Navigation</p>
+              <Link href="/" onClick={handleOpen}>
+                <ImageComponent
+                  src="/svgs/logolight.svg"
+                  width="229px"
+                  height="34px"
+                  alt="company logo"
+                />
+              </Link>
               <div className="flex gap-4">
-                <LinkNavigation link="/" text="+ Become a client" />
+                <div className={`${styles.btn}`}>
+                  <LinkNavigation link="/" text="+ Become a client" />
+                </div>
                 <button onClick={handleOpen}>
                   <ImageComponent
                     src="/svgs/closeIcon.svg"
@@ -96,7 +114,9 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
                 </button>
               </div>
             </div>
-            <div className="flex flex-col justify-between  h-[584px]">
+            <div
+              className={`${styles.res_links} flex flex-col justify-between  h-[584px]`}
+            >
               {links.map((item, index) => (
                 <Link
                   className="text-[80px] leading-[64px] text-white"
@@ -108,7 +128,9 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
                 </Link>
               ))}
             </div>
-            <div className="absolute flex gap-10 right-[-20px] bottom-[-20px]">
+            <div
+              className={`${styles.mid_cont} absolute flex gap-10 right-[-20px] bottom-[-20px]`}
+            >
               <div>
                 <Link
                   href={whatsappLink}
@@ -139,7 +161,7 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
                   />
                 </Link>
               </div>
-              <div className="flex flex-col gap-2">
+              <div className={`${styles.row} flex flex-col gap-2`}>
                 {socilaLinks.map((item, index) => (
                   <Link key={index} href={item.link}>
                     <ImageComponent
@@ -150,6 +172,17 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
                     />
                   </Link>
                 ))}
+              </div>
+              <div className={`${styles.last} flex flex-col gap-2`}>
+                <ImageComponent
+                  src="/svgs/stars.svg"
+                  width="116px"
+                  height="20px"
+                  alt="stars"
+                />
+                <p className="max-w-[243px] text-sm font-semibold text-thingray relative">
+                  Awesome Design For Awesome Businesses
+                </p>
               </div>
             </div>
           </div>

@@ -1,6 +1,6 @@
 .main_hero_container {
   margin: 16px;
-  border-radius: 40px;
+  /* border-radius: 40px; */
   background: linear-gradient(
     90deg,
     #cdc6ee 0%,
@@ -8,8 +8,89 @@
     #e6e2f9 73.62%,
     #eeeaff 97.41%
   );
-  padding: 32px 48px;
+
   height: 833px;
   position: relative;
 }
-
+.point_bottom {
+  animation-name: pointAnimationRev;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  /* animation-direction: reverse; */
+  animation-fill-mode: forwards;
+  margin-left: auto;
+}
+.point {
+  animation-name: pointAnimation;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+@media (max-width: 1396px) {
+  .main_hero_container {
+    height: auto;
+  }
+  .pos_relative {
+    position: relative;
+    top: 64px;
+  }
+  .responsive {
+    top: 0;
+    margin-top: 150px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .point_bottom,
+  .point {
+    display: none;
+  }
+}
+@media (max-width: 640px) {
+  .pos_relative {
+    top: 0;
+  }
+  .responsive {
+    margin-top: 30px;
+  }
+  .verysmall {
+    gap: 8px;
+  }
+}
+@media (max-width: 425px) {
+  .verysmall {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .verysmall div {
+    width: 100%;
+  }
+}
+@keyframes pointAnimation {
+  0% {
+    scale: 2;
+    opacity: 0.7;
+    transform: translate3d(-80px, -80px, -80px);
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes pointAnimationRev {
+  0% {
+    scale: 2;
+    opacity: 0.7;
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+    transform: translate3d(120px, 20px, 120px);
+  }
+}
+@media (max-width: 1280px) {
+  /* .responsive {
+    margin-top: 15px;
+  } */
+}
