@@ -9,9 +9,11 @@ const companies = [
   },
 
   {
-    logo: "/assets/mml.png",
+    logo: "/assets/mm.webp",
     width: "143px",
-    height:"130px"
+    height: "130px",
+    smWidth: "61px",
+    smheight: "56px",
   },
   {
     logo: "/assets/amazon.webp",

@@ -46,6 +46,11 @@
   }
 }
 @media (max-width: 640px) {
+  .main_hero_container {
+    margin: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
   .pos_relative {
     top: 0;
   }

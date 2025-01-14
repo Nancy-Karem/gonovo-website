@@ -17,8 +17,9 @@ function Header() {
     <header className="h-[50px] flex justify-between items-center">
       <Link
         href="/"
-        className="relative w-[161px] h-[24px] sm:w-[215px] sm:h-[32px] inline-block"
+        className="relative w-[180px] h-[36px] sm:w-[215px] sm:h-[32px] inline-block"
       >
+        {/* w-[161px] h-[24px] */}
         <Image src="/svgs/logo.svg" alt="logo of website" fill />
       </Link>
       <div>
