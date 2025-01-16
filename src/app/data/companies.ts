@@ -9,15 +9,13 @@ const companies = [
   },
 
   {
-    logo: "/assets/mm.webp",
-    width: "143px",
-    height: "130px",
-    smWidth: "61px",
-    smheight: "56px",
-  },
-  {
     logo: "/assets/amazon.webp",
     width: "166px",
+  },
+  {
+    logo: "/assets/mml.png",
+    width: "143px",
+    height: "130px",
   },
   {
     logo: "/svgs/lightbox.svg",

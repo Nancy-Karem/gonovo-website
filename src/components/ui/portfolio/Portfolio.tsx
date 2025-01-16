@@ -23,7 +23,7 @@ function Portfolio() {
         <LinkNavigation text="Contact us" link="/" ring={true} />
       </div>
       <div
-        className={`${styles.main_sec_cont} my-10 grid grid-cols-2 gap-5 max-w-[1307px] mx-auto justify-items-center`}
+        className={`${styles.main_sec_cont} my-10 grid grid-cols-2 gap-x-5 sm:gap-y-10 gap-y-4 max-w-[1307px] mx-auto justify-items-center`}
       >
         {/* work__1 */}
         <ShapeOne bgColor="#feff76" index={1} text="Chef’s Choice" link="/" />
@@ -43,7 +43,7 @@ function Portfolio() {
           index={3}
         />
         <Shapethree />
-        {/* work__2 */}
+        <div className={styles.main_Shape_cont}></div>
       </div>
     </section>
   );
