@@ -1,22 +1,19 @@
 import React from "react";
 import LinkNavigation from "../link/LinkNavigation";
-import ImageComponent from "@/components/imagecomponent/ImageComponent";
-
+import Badge from "../common/Badge";
+import ShapeOne from "./shape1/ShapeOne";
+import ShapeTwo from "./shape2/ShapeTwo";
+import Shapethree from "./shape3/Shapethree";
+import styles from "./mainsection.module.css";
 function Portfolio() {
   return (
-    <section className="my-12">
-      <p className="font-medium w-fit mx-auto px-3 text-sm ring-2 ring-black rounded-full">
-        #ABOUT THE COMPANY#
-      </p>
-      <h1 className="text-[60px] font-semibold  mt-8 w-fit mx-auto">
-        WHO WE ARE !
-      </h1>
-      <p className="max-w-[1216px] text-[23px] mx-auto text-center text-secondaryblack leading-[43px] mt-6">
-        GONOVO Tech is founded by driven computer scientists, researchers and
-        developers that combined their decade of expertise in multiple facets of
-        computer science and digital marketing with their passion for client
-      </p>
-      <div className="flex gap-7 mt-10 justify-center">
+    <section className="py-12">
+      <Badge
+        text="#Company Portfolio#"
+        title="Some of our work!"
+        desc="Explore some of the exciting projects we've worked on! From innovative mobile apps to dynamic websites, we craft digital solutions that are tailored to meet the unique needs of our clients."
+      />
+      <div className="flex justify-center gap-4">
         <LinkNavigation
           text="+ Become a Client"
           bg="#FF732C"
@@ -25,19 +22,28 @@ function Portfolio() {
         />
         <LinkNavigation text="Contact us" link="/" ring={true} />
       </div>
-      <div className="relative flex justify-center">
-        <ImageComponent
-          src="/svgs/tablet.svg"
-          width="1024px"
-          height="682px"
-          alt="tablet"
+      <div
+        className={`${styles.main_sec_cont} my-10 grid grid-cols-2 gap-5 max-w-[1307px] mx-auto justify-items-center`}
+      >
+        {/* work__1 */}
+        <ShapeOne bgColor="#feff76" index={1} text="Chef’s Choice" link="/" />
+        {/* work__2 */}
+        <ShapeTwo
+          bgColor="linear-gradient(96.71deg, #514FFF -1.8%, #6724F5 99.73%)"
+          index={2}
+          text="Bling Weddings"
+          link="/"
         />
-        <ImageComponent
-          src="/svgs/mobilepro.svg"
-          width="383px"
-          height="781px"
-          alt="tablet"
+        <ShapeTwo bgImage="/assets/3.png" text="F2F Scaffolding" link="/" />
+        <ShapeOne
+          bgColor="linear-gradient(96.71deg, #FED2F2 -1.8%, #9724F5 99.84%)
+"
+          text="Mobile View"
+          link="/"
+          index={3}
         />
+        <Shapethree />
+        {/* work__2 */}
       </div>
     </section>
   );

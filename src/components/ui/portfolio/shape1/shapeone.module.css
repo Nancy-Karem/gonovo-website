@@ -1,0 +1,17 @@
+.main_Shape_cont {
+  width: 100%;
+  height: 380px;
+  max-width: 642px;
+  background-color: var(--lightyellow-color);
+  /* background-image: url("/assets/3.png"); */
+  border-radius: 18px;
+  position: relative;
+}
+.clip_cont {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 6.5% 100%);
+  width: 300px;
+  background-color: white;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+}
