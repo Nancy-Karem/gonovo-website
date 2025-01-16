@@ -3,3 +3,9 @@
     margin: 2.5rem 1rem;
   }
 }
+
+@media (max-width: 1024px) {
+  .main_sec_cont {
+    grid-template-columns: 1fr;
+  }
+}

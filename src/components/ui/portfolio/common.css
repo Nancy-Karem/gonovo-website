@@ -41,3 +41,12 @@
   left: 375px;
   top: 55px;
 }
+@media (max-width: 640px) {
+  .clip_cont {
+    width: 200px;
+  }
+  .corner_1 {
+    right: 196px;
+  }
+  
+}

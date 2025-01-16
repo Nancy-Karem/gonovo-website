@@ -3,6 +3,7 @@
   height: 380px;
   border-radius: 18px;
   position: relative;
+  max-width: 642px;
   background: linear-gradient(68.08deg, #fa722d 9.39%, #c9632f 102.92%);
 }
 
@@ -21,4 +22,24 @@
 .corner_2 {
   right: -1px;
   top: 103px;
+}
+@media (max-width: 1280px) {
+  .main_Shape_cont {
+    width: 475px;
+    height: 320px;
+  }
+}
+@media (max-width: 1024px) {
+  .main_Shape_cont {
+    width: 100%;
+    height: 380px;
+    max-width: 642px;
+  }
+}
+@media (max-width: 640px) {
+  .main_Shape_cont {
+    width: 100%;
+    height: 380px;
+    max-width: 395px;
+  }
 }

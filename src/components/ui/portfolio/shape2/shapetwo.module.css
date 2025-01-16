@@ -25,3 +25,38 @@
   top: 336px;
   left: 210px;
 }
+@media (max-width: 1280px) {
+  .main_Shape_cont {
+    width: 475px;
+    height: 320px;
+  }
+  .corner_4 {
+    top: 223px;
+  }
+  .corner_5 {
+    top: 276px;
+  }
+}
+@media (max-width: 1024px) {
+  .main_Shape_cont {
+    width: 100%;
+    height: 380px;
+    max-width: 642px;
+  }
+  .corner_4 {
+    top: 283px;
+  }
+  .corner_5 {
+    top: 336px;
+  }
+}
+@media (max-width: 640px) {
+  .main_Shape_cont {
+    width: 100%;
+    height: 380px;
+    max-width: 395px;
+  }
+  .corner_5 {
+    left: 138px;
+  }
+}
