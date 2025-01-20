@@ -1,4 +1,4 @@
-import ImageComponent from "@/components/imagecomponent/ImageComponent";
+
 import Image from "next/image";
 import React from "react";
 
