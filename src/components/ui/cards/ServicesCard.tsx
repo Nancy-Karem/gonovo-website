@@ -1,4 +1,5 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
+import Image from "next/image";
 import React from "react";
 interface IPServices {
   category: string;
@@ -58,12 +59,14 @@ function ServicesCard({ item }: { item: IPServices }) {
         ))}
       </div>
       {item.bggradient && (
-        <ImageComponent
-          src={item.bggradient}
-          width="384px"
-          height="108px"
-          alt="gradient"
-        />
+        <div className="relative h-[108px] w-full  overflow-hidden rounded-ee-[46px] rounded-es-[46px]">
+          <Image
+            src={item.bggradient}
+            alt="gradient"
+            fill
+            className="object-cover"
+          />
+        </div>
       )}
     </div>
   );

@@ -30,6 +30,7 @@ export default {
         badgecolor: "var(--graybadge-color)",
         textbadge: "var(--textbadge-color)",
         semiyellow: "var(--semiyellow-color)",
+        orangebg: "var(--orange-bg-color)",
       },
       // screens: {
       //   custom: { max: "1384px" },

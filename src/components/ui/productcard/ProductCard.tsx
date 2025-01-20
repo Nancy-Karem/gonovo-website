@@ -16,7 +16,7 @@ function ProductCard({ item, index }: { item: IPProduct; index: number }) {
             }
           : {}
       }
-      className={`rounded-2xl border border-thingray px-8 py-10 w-fit ${
+      className={`rounded-2xl border border-thingray px-8 py-10 w-fit max-w-[384px] ${
         index === 1 && "bg-semiyellow"
       }`}
     >
@@ -29,9 +29,7 @@ function ProductCard({ item, index }: { item: IPProduct; index: number }) {
         />
         <h1 className="text-base font-semibold text-textbadge">{item.title}</h1>
       </div>
-      <p className="text-sm leading-5 text-darkGray w-[320px] mt-4">
-        {item.desc}
-      </p>
+      <p className="text-sm leading-5 text-darkGray  mt-4">{item.desc}</p>
     </div>
   );
 }

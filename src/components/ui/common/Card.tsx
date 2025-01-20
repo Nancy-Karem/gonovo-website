@@ -10,8 +10,8 @@ function Card({ item, index }: { item: IPCard; index: number }) {
     <div
       className={`${
         index === 1 ? "bg-semipurple" : ""
-      } border border-thingray pt-10 pl-8 pr-10  pb-8 rounded-[40px]
-       ${index === 1 || index === 4 ? "translate-y-[50px]" : ""} `}
+      } border border-thingray pt-10 pl-8 pr-10  pb-8 rounded-[40px] md:max-w-[405px] max-w-[94.7%]  mx-auto
+       ${index === 1 || index === 4 ? "xl:translate-y-[50px]" : ""} `}
       style={{
         boxShadow: "0px 4px 6px -2px #10182808, 0px 12px 16px -4px #10182814",
       }}
