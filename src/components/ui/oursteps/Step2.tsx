@@ -2,7 +2,7 @@ import React from "react";
 
 function Step2() {
   return (
-    <div className="relative w-fit xl:w-full  bg-orangebg rounded-[31px] h-auto xl:h-[443px] sm:my-10 flex flex-col mx-auto">
+    <div className="relative w-fit xl:w-full  bg-orangebg rounded-[31px] h-auto xl:h-[443px] xl:my-10 flex flex-col mx-auto">
       <div className="w-[120px] h-[120px] lg:w-[150px] lg:h-[150px] rounded-ee-[31px] bg-white left-[-2px] top-[-2px] absolute"></div>
       <div
         style={{ boxShadow: "-10px -10px 0 white" }}
