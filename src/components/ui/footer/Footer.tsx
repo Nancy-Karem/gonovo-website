@@ -68,7 +68,7 @@ function Footer() {
 
   return (
     <footer className="bg-semiblue pt-[100px] pb-7 mt-[-40px] flex flex-col gap-10 sm:gap-16">
-      <div className="w-[96%] xl:w-[1216px] gap-16 xl:gap-0 m-auto grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr]">
+      <div className="w-[92%] sm:w-[96%] xl:w-[1216px] gap-16 xl:gap-0 m-auto grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr]">
         <div className="flex flex-col gap-10">
           <ImageComponent
             src="/svgs/logolight.svg"

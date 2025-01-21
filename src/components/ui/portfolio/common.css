@@ -1,22 +1,21 @@
 .clip_cont {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 6.5% 100%);
+  
   width: 300px;
-
-  background-color: white;
+  background-color: transparent;
   position: absolute;
   top: -1px;
   right: -1px;
 }
 .corner_1 {
+  
   position: absolute;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background-color: transparent;
-  box-shadow: 0px -12px 0 white;
-  right: 294px;
-  top: 0px;
-  transform: rotate(45deg);
+  background-color: white;
+  width: 37px;
+  height: 65px;
+  right: 266px;
+  top: -9px;
+  border-bottom-left-radius: 18px;
+  transform: rotate(-18deg);
 }
 .corner_2 {
   position: absolute;
@@ -32,21 +31,23 @@
 }
 .corner_3 {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  transform: rotate(177deg);
-  /* background-color: black; */
-  box-shadow: 4px -4px 0 #fff;
-  left: 375px;
-  top: 55px;
+  background-color: transparent;
+  box-shadow: 0px -30px 0 white;
+  right: 305px;
+  top: 0px;
+  transform: rotate(45deg);
 }
 @media (max-width: 640px) {
   .clip_cont {
-    width: 200px;
+    width: 174px;
   }
   .corner_1 {
-    right: 196px;
+    right: 156px;
   }
-  
+  .corner_3 {
+    right: 195px;
+  }
 }

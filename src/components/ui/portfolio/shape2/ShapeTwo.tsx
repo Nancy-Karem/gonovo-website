@@ -31,10 +31,10 @@ function ShapeTwo({
       className={styles.main_Shape_cont}
     >
       <div className="clip_cont">
-        <h1 className="ms-6 sm:ms-8 text-[17px] sm:text-[26px] leading-[40px] py-2">
+        <h1 className="sm:ps-4 sm:ms-4 text-[17px] sm:text-[26px] leading-[40px] py-2 bg-white">
           <Link
             href={link}
-            className="w-full h-full flex items-center gap-2 relative"
+            className="w-full h-full flex items-center gap-2 relative z-10"
           >
             <div className="relative w-[34px] h-[34px]">
               <Image src="/svgs/portfolio/rightarrow.svg" alt="arrow" fill />
@@ -46,6 +46,7 @@ function ShapeTwo({
       {/* <div className="corner_3"></div> */}
       <div className="corner_1"></div>
       <div className="corner_2"></div>
+      <div className="corner_3"></div>
       <h1 className=" bg-white absolute bottom-[-1px] left-[-1px] z-10  rounded-se-[18px] text-lg sm:text-[26px] leading-[40px] h-12 pt-2 w-[140px] sm:w-[212px]">
         {index === 2 && (
           <Link
