@@ -32,7 +32,6 @@ function ShapeOne({
           </Link>
         </h1>
       </div>
-      {/* <div className="corner_3"></div> */}
 
       <div className="corner_1"></div>
       <div className="corner_2"></div>
@@ -41,10 +40,14 @@ function ShapeOne({
           className="mt-[30px]
    w-[80%] h-full mx-auto flex justify-between"
         >
-          <div className="xl:max-w-[156px] lg:max-w-[126px] sm:max-w-[156px] w-full h-[315px] sm:h-auto relative  ml-[-55px] sm:mt-0 sm:ml-0">
+          <div
+            className={`${styles.mob1_res} xl:max-w-[156px] lg:max-w-[126px] sm:max-w-[156px] w-full h-[315px] sm:h-auto relative  ml-[-55px] sm:mt-0 sm:ml-0`}
+          >
             <Image src="/svgs/portfolio/1s1.svg" alt="mob1" fill />
           </div>
-          <div className="max-w-[136px] sm:max-w-[106px] w-full  relative sm:mt-10">
+          <div
+            className={`${styles.mob2_res} max-w-[136px] sm:max-w-[106px] w-full  relative sm:mt-10`}
+          >
             <Image src="/svgs/portfolio/2s1.svg" alt="mob1" fill />
           </div>
           <div className="hidden sm:block max-w-[106px] w-full  relative mt-10">
@@ -54,7 +57,9 @@ function ShapeOne({
       )}
       {index === 3 && (
         <div className="w-[92%] h-full mx-auto flex justify-between items-center">
-          <div className=" h-[342px] max-w-[168px] lg:max-w-[128px] lg:h-[282px] xl:max-w-[168px] xl:h-[342px] w-full  sm:ml-[30px] relative">
+          <div
+            className={`${styles.mob2_res} h-[342px] max-w-[168px] lg:max-w-[128px] lg:h-[282px] xl:max-w-[168px] xl:h-[342px] w-full  sm:ml-[30px] relative`}
+          >
             <Image src="/svgs/portfolio/1s3.svg" alt="mob1" fill />
           </div>
           <div className="w-full flex h-full relative">
