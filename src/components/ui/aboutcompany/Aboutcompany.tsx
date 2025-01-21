@@ -6,7 +6,7 @@ import Image from "next/image";
 import styles from "./aboutstyle.module.css";
 function Aboutcompany() {
   return (
-    <section className="my-12">
+    <section className="my-12" id="about">
       <Badge
         text="#ABOUT THE COMPANY#"
         title="WHO WE ARE !"

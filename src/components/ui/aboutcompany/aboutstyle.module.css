@@ -222,6 +222,8 @@
     width: 43px;
     height: 51px;
   }
+  .text {
+    margin: 0 !important;}
 }
 @media (max-width: 400px) {
   .sec_clip {

@@ -51,9 +51,10 @@ function Buildsoftware() {
           {skills.map((item, index) => (
             <p
               key={index}
-              className={`${
-                index === 0 ? "bg-white ring-white" : "ring-darkring"
-              } px-3 py-1 ring-[1.5px] text-darkring  rounded-full`}
+              // className={`${
+              //   index === 0 ? "bg-white ring-white" : "ring-darkring"
+              // } px-3 py-1 ring-[1.5px] text-darkring  rounded-full`}
+              className="ring-darkring px-3 py-1 ring-[1.5px] text-darkring  rounded-full"
             >
               {item}
             </p>

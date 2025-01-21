@@ -4,7 +4,10 @@ import reviews from "@/app/data/reviews";
 
 const Reviews = () => {
   return (
-    <section className="scroll-container relative pb-16 bg-white rounded-ee-[40px] rounded-es-[40px]">
+    <section
+      id="reviews"
+      className="scroll-container relative pb-16 bg-white rounded-ee-[40px] rounded-es-[40px]"
+    >
       <p className="font-medium w-fit mx-auto px-3 text-sm ring-2 ring-black rounded-full my-6">
         #WHAT PEOPLE SAY ABOUT US#
       </p>

@@ -11,19 +11,19 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
     },
     {
       name: "About Us",
-      link: "/",
+      link: "/#about",
     },
     {
       name: "Software Dev",
-      link: "/",
+      link: "/softwaredevelopment",
     },
     {
       name: "Digital marketing",
-      link: "/",
+      link: "/digitalmarketing",
     },
     {
       name: "Reviews",
-      link: "/",
+      link: "/#reviews",
     },
     {
       name: "Contact Us",
