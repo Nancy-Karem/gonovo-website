@@ -5,13 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 function ShapeTwo({
   bgColor,
-  bgImage,
+
   index,
   link,
   text,
 }: {
   bgColor?: string;
-  bgImage?: string;
+
   index?: number;
   text: string;
   link: string;
@@ -20,13 +20,6 @@ function ShapeTwo({
     <div
       style={{
         ...(bgColor ? { background: bgColor } : {}),
-        ...(bgImage
-          ? {
-              backgroundImage: `url(${bgImage})`,
-              backgroundSize: "cover",
-              backgroundRepeat: "no-repeat",
-            }
-          : {}),
       }}
       className={styles.main_Shape_cont}
     >
@@ -43,7 +36,7 @@ function ShapeTwo({
           </Link>
         </h1>
       </div>
-      
+
       <div className="corner_1"></div>
       <div className="corner_2"></div>
       <div className="corner_3"></div>
