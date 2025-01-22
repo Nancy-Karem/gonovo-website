@@ -5,18 +5,17 @@ import Link from "next/link";
 import React, { useState } from "react";
 import Aside from "../aside/Aside";
 import { usePathname } from "next/navigation";
-import Contactus from "@/components/contactus/Contactus";
+import { useCallusContext } from "@/components/context/ContactusContext";
+
 function Header() {
   const pathname = usePathname();
-
+  const { toggleOpen } = useCallusContext();
   const [open, setOpen] = useState(false);
-  const [openContactus, setContactus] = useState(false);
+
   const handleToggle = () => {
     setOpen(!open);
   };
-  const handleContactusToggle = () => {
-    setContactus(!openContactus);
-  };
+
   return (
     <header className="h-[50px] flex justify-between items-center">
       <Link
@@ -46,14 +45,14 @@ function Header() {
           {pathname === "/softwaredevelopment" ? (
             <button
               className="bg-[#4541F1] rounded-full py-[12px] px-[18px] text-[17px] text-white font-medium"
-              onClick={handleContactusToggle}
+              onClick={toggleOpen}
             >
               + Become a Client
             </button>
           ) : (
             <button
               className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-              onClick={handleContactusToggle}
+              onClick={toggleOpen}
             >
               + Become a Client
             </button>
@@ -64,8 +63,9 @@ function Header() {
           <Image src="/svgs/burger.svg" alt="burger icon" fill />
         </button>
       </div>
-      {open && <Aside handleOpen={handleToggle} handleOpenContact={handleContactusToggle} />}
-      {openContactus && <Contactus handleOpen={handleContactusToggle} />}
+      {open && (
+        <Aside handleOpen={handleToggle} handleOpenContact={toggleOpen} />
+      )}
     </header>
   );
 }

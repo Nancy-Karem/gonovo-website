@@ -136,14 +136,15 @@ function Aside({
                   className="text-[80px] leading-[64px] text-white"
                   key={index}
                   href={item.link}
-                  onClick={
-                    index < 5
-                      ? handleOpen
-                      : () => {
-                          handleOpen();
-                          handleOpenContact();
-                        }
-                  }
+                  onClick={(e) => {
+                    if (index !== 5) {
+                      handleOpen();
+                    } else {
+                      e.preventDefault();
+                      handleOpen();
+                      handleOpenContact();
+                    }
+                  }}
                 >
                   {item.name}
                 </Link>

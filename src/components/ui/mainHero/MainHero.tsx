@@ -120,19 +120,7 @@ function MainHero() {
               backgroundPosition: "center",
               backgroundSize: "cover",
             }}
-          >
-            {/* <div
-              className="absolute inset-0 p-5"
-              style={{
-                backgroundImage:
-                  "linear-gradient(180deg, rgba(98, 101, 252, 0.24) 12.3%, rgba(169, 164, 243, 0.24) 100%)",
-              }}
-            >
-              <h1 className="text-white text-[40px] leading-[48.41px]">
-                Design Thinking
-              </h1>
-            </div> */}
-          </div>
+          ></div>
         </div>
         <div
           className="w-full sm:w-[593px] md:h-[201px] rounded-[20px] py-[19px] px-5 sm:px-[38px] flex flex-col gap-6 items-center"

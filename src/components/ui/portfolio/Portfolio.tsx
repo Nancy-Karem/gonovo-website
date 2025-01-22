@@ -1,12 +1,13 @@
 import React from "react";
-import LinkNavigation from "../link/LinkNavigation";
 import Badge from "../common/Badge";
 import ShapeOne from "./shape1/ShapeOne";
 import ShapeTwo from "./shape2/ShapeTwo";
 import Shapethree from "./shape3/Shapethree";
 import styles from "./mainsection.module.css";
 import ShapeShort from "./shapshort/ShapeShort";
+import { useCallusContext } from "@/components/context/ContactusContext";
 function Portfolio() {
+  const { toggleOpen } = useCallusContext();
   return (
     <section className="py-12">
       <Badge
@@ -15,13 +16,19 @@ function Portfolio() {
         desc="Explore some of the exciting projects we've worked on! From innovative mobile apps to dynamic websites, we craft digital solutions that are tailored to meet the unique needs of our clients."
       />
       <div className="flex justify-center gap-4">
-        <LinkNavigation
-          text="+ Become a Client"
-          bg="#FF732C"
-          link="/"
-          color="#fff"
-        />
-        <LinkNavigation text="Contact us" link="/" ring={true} />
+        <button
+          onClick={toggleOpen}
+          className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+        >
+          + Become a Client
+        </button>
+
+        <button
+          onClick={toggleOpen}
+          className="ring-1 ring-black rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+        >
+          Contact us
+        </button>
       </div>
       <div
         className={`${styles.main_sec_cont} my-10 grid grid-cols-2 gap-x-5 sm:gap-y-10 gap-y-6 max-w-[1307px] mx-auto justify-items-center`}

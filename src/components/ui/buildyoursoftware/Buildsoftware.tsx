@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import LinkNavigation from "../link/LinkNavigation";
+import { useCallusContext } from "@/components/context/ContactusContext";
 
 function Buildsoftware() {
   const skills = [
@@ -26,6 +26,7 @@ function Buildsoftware() {
       image: "/assets/2.webp",
     },
   ];
+  const { toggleOpen } = useCallusContext();
   return (
     <section className="py-4 md:py-16">
       <div className="bg-semipurple py-16">
@@ -51,9 +52,6 @@ function Buildsoftware() {
           {skills.map((item, index) => (
             <p
               key={index}
-              // className={`${
-              //   index === 0 ? "bg-white ring-white" : "ring-darkring"
-              // } px-3 py-1 ring-[1.5px] text-darkring  rounded-full`}
               className="ring-darkring px-3 py-1 ring-[1.5px] text-darkring  rounded-full"
             >
               {item}
@@ -127,13 +125,18 @@ function Buildsoftware() {
               your specific needs.
             </p>
             <div className="flex gap-7 mt-4">
-              <LinkNavigation
-                text="Learn More"
-                bg="#FF732C"
-                link="/"
-                color="#fff"
-              />
-              <LinkNavigation text="Contact us" link="/" />
+              <button
+                onClick={toggleOpen}
+                className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              >
+                + Become a Client
+              </button>
+              <button
+                onClick={toggleOpen}
+                className="text-black bg-[#FFF] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              >
+                Contact us
+              </button>
             </div>
           </div>
         </div>

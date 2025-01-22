@@ -2,7 +2,9 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import styles from "./contactus.module.css";
-function Contactus({ handleOpen }: { handleOpen: () => void }) {
+import { useCallusContext } from "../context/ContactusContext";
+function Contactus() {
+  const { toggleOpen } = useCallusContext();
   const initialFormState = {
     name: "",
     email: "",
@@ -31,7 +33,7 @@ function Contactus({ handleOpen }: { handleOpen: () => void }) {
       <div className="">
         <div className=" relative flex justify-end border-b border-[#F2F4F7]">
           <button
-            onClick={handleOpen}
+            onClick={toggleOpen}
             className="inline-block relative w-12 h-12 my-2 mx-4"
           >
             <Image src="/svgs/graycloseIcon.svg" alt="" fill />

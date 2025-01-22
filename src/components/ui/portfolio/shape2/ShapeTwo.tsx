@@ -3,6 +3,7 @@ import styles from "./shapetwo.module.css";
 import "../../../ui/portfolio/common.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useCallusContext } from "@/components/context/ContactusContext";
 function ShapeTwo({
   bgColor,
 
@@ -16,6 +17,7 @@ function ShapeTwo({
   text: string;
   link: string;
 }) {
+  const { toggleOpen } = useCallusContext();
   return (
     <div
       style={{
@@ -42,9 +44,9 @@ function ShapeTwo({
       <div className="corner_3"></div>
       <h1 className=" bg-white absolute bottom-[-1px] left-[-1px] z-10  rounded-se-[18px] text-lg sm:text-[26px] leading-[40px] h-12 pt-2 w-[140px] sm:w-[212px]">
         {index === 2 && (
-          <Link
-            href="/"
-            className="flex items-center justify-center gap-2 text-[#5843FC]"
+          <button
+            onClick={toggleOpen}
+            className="flex items-center justify-center mx-auto gap-2 text-[#5843FC]"
           >
             Contact us
             <div className="relative w-[34px] h-[34px]">
@@ -54,7 +56,7 @@ function ShapeTwo({
                 fill
               />
             </div>
-          </Link>
+          </button>
         )}
       </h1>
       <div className={styles.corner_4}></div>

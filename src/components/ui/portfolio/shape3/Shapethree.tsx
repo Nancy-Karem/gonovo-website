@@ -2,15 +2,20 @@ import React from "react";
 import styles from "./shapeth.module.css";
 import Image from "next/image";
 import Link from "next/link";
+import { useCallusContext } from "@/components/context/ContactusContext";
 function Shapethree() {
+  const { toggleOpen } = useCallusContext();
   return (
     <div className={styles.main_Shape_cont}>
       <div className="w-[130px] h-[105px] rounded-es-[18px] bg-white absolute right-[-1px] top-[-1px]">
-        <Link href="https://www.bling-weddings.com/coupons">
-          <div className="relative w-[93px] h-[93px] mx-auto">
+        <div className="relative w-[93px] h-[93px] mx-auto">
+          <Link
+            href="https://www.bling-weddings.com/coupons"
+            className="w-full h-full block relative z-10"
+          >
             <Image src="/svgs/blacksqrarrow.svg" fill alt="black sqr arrow" />
-          </div>
-        </Link>
+          </Link>
+        </div>
       </div>
       <div className={styles.corner_1}></div>
       <div className={styles.corner_2}></div>
@@ -20,12 +25,12 @@ function Shapethree() {
         </div>
         <div className="relative h-full w-[10%] ">
           <div className="absolute -rotate-90 right-[-25px] sm:right-[-45px] bottom-[120px] lg:bottom-[85px] xl:bottom-[120px] w-max">
-            <Link
+            <button
               className="text-[28px] sm:text-[35px] text-white font-medium   block"
-              href="/"
+              onClick={toggleOpen}
             >
               Contact us
-            </Link>
+            </button>
           </div>
         </div>
       </div>

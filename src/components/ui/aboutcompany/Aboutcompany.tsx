@@ -1,10 +1,11 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
-import LinkNavigation from "../link/LinkNavigation";
 import Badge from "../common/Badge";
 import Image from "next/image";
 import styles from "./aboutstyle.module.css";
+import { useCallusContext } from "@/components/context/ContactusContext";
 function Aboutcompany() {
+  const { toggleOpen } = useCallusContext();
   return (
     <section className="my-12" id="about">
       <Badge
@@ -41,13 +42,18 @@ function Aboutcompany() {
               learn what GONOVO can do for you
             </p>
             <div className="flex gap-4">
-              <LinkNavigation
-                text="+ Become a Client"
-                bg="#FF732C"
-                link="/"
-                color="#fff"
-              />
-              <LinkNavigation text="Contact us" link="/" ring={true} />
+              <button
+                onClick={toggleOpen}
+                className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              >
+                + Become a Client
+              </button>
+              <button
+                onClick={toggleOpen}
+                className="ring-1 ring-black rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              >
+                Contact us
+              </button>
             </div>
           </div>
         </div>

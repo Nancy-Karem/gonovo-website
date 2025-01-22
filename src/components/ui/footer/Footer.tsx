@@ -1,7 +1,9 @@
+"use client";
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
-import LinkNavigation from "../link/LinkNavigation";
+
 import Link from "next/link";
+import { useCallusContext } from "@/components/context/ContactusContext";
 
 function Footer() {
   const columns = [
@@ -14,23 +16,23 @@ function Footer() {
         },
         {
           text: "About Us",
-          link: "/",
+          link: "/#about",
         },
         {
-          text: "Software Dv",
-          link: "/",
+          text: "Software Dev",
+          link: "/softwaredevelopment",
         },
         {
           text: "Digital Marketing",
-          link: "/",
+          link: "/digitalmarketing",
         },
         {
           text: "Reviews",
-          link: "/",
+          link: "/#reviews",
         },
         {
           text: "Contact Us",
-          link: "/",
+          link: "#",
         },
       ],
     },
@@ -65,6 +67,7 @@ function Footer() {
       ],
     },
   ];
+  const { toggleOpen } = useCallusContext();
 
   return (
     <footer className="bg-semiblue pt-[100px] pb-7 mt-[-40px] flex flex-col gap-10 sm:gap-16">
@@ -83,12 +86,12 @@ function Footer() {
             Feel free to reach our if you want to collaborate with us, or simply
             have a chat
           </p>
-          <LinkNavigation
-            text="+ Become a Client"
-            link="/"
-            color="#2e2f30"
-            inline={true}
-          />
+          <button
+            className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium w-fit text-[#2e2f30] outline-none"
+            onClick={toggleOpen}
+          >
+            + Become a Client
+          </button>
         </div>
         <div className="flex justify-between flex-wrap gap-8">
           {columns.map((list, genindex) => (
@@ -100,6 +103,12 @@ function Footer() {
                   <li key={index}>
                     <Link
                       href={listItem?.link}
+                      onClick={(e) => {
+                        if (listItem.text === "Contact Us") {
+                          e.preventDefault();
+                          toggleOpen();
+                        }
+                      }}
                       className="flex gap-2 text-thingray"
                       target={`${
                         genindex === 2 || genindex === 1 ? "_blank" : "_self"

@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "../header/Header";
-import LinkNavigation from "../link/LinkNavigation";
+
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
+import { useCallusContext } from "@/components/context/ContactusContext";
 
 function HeroDigital() {
+  const { toggleOpen } = useCallusContext();
   return (
     <section className="h-auto pb-[2rem] xl:h-[865px] bg-semipurple">
       <div className="w-[91%] pt-12 mx-auto">
@@ -18,14 +20,18 @@ function HeroDigital() {
               </span>
             </h1>
             <div className="sm:ml-[-24px]  my-10 lg:mb-0 sm:mt-10 flex gap-3">
-              <LinkNavigation
-                link="/"
-                text="+ Become a Client"
-                color="#fff"
-                bg="#FF732C"
-                inline={true}
-              />
-              <LinkNavigation link="/" text="Contact Us" inline={true} />
+              <button
+                onClick={toggleOpen}
+                className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              >
+                + Become a Client
+              </button>
+              <button
+                onClick={toggleOpen}
+                className="text-black bg-[#FFF] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              >
+                Contact us
+              </button>
             </div>
             <div className="hidden lg:flex mt-16 sm:ml-[-24px] gap-6">
               <div className="relative max-h-[187px] max-w-[402px] overflow-hidden rounded-[41px]">
