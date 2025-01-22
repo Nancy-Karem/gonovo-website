@@ -1,9 +1,15 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
 import styles from "./aside.module.css";
-import LinkNavigation from "../link/LinkNavigation";
+
 import Link from "next/link";
-function Aside({ handleOpen }: { handleOpen: () => void }) {
+function Aside({
+  handleOpen,
+  handleOpenContact,
+}: {
+  handleOpen: () => void;
+  handleOpenContact: () => void;
+}) {
   const links = [
     {
       name: "Home",
@@ -57,7 +63,7 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
   return (
     <aside>
       <div
-        className={`${styles.main_responsive} fixed w-full top-0 left-0 z-50 h-[100vh] bg-white grid grid-cols-[352px_1fr] overflow-hidden`}
+        className={`${styles.main_responsive} fixed w-full top-0 left-0 z-20 h-[100vh] bg-white grid grid-cols-[352px_1fr] overflow-hidden`}
       >
         <div
           className={`${styles.left_container} relative p-12 flex flex-col justify-between`}
@@ -100,9 +106,17 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
                   alt="company logo"
                 />
               </Link>
-              <div className="flex gap-4">
+              <div className="flex gap-4 items-center">
                 <div className={`${styles.btn}`}>
-                  <LinkNavigation link="/" text="+ Become a client" />
+                  <button
+                    className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+                    onClick={() => {
+                      handleOpenContact();
+                      handleOpen();
+                    }}
+                  >
+                    Become a client
+                  </button>
                 </div>
                 <button onClick={handleOpen}>
                   <ImageComponent
@@ -122,7 +136,14 @@ function Aside({ handleOpen }: { handleOpen: () => void }) {
                   className="text-[80px] leading-[64px] text-white"
                   key={index}
                   href={item.link}
-                  onClick={handleOpen}
+                  onClick={
+                    index < 5
+                      ? handleOpen
+                      : () => {
+                          handleOpen();
+                          handleOpenContact();
+                        }
+                  }
                 >
                   {item.name}
                 </Link>

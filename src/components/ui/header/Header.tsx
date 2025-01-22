@@ -3,15 +3,19 @@ import navLinks from "@/app/data/links";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
-import LinkNavigation from "../link/LinkNavigation";
 import Aside from "../aside/Aside";
 import { usePathname } from "next/navigation";
+import Contactus from "@/components/contactus/Contactus";
 function Header() {
   const pathname = usePathname();
-  console.log(pathname);
+
   const [open, setOpen] = useState(false);
+  const [openContactus, setContactus] = useState(false);
   const handleToggle = () => {
     setOpen(!open);
+  };
+  const handleContactusToggle = () => {
+    setContactus(!openContactus);
   };
   return (
     <header className="h-[50px] flex justify-between items-center">
@@ -19,7 +23,6 @@ function Header() {
         href="/"
         className="relative w-[180px] h-[36px] sm:w-[215px] sm:h-[32px] inline-block"
       >
-        {/* w-[161px] h-[24px] */}
         <Image src="/svgs/logo.svg" alt="logo of website" fill />
       </Link>
       <div>
@@ -41,14 +44,19 @@ function Header() {
       <div className="flex gap-4 items-center ">
         <div className="hidden sm:flex">
           {pathname === "/softwaredevelopment" ? (
-            <LinkNavigation
-              text="+ Become a Client"
-              link="/"
-              bg="#4541F1"
-              color="#FFF"
-            />
+            <button
+              className="bg-[#4541F1] rounded-full py-[12px] px-[18px] text-[17px] text-white font-medium"
+              onClick={handleContactusToggle}
+            >
+              + Become a Client
+            </button>
           ) : (
-            <LinkNavigation text="+ Become a Client" link="/" />
+            <button
+              className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              onClick={handleContactusToggle}
+            >
+              + Become a Client
+            </button>
           )}
         </div>
 
@@ -56,7 +64,8 @@ function Header() {
           <Image src="/svgs/burger.svg" alt="burger icon" fill />
         </button>
       </div>
-      {open && <Aside handleOpen={handleToggle} />}
+      {open && <Aside handleOpen={handleToggle} handleOpenContact={handleContactusToggle} />}
+      {openContactus && <Contactus handleOpen={handleContactusToggle} />}
     </header>
   );
 }

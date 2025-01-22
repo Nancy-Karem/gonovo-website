@@ -20,6 +20,15 @@
 .logo_responsive a {
   display: none;
 }
+.logo_responsive .btn button {
+  display: inline;
+  opacity: 0;
+  animation-name: bottom-top;
+  animation-delay: 0.5s;
+  animation-duration: 500ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
 .last {
   display: none;
 }
