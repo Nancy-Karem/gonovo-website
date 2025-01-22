@@ -38,15 +38,15 @@ function Portfolio() {
           bgColor="linear-gradient(96.71deg, #514FFF -1.8%, #6724F5 99.73%)"
           index={2}
           text="Bling Weddings"
-          link="/"
+          link="https://www.bling-weddings.com/"
         />
         {/* <ShapeTwo bgImage="/assets/3.png" text="F2F Scaffolding" link="/" /> */}
-        <ShapeShort/>
+        <ShapeShort />
         <ShapeOne
           bgColor="linear-gradient(96.71deg, #FED2F2 -1.8%, #9724F5 99.84%)
 "
           text="Mobile View"
-          link="/"
+          link="https://scafolding-gamma.vercel.app/"
           index={3}
         />
         <Shapethree />

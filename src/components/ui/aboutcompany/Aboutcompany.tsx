@@ -93,15 +93,39 @@ function Aboutcompany() {
                 <div className={styles.line_top}>
                   <span>Reach More Eyes</span>
                   <span className={`${styles.responsive} relative w-6 h-6`}>
-                    <Image src="/svgs/star.svg" alt="star icon" fill />
+                    <Image
+                      src="/svgs/star.svg"
+                      alt="star icon"
+                      fill
+                      className="hidden sm:block"
+                    />
+                    <Image
+                      src="/svgs/starmob.svg"
+                      alt="star icon"
+                      fill
+                      className="block sm:hidden"
+                    />
                   </span>
                 </div>
                 <p className={styles.line_bottom}>
                   Transform Your Business Grow With Us
                 </p>
               </div>
-              <div className={`${styles.target_res} relative w-[134px] h-[103px]`}>
-                <Image src="/svgs/simplestatic.svg" alt="star icon" fill />
+              <div
+                className={`${styles.target_res} relative w-[134px] h-[103px]`}
+              >
+                <Image
+                  src="/svgs/simplestatic.svg"
+                  alt="projects completed"
+                  fill
+                  className="hidden sm:block"
+                />
+                <Image
+                  src="/svgs/simplestaticsmob.svg"
+                  alt="projects completed"
+                  fill
+                  className="block sm:hidden"
+                />
               </div>
             </div>
             <div
