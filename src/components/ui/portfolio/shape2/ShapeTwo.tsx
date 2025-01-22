@@ -43,7 +43,7 @@ function ShapeTwo({
           </Link>
         </h1>
       </div>
-      {/* <div className="corner_3"></div> */}
+      
       <div className="corner_1"></div>
       <div className="corner_2"></div>
       <div className="corner_3"></div>

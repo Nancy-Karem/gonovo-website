@@ -1,0 +1,23 @@
+@media (max-width: 640px) {
+  .specialHight {
+    height: 232px;
+  }
+  .corner_1 {
+    height: 48px;
+    top: -14px;
+  }
+  .corner_2 {
+    top: 34px;
+  }
+  .corner_5 {
+    height: 22px;
+    width: 22px;
+    box-shadow: -6px 6px 0 white;
+    top: 210px;
+    left: 138px;
+  }
+
+  .corner_4 {
+    top: 151px;
+  }
+}

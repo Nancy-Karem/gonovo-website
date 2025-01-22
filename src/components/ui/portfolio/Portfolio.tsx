@@ -5,6 +5,7 @@ import ShapeOne from "./shape1/ShapeOne";
 import ShapeTwo from "./shape2/ShapeTwo";
 import Shapethree from "./shape3/Shapethree";
 import styles from "./mainsection.module.css";
+import ShapeShort from "./shapshort/ShapeShort";
 function Portfolio() {
   return (
     <section className="py-12">
@@ -39,7 +40,8 @@ function Portfolio() {
           text="Bling Weddings"
           link="/"
         />
-        <ShapeTwo bgImage="/assets/3.png" text="F2F Scaffolding" link="/" />
+        {/* <ShapeTwo bgImage="/assets/3.png" text="F2F Scaffolding" link="/" /> */}
+        <ShapeShort/>
         <ShapeOne
           bgColor="linear-gradient(96.71deg, #FED2F2 -1.8%, #9724F5 99.84%)
 "

@@ -1,5 +1,4 @@
 .clip_cont {
-  
   width: 300px;
   background-color: transparent;
   position: absolute;
@@ -7,7 +6,6 @@
   right: -1px;
 }
 .corner_1 {
-  
   position: absolute;
   background-color: white;
   width: 37px;
