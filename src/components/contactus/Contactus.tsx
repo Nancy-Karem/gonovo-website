@@ -1,24 +1,47 @@
+
+
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import styles from "./contactus.module.css";
 import { useCallusContext } from "../context/ContactusContext";
+import { useFormik } from "formik";
+import validationSchema from "../validation schema/contactus";
+import emailjs from "@emailjs/browser";
 function Contactus() {
   const { toggleOpen } = useCallusContext();
-  const initialFormState = {
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  };
-  const [formState, setFormState] = useState(initialFormState);
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormState((prevState) => ({ ...prevState, [name]: value }));
-  };
-  console.log(formState);
+  const formik = useFormik({
+    initialValues: {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    },
+    validationSchema,
+    onSubmit: (values, { resetForm }) => {
+      emailjs
+        .send(
+          "service_ta6dex9",
+          "template_ytb78wz",
+          { ...values },
+
+          {
+            publicKey: "XdPuBFT_MODIwWQPc",
+          }
+        )
+        .then(
+          (result) => {
+            console.log("Email sent successfully:", result.text);
+            resetForm();
+            toggleOpen();
+          },
+          (error) => {
+            console.error("Failed to send email:", error.text);
+          }
+        );
+      // console.log("Form submitted:", values);
+    },
+  });
   return (
     <section
       className={`${styles.main_section} overflow-y-auto fixed inset-0 bg-white z-20 grid grid-cols-1 lg:grid-cols-[1fr_630px] min-h-[100vh]`}
@@ -43,7 +66,8 @@ function Contactus() {
           <h1 className="text-[#101828] text-[30px] font-semibold mb-12">
             Let’s level up your brand, together
           </h1>
-          <form className="flex flex-col gap-8">
+          <form onSubmit={formik.handleSubmit} className="flex flex-col gap-8">
+            {/* Name of client */}
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="name"
@@ -54,12 +78,22 @@ function Contactus() {
               <input
                 id="name"
                 type="text"
-                className=" border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]"
+                className={`${
+                  formik.touched.name && formik.errors.name
+                    ? "border-red-500"
+                    : "border-[#D0D5DD]"
+                } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
                 placeholder="Name & Company"
                 name="name"
-                onChange={handleChange}
+                value={formik.values.name}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
+              {formik.touched.name && formik.errors.name && (
+                <p className="text-red-500">{formik.errors.name}</p>
+              )}
             </div>
+            {/* email of client */}
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="email"
@@ -71,11 +105,21 @@ function Contactus() {
                 id="email"
                 type="email"
                 name="email"
-                className=" border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]"
+                className={`${
+                  formik.touched.email && formik.errors.email
+                    ? "border-red-500"
+                    : "border-[#D0D5DD]"
+                } border  px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
                 placeholder="you@company.com"
-                onChange={handleChange}
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
+              {formik.touched.email && formik.errors.email && (
+                <p className="text-red-500">{formik.errors.email}</p>
+              )}
             </div>
+            {/* client Phone */}
             <div className="flex flex-col gap-2">
               <label
                 htmlFor="phone"
@@ -87,10 +131,19 @@ function Contactus() {
                 type="text"
                 id="phone"
                 name="phone"
-                className=" border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]"
+                className={`${
+                  formik.touched.phone && formik.errors.phone
+                    ? "border-red-500"
+                    : "border-[#D0D5DD]"
+                }} border  px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
                 placeholder="Enter your phone number"
-                onChange={handleChange}
+                value={formik.values.phone}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
+              {formik.touched.phone && formik.errors.phone && (
+                <p className="text-red-500">{formik.errors.phone}</p>
+              )}
             </div>
             <div className="flex flex-col gap-2">
               <label
@@ -102,21 +155,28 @@ function Contactus() {
               <textarea
                 id="message"
                 name="message"
-                className="border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]  "
+                className={`${
+                  formik.touched.message && formik.errors.message
+                    ? "border-red-500"
+                    : "border-[#D0D5DD]"
+                } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]  `}
                 placeholder="Leave us a message..."
                 rows={4}
-                onChange={handleChange}
+                value={formik.values.message}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
               />
+              {formik.touched.message && formik.errors.message && (
+                <p className="text-red-500">{formik.errors.message}</p>
+              )}
             </div>
             {/* Submit */}
-            <input
-              // data-aos="fade-up"
-              // data-aos-delay="750"
-              // data-aos-offset="0"
+            <button
               type="submit"
-              value="Submit your request"
-              className="px-5 py-[14px]  bg-btnbg text-white rounded-3xl font-medium cursor-pointer text-[17px] bg-[#4541F1] w-fit ms-auto"
-            />
+              className="px-5 py-[14px]  bg-btnbg text-white rounded-3xl font-medium cursor-pointer text-[17px] bg-[#4541F1] w-fit ms-auto outline-none"
+            >
+              Submit your request
+            </button>
           </form>
         </div>
       </div>
