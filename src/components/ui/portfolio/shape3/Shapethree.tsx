@@ -6,7 +6,7 @@ import { useCallusContext } from "@/components/context/ContactusContext";
 function Shapethree() {
   const { toggleOpen } = useCallusContext();
   return (
-    <div className={styles.main_Shape_cont}>
+    <div data-aos="flip-left" className={styles.main_Shape_cont}>
       <div className="w-[130px] h-[105px] rounded-es-[18px] bg-white absolute right-[-1px] top-[-1px]">
         <div className="relative w-[93px] h-[93px] mx-auto">
           <Link

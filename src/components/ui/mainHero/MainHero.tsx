@@ -46,7 +46,11 @@ function MainHero() {
             alt="support arrow"
           />
         </div>
-        <h1 className="flex items-center font-semibold text-[64px] sm:text-[102px] leading-[90px] sm:leading-[123px] gap-3 justify-center">
+        <h1
+          data-aos="fade-up"
+          data-aos-delay={200}
+          className="flex items-center font-semibold text-[64px] sm:text-[102px] leading-[90px] sm:leading-[123px] gap-3 justify-center"
+        >
           gr
           <span
             className="w-[105px] h-[45px] sm:w-[126px] sm:h-[54px]  rounded-[26px] flex items-center justify-center sm:mt-[25px]"
@@ -59,7 +63,11 @@ function MainHero() {
           </span>
           wth
         </h1>
-        <div className="font-semibold sm:text-[46px] text-[32px] leading-[55.67px] flex items-end gap-1 sm:gap-3 justify-center  mt-[-10px] ms-12 sm:ms-28">
+        <div
+          data-aos="fade-up"
+          data-aos-delay={400}
+          className="font-semibold sm:text-[46px] text-[32px] leading-[55.67px] flex items-end gap-1 sm:gap-3 justify-center  mt-[-10px] ms-12 sm:ms-28"
+        >
           <ImageComponent
             src="/svgs/circlearrow.svg"
             alt="circle arrow Image"
@@ -68,7 +76,11 @@ function MainHero() {
           />
           of your business
         </div>
-        <p className="lg:w-[730px] lg:mx-auto text-center sm:font-medium text-grayLight text-[18px] leading-[26px] mt-4">
+        <p
+          data-aos="fade-up"
+          data-aos-delay={600}
+          className="lg:w-[730px] lg:mx-auto text-center sm:font-medium text-grayLight text-[18px] leading-[26px] mt-4"
+        >
           We’re a marketing and software company with a speciality in direct to
           consumer and challenger brands: those that think differently, act
           differently and walk their talk.
@@ -81,6 +93,8 @@ function MainHero() {
         className={`${styles.responsive} relative flex mx-auto xl:top-[515px] gap-2 max-w-[1300px]  lg:justify-between  xl:flex-nowrap`}
       >
         <div
+          data-aos="zoom-in-out"
+          data-aos-delay={700}
           className="relative w-[275px] h-[201px] rounded-ss-[20px] rounded-se-[4px] rounded-ee-[21px] rounded-es-[23px] overflow-hidden"
           style={{
             backgroundImage:
@@ -102,7 +116,11 @@ function MainHero() {
             className="absolute right-2 bottom-1 scale-90"
           />
         </div>
-        <div className={`${styles.verysmall} flex gap-3`}>
+        <div
+          data-aos="zoom-in-out"
+          data-aos-delay={800}
+          className={`${styles.verysmall} flex gap-3`}
+        >
           <div
             className="rounded-2xl w-[149px] sm:w-[157px] h-[201px] px-4 py-6 flex flex-col justify-between"
             style={{
@@ -126,6 +144,8 @@ function MainHero() {
           ></div>
         </div>
         <div
+          data-aos="zoom-in-out"
+          data-aos-delay={900}
           className="w-full sm:w-[593px] md:h-[201px] rounded-[20px] py-[19px] px-5 sm:px-[38px] flex flex-col gap-6 items-center"
           style={{
             backgroundImage:

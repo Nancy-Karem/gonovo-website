@@ -15,7 +15,7 @@ function Portfolio() {
         title="Some of our work!"
         desc="Explore some of the exciting projects we've worked on! From innovative mobile apps to dynamic websites, we craft digital solutions that are tailored to meet the unique needs of our clients."
       />
-      <div className="flex justify-center gap-4">
+      <div data-aos="fade-up" className="flex justify-center gap-4">
         <button
           onClick={toggleOpen}
           className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
@@ -34,12 +34,14 @@ function Portfolio() {
         className={`${styles.main_sec_cont} my-10 grid grid-cols-2 gap-x-5 sm:gap-y-10 gap-y-6 max-w-[1307px] mx-auto justify-items-center`}
       >
         {/* work__1 */}
+        {/* <div  data-aos="fade-right"> */}
         <ShapeOne
           bgColor="#feff76"
           index={1}
           text="Chef’s Choice"
           link="https://www.chefschoicefruits.com/"
         />
+        {/* </div> */}
         {/* work__2 */}
         <ShapeTwo
           bgColor="linear-gradient(96.71deg, #514FFF -1.8%, #6724F5 99.73%)"
@@ -57,7 +59,7 @@ function Portfolio() {
           index={3}
         />
         <Shapethree />
-        <div className={styles.main_Shape_cont}></div>
+        <div data-aos="flip-right" className={styles.main_Shape_cont}></div>
       </div>
     </section>
   );

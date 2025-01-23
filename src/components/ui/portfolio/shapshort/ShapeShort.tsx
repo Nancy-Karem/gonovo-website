@@ -12,6 +12,7 @@ function ShapeShort() {
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}
+      data-aos="flip-left"
     >
       <div className="clip_cont">
         <h1 className=" sm:ps-4 sm:ms-4 text-[17px] sm:text-[26px] leading-[35px] sm:leading-[40px] py-0 sm:py-2 bg-white">

@@ -24,6 +24,7 @@ function ShapeTwo({
         ...(bgColor ? { background: bgColor } : {}),
       }}
       className={styles.main_Shape_cont}
+      data-aos="flip-right"
     >
       <div className="clip_cont">
         <h1 className="sm:ps-4 sm:ms-4 text-[17px] sm:text-[26px] leading-[40px] py-2 bg-white">

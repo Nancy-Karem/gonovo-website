@@ -31,7 +31,10 @@ function Buildsoftware() {
     <section className="py-4 md:py-16">
       <div className="bg-semipurple py-16">
         <div className="max-w-[full] mx-9 lg:max-w-[829px] lg:m-auto flex flex-col gap-5">
-          <h1 className="text-[30px] lg:text-[60px] leading-[38px] lg:leading-[72px] sm:flex  justify-center font-semibold lg:justify-between items-center block text-center">
+          <h1
+            data-aos="fade-down"
+            className="text-[30px] lg:text-[60px] leading-[38px] lg:leading-[72px] sm:flex  justify-center font-semibold lg:justify-between items-center block text-center"
+          >
             Lets Build Your Software!
             <span className="relative w-[30px]  h-[30px] lg:w-[58px] lg:h-[58px] inline-block">
               <Image
@@ -42,7 +45,10 @@ function Buildsoftware() {
               />
             </span>
           </h1>
-          <p className="text-lightblack leading-[28px] font-medium text-center">
+          <p
+            data-aos="fade-up"
+            className="text-lightblack leading-[28px] font-medium text-center"
+          >
             GONOVO provides a complete end to end solution for your needs. Our
             unique approach to client success has helped us deliver robust
             products
@@ -52,6 +58,8 @@ function Buildsoftware() {
           {skills.map((item, index) => (
             <p
               key={index}
+              data-aos="flip-left"
+              data-aos-delay={index * 150}
               className="ring-darkring px-3 py-1 ring-[1.5px] text-darkring  rounded-full"
             >
               {item}
@@ -59,7 +67,7 @@ function Buildsoftware() {
           ))}
         </div>
         <div className="w-[88%] mx-auto lg:w-[87%] lg:ml-[8%] lg:mr-[5%] grid grid-cols-1 xl:grid-cols-2 mt-16  items-center justify-items-center">
-          <div className="relative w-full  md:w-[auto]">
+          <div data-aos="fade-right" className="relative w-full  md:w-[auto]">
             <div
               style={{ backdropFilter: "blur(24px)" }}
               className="w-[337px] h-[277px] sm:top-[50px] mx-auto md:w-[566px] md:h-[381px] bg-offwight rounded-[20px] overflow-hidden p-6 flex gap-2 ring-1 ring-ringLight"
@@ -113,7 +121,10 @@ function Buildsoftware() {
               ))}
             </div>
           </div>
-          <div className="flex gap-5 mt-10 flex-col  md:ms-20 justify-end">
+          <div
+            data-aos="fade-left"
+            className="flex gap-5 mt-10 flex-col  md:ms-20 justify-end"
+          >
             <h1 className="text-lg md:text-3xl font-semibold">
               Our Software Development Services
             </h1>

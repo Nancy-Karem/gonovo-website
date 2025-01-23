@@ -18,6 +18,7 @@ function ShapeOne({
     <div
       style={{ background: `${bgColor}` }}
       className={styles.main_Shape_cont}
+      data-aos="flip-left"
     >
       <div className="clip_cont  bg-transparent">
         <h1 className="sm:ps-4 sm:ms-4 text-[17px] sm:text-[26px] leading-[40px] py-2 bg-white">

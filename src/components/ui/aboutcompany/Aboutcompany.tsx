@@ -21,7 +21,11 @@ function Aboutcompany() {
 
       <div className={styles.about_main_Wrapper}>
         <div className={styles.left_side}>
-          <div className={styles.clip_cont}>
+          <div
+            data-aos="fade-right"
+            data-aos-delay={200}
+            className={styles.clip_cont}
+          >
             <ImageComponent
               src="/svgs/clip.svg"
               width="595px"
@@ -30,18 +34,22 @@ function Aboutcompany() {
             />
           </div>
           <div className={styles.text}>
-            <p className="">
+            <p data-aos="fade-right" data-aos-delay={300}>
               A strategic experience agency crafting brands, websites, Products
               and pretty much anything you can imagine
             </p>
-            <p className="">
+            <p data-aos="fade-right" data-aos-delay={400}>
               Want to grow your brand and reach more eyes? Our digital marketing
               team will help you create the perfect user growth, engagement and
               retention strategies. Our team will tailor custom go to market
               plans for your product or service. Set up an introductory call to
               learn what GONOVO can do for you
             </p>
-            <div className="flex gap-4">
+            <div
+              data-aos="fade-right"
+              data-aos-delay={500}
+              className="flex gap-4"
+            >
               <button
                 onClick={toggleOpen}
                 className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
@@ -57,7 +65,11 @@ function Aboutcompany() {
             </div>
           </div>
         </div>
-        <div className={styles.right_side}>
+        <div
+          data-aos="fade-left"
+          data-aos-delay={200}
+          className={styles.right_side}
+        >
           <div
             style={{
               backgroundImage: "url(/assets/about1.webp)",
