@@ -6,7 +6,7 @@ function Devsolution() {
   return (
     <section className="relative my-16 max-w-[1310px] mx-auto">
       <div className={`${styles.main_sec_grid} grid grid-cols-[1fr_637px]`}>
-        <div className={`${styles.lineOne} flex`}>
+        <div data-aos="fade-right" className={`${styles.lineOne} flex`}>
           <div
             className={`${styles.inner_line_one} flex justify-between flex-col`}
           >
@@ -38,6 +38,7 @@ function Devsolution() {
         <div
           className={`${styles.leftdev} w-[296px] h-[336px] md:w-[637px] md:h-[610px] relative`}
           style={{ backgroundImage: "url(/svgs/clipsoftdev2.svg)" }}
+          data-aos="fade-left"
         >
           <div
             className="flex gap-3 w-fit -rotate-90 absolute bottom-11 md:bottom-[90px] right-[-35px]

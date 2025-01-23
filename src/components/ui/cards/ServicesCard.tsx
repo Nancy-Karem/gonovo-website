@@ -12,6 +12,7 @@ interface IPServices {
 function ServicesCard({ item }: { item: IPServices }) {
   return (
     <div
+      data-aos="fade-up"
       style={{ boxShadow: "0px 4px 6px -2px #10182808" }}
       className="relative w-[384px] rounded-[46px] border border-thingray"
     >

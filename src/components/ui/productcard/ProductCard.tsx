@@ -8,6 +8,8 @@ interface IPProduct {
 function ProductCard({ item, index }: { item: IPProduct; index: number }) {
   return (
     <div
+      data-aos="zoom-in-out"
+      data-aos-delay={index * 50}
       style={
         index !== 4
           ? {

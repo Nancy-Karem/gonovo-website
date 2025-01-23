@@ -13,6 +13,7 @@ function Products() {
       />
       <div className="flex  max-w-[1225px] justify-center flex-wrap mx-auto gap-x-8 gap-y-12 mt-12">
         {productsData.map((item, index) => (
+         
           <ProductCard item={item} key={index} index={index} />
         ))}
       </div>

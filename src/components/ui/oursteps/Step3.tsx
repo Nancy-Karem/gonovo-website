@@ -16,7 +16,10 @@ function Step3() {
     "/svgs/csharp.svg",
   ];
   return (
-    <div className="relative w-fit xl:w-full  bg-semipurple rounded-[31px] h-auto xl:h-[443px]  xl:my-10 flex flex-col mx-auto">
+    <div
+      data-aos="fade-right"
+      className="relative w-fit xl:w-full  bg-semipurple rounded-[31px] h-auto xl:h-[443px]  xl:my-10 flex flex-col mx-auto"
+    >
       <div className="z-10 w-[120px] h-[120px] lg:w-[150px] lg:h-[150px] rounded-es-[31px] bg-white right-[-2px] top-[-2px] absolute"></div>
       <div
         style={{ boxShadow: "10px -10px 0 white" }}

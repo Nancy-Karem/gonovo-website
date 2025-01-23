@@ -13,6 +13,7 @@ function Ouroffers() {
       />
       <div className="max-w-[1216px] gap-4 mx-auto flex items-end justify-center my-10 xl:flex-nowrap flex-wrap">
         {cardsservicesdata.map((item, index) => (
+          
           <ServicesCard item={item} key={index} />
         ))}
       </div>

@@ -8,6 +8,8 @@ interface IPCard {
 function Card({ item, index }: { item: IPCard; index: number }) {
   return (
     <div
+      data-aos="zoom-out"
+      data-aos-delay={index * 50}
       className={`${
         index === 1 ? "bg-semipurple" : ""
       } border border-thingray pt-10 pl-8 pr-10  pb-8 rounded-[40px] md:max-w-[405px] max-w-[94.7%]  mx-auto

@@ -12,7 +12,7 @@ function HeroDigital() {
       <div className="w-[91%] pt-12 mx-auto">
         <Header />
         <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-3 xl:gap-0 xl:grid-cols-[600px_695px] mt-12 lg:items-center xl:items-end w-full xl:w-fit mx-auto">
-          <div>
+          <div data-aos="fade-right">
             <h1 className="text-white  text-[48px] sm:leading-[135px]  sm:text-[94px] lg:text-[70px] xl:text-[94px] xl:leading-[135px] max-w-[600px]">
               Solid Design{" "}
               <span className="text-[#313131] bg-[#E1E2F4] px-6 sm:ml-[-24px]">
@@ -53,7 +53,7 @@ function HeroDigital() {
               </div>
             </div>
           </div>
-          <div>
+          <div data-aos="fade-left">
             <div className="relative w-full xl:w-[585px] h-[370px] sm:h-[652px] sm:rounded-[30px] rounded-[16px] bg-[#FF732C]">
               <div className="bg-white sm:py-6 sm:px-5 p-3 w-[40%] sm:w-[60%] xl:w-[343px] rounded-[20px] absolute top-7 left-7">
                 <ImageComponent
