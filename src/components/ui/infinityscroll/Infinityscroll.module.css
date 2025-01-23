@@ -39,14 +39,14 @@
   }
   100% {
     transform: translate(
-      calc(100% - (6 * 448px + 5 * 14px))
+      calc(100% - (8 * 448px + 7 * 14px))
     ); /* Move left by one full track width */
   }
 }
 @keyframes scroll-infinite-right {
   0% {
     transform: translate(
-      calc(100% - (6 * 448px + 5 * 14px))
+      calc(100% - (8 * 448px + 7 * 14px))
     ); /* Move left by one full track width */
   }
   100% {

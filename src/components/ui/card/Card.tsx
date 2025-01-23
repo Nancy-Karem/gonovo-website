@@ -13,22 +13,24 @@ function Card({ review }: { review: IPelements }) {
             <h1 className="text-xl leading-8 font-semibold text-thirdblack">
               {review.title}
             </h1>
-            <p className="text-darkGray leading-6">{review.desc}</p>
+            <p className="text-darkGray text-[14px] leading-[22px]">
+              {review.desc}
+            </p>
           </div>
           <div className="flex gap-4">
-            <ImageComponent
-              src={`${review.clientImage}`}
-              width="40px"
-              height="40px"
-              alt="client Image"
-              background="#ddd"
-              radius="50%"
-            />
-
-            <div className="flex flex-col justify-between">
-              <h1 className="text-sm font-bold">{review.name}</h1>
-              <p className="text-sm">{review.bio}</p>
-            </div>
+            {review.logotxt && (
+              <p className="text-[21px] font-bold leading-5 text-[#2E2E2E]">
+                {review.logotxt}
+              </p>
+            )}
+            {review.clientImage && (
+              <ImageComponent
+                src={`${review.clientImage}`}
+                width={review.width!}
+                height={review.height!}
+                alt="client Image"
+              />
+            )}
           </div>
         </div>
       )}

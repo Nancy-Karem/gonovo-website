@@ -8,6 +8,9 @@ export interface IPelements {
   name?: string;
   bio?: string;
   bgImage?: string;
+  width?: string;
+  height?: string;
+  logotxt?:string;
 }
 function InfinityScroll({
   elements,
