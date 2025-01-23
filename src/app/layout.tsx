@@ -3,7 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/ui/footer/Footer";
 import { ContactusContext } from "@/components/context/ContactusContext";
-
+import "aos/dist/aos.css";
+import WithAOS from "@/components/withaos/WithAos";
 const InterFont = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -25,8 +26,10 @@ export default function RootLayout({
     <html lang="en">
       <ContactusContext>
         <body className={`${InterFont.variable}`}>
-          {children}
-          <Footer />
+          <WithAOS>
+            {children}
+            <Footer />
+          </WithAOS>
         </body>
       </ContactusContext>
     </html>

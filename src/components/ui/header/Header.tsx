@@ -30,6 +30,12 @@ function Header() {
             <li key={index}>
               <Link
                 href={link.path}
+                onClick={(e) => {
+                  if (link.name === "Contact Us") {
+                    e.preventDefault();
+                    toggleOpen();
+                  }
+                }}
                 className={`font-semibold text-[15px] text-linksColor ${
                   link.path === pathname && pathname !== "/" && "activeLink"
                 }`}

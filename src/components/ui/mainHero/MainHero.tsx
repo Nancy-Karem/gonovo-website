@@ -34,7 +34,10 @@ function MainHero() {
         <div
           className={`${styles.point} w-[19px] h-[19px] rounded-full bg-purpleLight`}
         ></div>
-        <div className="flex items-center gap-3 justify-center">
+        <div
+          data-aos="fade-up"
+          className="flex items-center gap-3 justify-center"
+        >
           <h2 className="font-semibold text-[34px] sm:text-5xl">We Support</h2>
           <ImageComponent
             src="/svgs/bluearrow.svg"
