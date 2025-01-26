@@ -28,7 +28,7 @@ function Buildsoftware() {
   ];
   const { toggleOpen } = useCallusContext();
   return (
-    <section className="py-4 md:py-16">
+    <section className="py-4 md:py-16 overflow-x-hidden">
       <div className="bg-semipurple py-16">
         <div className="max-w-[full] mx-9 lg:max-w-[829px] lg:m-auto flex flex-col gap-5">
           <h1
@@ -67,7 +67,7 @@ function Buildsoftware() {
           ))}
         </div>
         <div className="w-[92%] mx-auto lg:w-[87%] lg:ml-[8%] lg:mr-[5%] grid grid-cols-1 xl:grid-cols-2 mt-16  items-center justify-items-center">
-          <div data-aos="zoom-in-out" className="relative w-full  md:w-[auto]">
+          <div data-aos="fade-right" className="relative w-full  md:w-[auto]">
             <div
               style={{ backdropFilter: "blur(24px)" }}
               className="w-[337px] h-[277px] sm:top-[50px] mx-auto md:w-[566px] md:h-[381px] bg-offwight rounded-[20px] overflow-hidden p-6 flex gap-2 ring-1 ring-ringLight"
@@ -77,7 +77,7 @@ function Buildsoftware() {
               <p className="h-[13px] w-[13px] rounded-full bg-ringLight"></p>
             </div>
 
-            <div className="grid grid-cols-3 gap-1 md:gap-3 top-16 absolute md:top-[68px] md:left-[-70px] md:translate-x-0 left-[50%] translate-x-[-50%] w-max">
+            <div className="grid grid-cols-3 gap-2 md:gap-3 top-16 absolute md:top-[68px] md:left-[-70px] md:translate-x-0 left-[50%] translate-x-[-50%] w-max">
               {data.map((item, index) => (
                 <div
                   key={index}
@@ -121,35 +121,33 @@ function Buildsoftware() {
               ))}
             </div>
           </div>
-          <div className="overflow-x-hidden">
-            <div
-              data-aos="fade-left"
-              className="flex gap-5 mt-10 flex-col  md:ms-20 justify-end"
-            >
-              <h1 className="text-lg md:text-3xl font-semibold">
-                Our Software Development Services
-              </h1>
-              <p className="leading-[28px] text-lightblack">
-                We offer bespoke software development services that are
-                customized to your exact requirements. Our team of experts will
-                work with you from conception to delivery to ensure that you
-                receive intelligent, high-tech software solutions that are
-                tailored to your specific needs.
-              </p>
-              <div className="flex gap-7 mt-4">
-                <button
-                  onClick={toggleOpen}
-                  className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-                >
-                  + Become a Client
-                </button>
-                <button
-                  onClick={toggleOpen}
-                  className="text-black bg-[#FFF] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-                >
-                  Contact us
-                </button>
-              </div>
+          <div
+            data-aos="fade-left"
+            className="flex gap-5 mt-10 flex-col  md:ms-20 justify-end"
+          >
+            <h1 className="text-lg md:text-3xl font-semibold">
+              Our Software Development Services
+            </h1>
+            <p className="leading-[28px] text-lightblack">
+              We offer bespoke software development services that are customized
+              to your exact requirements. Our team of experts will work with you
+              from conception to delivery to ensure that you receive
+              intelligent, high-tech software solutions that are tailored to
+              your specific needs.
+            </p>
+            <div className="flex gap-7 mt-4">
+              <button
+                onClick={toggleOpen}
+                className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              >
+                + Become a Client
+              </button>
+              <button
+                onClick={toggleOpen}
+                className="text-black bg-[#FFF] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              >
+                Contact us
+              </button>
             </div>
           </div>
         </div>

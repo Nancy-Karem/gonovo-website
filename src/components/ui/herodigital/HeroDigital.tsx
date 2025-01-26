@@ -8,10 +8,10 @@ import { useCallusContext } from "@/components/context/ContactusContext";
 function HeroDigital() {
   const { toggleOpen } = useCallusContext();
   return (
-    <section className="h-auto pb-[2rem] xl:h-[865px] bg-semipurple">
+    <section className="h-auto pb-[2rem] xl:h-[865px] bg-semipurple overflow-x-hidden">
       <div className="w-[91%] pt-12 mx-auto">
         <Header />
-        <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-3 xl:gap-0 xl:grid-cols-[600px_695px] mt-12 lg:items-center xl:items-end w-full xl:w-fit mx-auto overflow-x-hidden">
+        <div className="grid grid-cols-1 lg:grid-cols-[50%_50%] gap-3 xl:gap-0 xl:grid-cols-[600px_695px] mt-12 lg:items-center xl:items-end w-full xl:w-fit mx-auto">
           <div data-aos="fade-right">
             <h1 className="text-white  text-[48px] sm:leading-[135px]  sm:text-[94px] lg:text-[70px] xl:text-[94px] xl:leading-[135px] max-w-[600px]">
               Solid Design{" "}

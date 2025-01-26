@@ -7,7 +7,7 @@ import { useCallusContext } from "@/components/context/ContactusContext";
 function Aboutcompany() {
   const { toggleOpen } = useCallusContext();
   return (
-    <section className="my-12" id="about">
+    <section className="my-10 overflow-x-hidden" id="about">
       <Badge
         text="#ABOUT THE COMPANY#"
         title="WHO WE ARE !"
@@ -66,7 +66,7 @@ function Aboutcompany() {
           </div>
         </div>
         <div
-          data-aos="zoom-in-out"
+          data-aos="fade-left"
           data-aos-delay={200}
           className={styles.right_side}
         >

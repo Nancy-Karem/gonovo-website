@@ -7,7 +7,7 @@ interface IPBage {
 }
 function Badge({ text, title, desc }: IPBage) {
   return (
-    <>
+    <div className="py-1">
       <p
         data-aos="flip-left"
         className="font-medium w-fit mx-auto px-3 text-sm ring-2 ring-black rounded-full"
@@ -28,7 +28,7 @@ function Badge({ text, title, desc }: IPBage) {
       >
         {desc}
       </p>
-    </>
+    </div>
   );
 }
 
