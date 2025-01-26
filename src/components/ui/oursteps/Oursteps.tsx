@@ -15,7 +15,6 @@ function Oursteps() {
       />
       <div className="mx-auto grid lg:grid-cols-2  xl:grid-cols-1 xl:max-w-[1216px] grid-cols-1 justify-center gap-6">
         <Step1 />
-
         <Step2 />
         <Step3 />
         <Step4 />

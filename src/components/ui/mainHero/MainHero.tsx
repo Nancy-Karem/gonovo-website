@@ -95,26 +95,35 @@ function MainHero() {
         <div
           data-aos="zoom-in-out"
           data-aos-delay={700}
-          className="relative w-[275px] h-[201px] rounded-ss-[20px] rounded-se-[4px] rounded-ee-[21px] rounded-es-[23px] overflow-hidden"
+          className="flex justify-between relative w-[275px] h-[201px] rounded-ss-[20px] rounded-se-[4px] rounded-ee-[21px] rounded-es-[23px] overflow-hidden"
           style={{
             backgroundImage:
               " linear-gradient(90deg, #8F5CE3 0%, #D9CAF4 55.89%, #E3DEF7 97.41%)",
           }}
         >
-          <Image
-            src="/assets/z4.png"
-            alt="mobile image"
-            width={133}
-            height={268}
-            className="absolute left-2 top-0 scale-90"
-          />
-          <Image
-            src="/assets/z3.png"
-            alt="mobile image"
-            width={133}
-            height={268}
-            className="absolute right-2 bottom-1 scale-90"
-          />
+          <div className="relative w-[115px] h-[193px]">
+            <Image
+              // src="/assets/z4.png"
+              src="/assets/z44.png"
+              alt="mobile image"
+              width={115}
+              height={193}
+              className="absolute left-6 top-4"
+              unoptimized={true}
+              quality={100}
+            />
+          </div>
+          <div className="relative w-[115px] h-[193px]">
+            <Image
+              src="/assets/z3.png"
+              alt="mobile image"
+              width={115}
+              height={193}
+              className="absolute right-3 bottom-4"
+              unoptimized={true}
+              quality={100}
+            />
+          </div>
         </div>
         <div
           data-aos="zoom-in-out"

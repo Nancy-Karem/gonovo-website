@@ -11,12 +11,8 @@ function Aboutcompany() {
       <Badge
         text="#ABOUT THE COMPANY#"
         title="WHO WE ARE !"
-        desc="GONOVO Tech is founded by driven computer scientists, researchers and
-        developers that combined their decade of expertise in multiple facets of
-        computer science and digital marketing with their passion for client
-        success, to create bespoke strategies and solutions for success in the
-        digital age. At GONOVO we build software and provide digital marketing
-        strategy"
+        desc="GONOVO Tech is founded by driven computer scientists, researchers and developers that combined their decade of expertise in multiple facets of computer science and digital marketing with their passion for client success, to create bespoke strategies and solutions for success in the digital age. At GONOVO we build software and provide digital marketing strategy"
+        descsize="15px"
       />
 
       <div className={styles.about_main_Wrapper}>

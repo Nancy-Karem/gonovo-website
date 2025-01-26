@@ -23,11 +23,11 @@ const Reviews = () => {
         </p>
         <h1
           data-aos="fade-left"
-          className="w-full text-[30px] md:text-[60px] font-semibold leading-5"
+          className="w-full text-[30px] md:text-[60px] font-semibold leading-10"
         >
           Our
           <span className="relative">
-            <span className="h-[3.5px] w-[96%] absolute bg-semiblue top-[52%] left-[50%] translate-x-[-50%] hidden md:block"></span>{" "}
+            <span className="h-[3.5px] w-[96%] absolute bg-semiblue top-[52%] left-[50%] translate-x-[-50%]"></span>{" "}
             clients{" "}
           </span>
           are our WHY!

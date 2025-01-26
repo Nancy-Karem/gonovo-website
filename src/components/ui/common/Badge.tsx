@@ -4,8 +4,9 @@ interface IPBage {
   text: string;
   title: string;
   desc: string;
+  descsize?: string;
 }
-function Badge({ text, title, desc }: IPBage) {
+function Badge({ text, title, desc, descsize }: IPBage) {
   return (
     <div className="py-1">
       <p
@@ -24,7 +25,10 @@ function Badge({ text, title, desc }: IPBage) {
       <p
         data-aos="fade-up"
         data-aos-delay={200}
-        className="max-w-[100%] md:max-w-[720px] md:mx-auto mx-4 xl:max-w-[1216px] sm:text-[20px] text-[17px] lg:mx-auto text-center text-secondaryblack md:leading-7 lg:leading-[43px] mt-6 mb-10"
+        className={`max-w-[100%] md:max-w-[720px] md:mx-auto mx-4 xl:max-w-[1216px] sm:text-[20px] ${
+          descsize ? "text-[15px]" : "text-[17px]"
+        } lg:mx-auto text-center text-secondaryblack md:leading-7 lg:leading-[43px] mt-6 mb-10`}
+        // style={{ fontSize: descsize }}
       >
         {desc}
       </p>

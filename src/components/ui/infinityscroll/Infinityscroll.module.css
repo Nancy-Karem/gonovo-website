@@ -12,12 +12,12 @@
 
 .scroll-track-left {
   display: flex;
-  animation: scroll-infinite-left 20s linear infinite;
+  animation: scroll-infinite-left 30s linear infinite;
   animation-direction: alternate-reverse;
 }
 .scroll-track-right {
   display: flex;
-  animation: scroll-infinite-right 20s linear infinite;
+  animation: scroll-infinite-right 30s linear infinite;
   animation-direction: alternate-reverse;
 }
 .scroll-item {
@@ -31,7 +31,14 @@
   border: 1px solid var(--thingray-color);
   overflow: hidden;
 }
-
+@media (max-width: 520px) {
+  .scroll-track-right {
+    animation: scroll-infinite-right 50s linear infinite;
+  }
+  .scroll-track-left {
+    animation: scroll-infinite-left 50s linear infinite;
+  }
+}
 /* Keyframes for continuous horizontal scrolling */
 @keyframes scroll-infinite-left {
   0% {
