@@ -4,11 +4,11 @@
   margin: auto;
   display: flex;
   gap: 20px;
-  overflow-x: hidden;
 }
 
 .about_main_Wrapper .left_side {
   position: relative;
+  overflow-x: hidden;
   /* width: ; */
 }
 
@@ -160,7 +160,7 @@
   }
   .sec_clip {
     transform: scale(1);
-    left: -20px;
+    left: -16px;
     bottom: 10px;
   }
   .blure_box2,
@@ -224,7 +224,8 @@
     height: 51px;
   }
   .text {
-    margin: 0 !important;}
+    margin: 0 !important;
+  }
 }
 @media (max-width: 400px) {
   .sec_clip {

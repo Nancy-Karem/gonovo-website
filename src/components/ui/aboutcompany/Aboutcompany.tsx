@@ -48,7 +48,7 @@ function Aboutcompany() {
             <div
               data-aos="fade-right"
               data-aos-delay={500}
-              className="flex gap-4"
+              className="flex gap-4 pb-1"
             >
               <button
                 onClick={toggleOpen}
@@ -66,7 +66,7 @@ function Aboutcompany() {
           </div>
         </div>
         <div
-          data-aos="fade-left"
+          data-aos="zoom-in-out"
           data-aos-delay={200}
           className={styles.right_side}
         >
