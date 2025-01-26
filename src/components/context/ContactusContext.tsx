@@ -1,5 +1,5 @@
 "use client";
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 interface CallusContextValue {
   contactModal: boolean;
   toggleOpen: () => void;
@@ -10,6 +10,13 @@ function ContactusContext({ children }: { children: React.ReactNode }) {
   const toggleOpen = () => {
     setContactModal(!contactModal);
   };
+  useEffect(() => {
+    if (contactModal) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
+    }
+  }, [contactModal]);
   console.log(contactModal);
   return (
     <CallusContext.Provider value={{ contactModal, toggleOpen }}>

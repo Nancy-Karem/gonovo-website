@@ -19,7 +19,7 @@ const companies = [
   },
   {
     logo: "/svgs/lightbox.svg",
-    width: "394px",
+    width: "300px",
   },
 ];
 

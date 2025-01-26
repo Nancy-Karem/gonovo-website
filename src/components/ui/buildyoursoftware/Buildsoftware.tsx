@@ -66,7 +66,7 @@ function Buildsoftware() {
             </p>
           ))}
         </div>
-        <div className="w-[88%] mx-auto lg:w-[87%] lg:ml-[8%] lg:mr-[5%] grid grid-cols-1 xl:grid-cols-2 mt-16  items-center justify-items-center">
+        <div className="w-[88%] mx-auto lg:w-[87%] lg:ml-[8%] lg:mr-[5%] grid grid-cols-1 xl:grid-cols-2 mt-16  items-center justify-items-center overflow-x-hidden">
           <div data-aos="fade-right" className="relative w-full  md:w-[auto]">
             <div
               style={{ backdropFilter: "blur(24px)" }}

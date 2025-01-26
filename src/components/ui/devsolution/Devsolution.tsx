@@ -4,7 +4,7 @@ import React from "react";
 import styles from "./devstyle.module.css";
 function Devsolution() {
   return (
-    <section className="relative my-16 max-w-[1310px] mx-auto">
+    <section className="relative my-16 max-w-[1310px] mx-auto overflow-x-hidden">
       <div className={`${styles.main_sec_grid} grid grid-cols-[1fr_637px]`}>
         <div data-aos="fade-right" className={`${styles.lineOne} flex`}>
           <div

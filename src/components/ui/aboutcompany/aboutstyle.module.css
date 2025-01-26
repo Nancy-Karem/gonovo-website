@@ -4,6 +4,7 @@
   margin: auto;
   display: flex;
   gap: 20px;
+  overflow-x: hidden;
 }
 
 .about_main_Wrapper .left_side {

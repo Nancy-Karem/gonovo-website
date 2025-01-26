@@ -2,7 +2,7 @@
 import navLinks from "@/app/data/links";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Aside from "../aside/Aside";
 import { usePathname } from "next/navigation";
 import { useCallusContext } from "@/components/context/ContactusContext";
@@ -15,7 +15,13 @@ function Header() {
   const handleToggle = () => {
     setOpen(!open);
   };
-
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
+    }
+  }, [open]);
   return (
     <header className="h-[50px] flex justify-between items-center">
       <Link
