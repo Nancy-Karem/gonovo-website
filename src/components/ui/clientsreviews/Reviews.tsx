@@ -14,7 +14,7 @@ const Reviews = () => {
       >
         #WHAT PEOPLE SAY ABOUT US#
       </p>
-      <div className="w-fit mx-auto overflow-x-hidden">
+      <div className="w-fit mx-auto pb-2 overflow-hidden">
         <p
           data-aos="fade-right"
           className="w-fit text-[30px] md:text-[60px] text-semiblue font-medium ms-28 mb-2"
