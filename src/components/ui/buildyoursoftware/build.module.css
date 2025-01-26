@@ -1,0 +1,11 @@
+@media (max-width: 425px) {
+  .responsive_grid_scale {
+    scale: 0.9;
+  }
+  .margin_Top1s{
+    margin-top: 2rem;
+  }
+  .margin_Top2s{
+    margin-top: 1.5rem;
+  }
+}

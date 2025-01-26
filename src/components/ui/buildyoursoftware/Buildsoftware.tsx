@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { useCallusContext } from "@/components/context/ContactusContext";
-
+import styles from "./build.module.css";
 function Buildsoftware() {
   const skills = [
     "JavaScript",
@@ -66,18 +66,20 @@ function Buildsoftware() {
             </p>
           ))}
         </div>
-        <div className="w-[92%] mx-auto lg:w-[87%] lg:ml-[8%] lg:mr-[5%] grid grid-cols-1 xl:grid-cols-2 mt-16  items-center justify-items-center">
+        <div
+          className={`${styles.margin_Top1s} w-[92%] mx-auto lg:w-[87%] lg:ml-[8%] lg:mr-[5%] grid grid-cols-1 xl:grid-cols-2 mt-16  items-center justify-items-center`}
+        >
           <div data-aos="fade-right" className="relative w-full  md:w-[auto]">
             <div
               style={{ backdropFilter: "blur(24px)" }}
-              className="w-[337px] h-[277px] sm:top-[50px] mx-auto md:w-[566px] md:h-[381px] bg-offwight rounded-[20px] overflow-hidden p-6 flex gap-2 ring-1 ring-ringLight"
+              className={`${styles.responsive_grid_scale} w-[337px] h-[277px] sm:top-[50px] mx-auto md:w-[566px] md:h-[381px] bg-offwight rounded-[20px] overflow-hidden p-6 flex gap-2 ring-1 ring-ringLight`}
             >
               <p className="h-[13px] w-[13px] rounded-full bg-white"></p>
               <p className="h-[13px] w-[13px] rounded-full bg-dotlight"></p>
               <p className="h-[13px] w-[13px] rounded-full bg-ringLight"></p>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 md:gap-3 top-16 absolute md:top-[68px] md:left-[-70px] md:translate-x-0 left-[50%] translate-x-[-50%] w-max">
+            <div className=" grid grid-cols-3 gap-2 md:gap-3 top-16 absolute md:top-[68px] md:left-[-70px] md:translate-x-0 left-[50%] translate-x-[-50%] w-max">
               {data.map((item, index) => (
                 <div
                   key={index}
@@ -123,7 +125,7 @@ function Buildsoftware() {
           </div>
           <div
             data-aos="fade-left"
-            className="flex gap-5 mt-10 flex-col  md:ms-20 justify-end"
+            className={`${styles.margin_Top2s} flex gap-5 mt-10 flex-col  md:ms-20 justify-end`}
           >
             <h1 className="text-lg md:text-3xl font-semibold">
               Our Software Development Services
