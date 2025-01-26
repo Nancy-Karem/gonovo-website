@@ -7,13 +7,13 @@ import Step4 from "./Step4";
 
 function Oursteps() {
   return (
-    <section className="py-16">
+    <section className="py-16 overflow-x-hidden">
       <Badge
         text="#Products Journey#"
         title="Four Simple Steps!"
         desc="Gonovo’s team of skilled developers is committed to crafting tailor-made software solutions that meet the specific needs of each client."
       />
-      <div className="mx-auto grid lg:grid-cols-2  xl:grid-cols-1 xl:max-w-[1216px] grid-cols-1 justify-center gap-6 overflow-x-hidden">
+      <div className="mx-auto grid lg:grid-cols-2  xl:grid-cols-1 xl:max-w-[1216px] grid-cols-1 justify-center gap-6">
         <Step1 />
 
         <Step2 />
