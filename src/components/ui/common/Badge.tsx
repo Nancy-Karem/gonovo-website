@@ -4,9 +4,10 @@ interface IPBage {
   text: string;
   title: string;
   desc: string;
+  boldText?: string;
   descsize?: string;
 }
-function Badge({ text, title, desc, descsize }: IPBage) {
+function Badge({ text, title, desc, descsize, boldText }: IPBage) {
   return (
     <div className="py-1">
       <p
@@ -30,7 +31,7 @@ function Badge({ text, title, desc, descsize }: IPBage) {
         } lg:mx-auto text-center text-secondaryblack md:leading-7 lg:leading-[43px] mt-6 mb-10`}
         // style={{ fontSize: descsize }}
       >
-        <span className="font-semibold">GONOVO Tech</span> {desc}
+        {boldText && <span className="font-semibold">{boldText}</span>} {desc}
       </p>
     </div>
   );

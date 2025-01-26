@@ -12,6 +12,7 @@ function Aboutcompany() {
         text="#ABOUT THE COMPANY#"
         title="WHO WE ARE !"
         desc="is founded by driven computer scientists, researchers and developers that combined their decade of expertise in multiple facets of computer science and digital marketing with their passion for client success, to create bespoke strategies and solutions for success in the digital age. At GONOVO we build software and provide digital marketing strategy"
+        boldText="GONOVO Tech"
         descsize="15px"
       />
 
