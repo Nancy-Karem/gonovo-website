@@ -31,12 +31,18 @@
   border: 1px solid var(--thingray-color);
   overflow: hidden;
 }
+.scroll-track-left:hover {
+  animation-play-state: paused;
+}
+.scroll-track-right:hover {
+  animation-play-state: paused;
+}
 @media (max-width: 520px) {
   .scroll-track-right {
-    animation: scroll-infinite-right 50s linear infinite;
+    animation: scroll-infinite-right 60s linear infinite;
   }
   .scroll-track-left {
-    animation: scroll-infinite-left 50s linear infinite;
+    animation: scroll-infinite-left 60s linear infinite;
   }
 }
 /* Keyframes for continuous horizontal scrolling */
