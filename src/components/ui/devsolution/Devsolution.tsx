@@ -109,7 +109,7 @@ function Devsolution() {
           </div>
           <div className="absolute bottom-0 -left-14 md:left-[-170px]">
             <div className="relative w-[150px] h-[300px] md:w-[280px] md:h-[560px]">
-              <Image src="/assets/softmobile.png" alt="mobile" fill />
+              <Image src="/assets/softmobile.webp" alt="mobile" fill />
             </div>
             <div className="absolute top-[46%] -left-40 md:top-1/2 md:left-[-230px] flex justify-between -rotate-90 h-[24px] w-[288px] md:w-[384px]">
               <p className="">All Right Reserved</p>

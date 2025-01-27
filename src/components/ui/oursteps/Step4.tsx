@@ -35,7 +35,7 @@ function Step4() {
         </div>
         <div className="relative xl:order-2 order-1 w-full md:w-fit">
           <div className="relative w-[65%] ms-auto  h-[162px] lg:w-[300px] xl:w-[378px] md:h-[250px] md:w-[378px] xl:h-[296px]">
-            <Image src="/assets/step4image.png" alt="explain image" fill />
+            <Image src="/assets/step4image.webp" alt="explain image" fill />
           </div>
 
           <div className="scale-50 sm:scale-75  left-[15%] -bottom-20 md:scale-90 xl:scale-100 absolute bg-white w-[191px] h-[154px] flex  flex-col md:-bottom-[20px] xl:bottom-[-80px] items-center rounded-ss-[25px] rounded-se-[25px] sm:left-[84px] md:-left-10">

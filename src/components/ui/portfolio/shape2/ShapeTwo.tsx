@@ -68,7 +68,7 @@ function ShapeTwo({
             <Image src="/svgs/portfolio/1s2.svg" alt="mob1" fill />
           </div>
           <div className="max-w-[225px] h-[150px] sm:max-w-[359px] sm:h-[249px] lg:max-w-[239px] lg:h-[179px] xl:max-w-[369px] xl:h-[249px] mt-[185px] sm:mt-[100px] w-full  relative">
-            <Image src="/assets/2s2.png" alt="tablet1" fill />
+            <Image src="/assets/2s2.webp" alt="tablet1" fill />
           </div>
         </div>
       )}

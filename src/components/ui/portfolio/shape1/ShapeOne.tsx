@@ -66,10 +66,10 @@ function ShapeOne({
           </div>
           <div className="w-full flex h-full relative">
             <div className="max-w-[74px] h-[152px] sm:max-w-[125px]  sm:h-[256px] lg:max-w-[115px] lg:h-[216px] xl:max-w-[125px]  xl:h-[256px] w-full top-[50%] left-[50%] translate-x-[-90%] z-10 translate-y-[-40%] absolute">
-              <Image src="/assets/2s3.png" alt="mob" fill />
+              <Image src="/assets/2s3.webp" alt="mob" fill />
             </div>
             <div className="max-w-[74px] h-[152px] sm:max-w-[125px]  sm:h-[256px] lg:max-w-[115px] lg:h-[216px] xl:max-w-[125px]  xl:h-[256px] w-full   top-[50%] left-[50%] translate-x-[-10%] translate-y-[-40%]  absolute">
-              <Image src="/assets/3s3.png" alt="mob" fill />
+              <Image src="/assets/3s3.webp" alt="mob" fill />
             </div>
           </div>
         </div>

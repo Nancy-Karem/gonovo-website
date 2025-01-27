@@ -49,7 +49,7 @@ function Portfolio() {
           text="Bling Weddings"
           link="https://www.bling-weddings.com/"
         />
-        {/* <ShapeTwo bgImage="/assets/3.png" text="F2F Scaffolding" link="/" /> */}
+        {/* <ShapeTwo bgImage="/assets/3.webp" text="F2F Scaffolding" link="/" /> */}
         <ShapeShort />
         <ShapeOne
           bgColor="linear-gradient(96.71deg, #FED2F2 -1.8%, #9724F5 99.84%)

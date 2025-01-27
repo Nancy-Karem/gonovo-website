@@ -103,8 +103,8 @@ function MainHero() {
         >
           <div className="relative w-[115px] h-[193px]">
             <Image
-              // src="/assets/z4.png"
-              src="/assets/z44.png"
+              // src="/assets/z4.webp"
+              src="/assets/z44.webp"
               alt="mobile image"
               width={115}
               height={193}
@@ -115,7 +115,7 @@ function MainHero() {
           </div>
           <div className="relative w-[115px] h-[193px]">
             <Image
-              src="/assets/z3.png"
+              src="/assets/z3.webp"
               alt="mobile image"
               width={115}
               height={193}

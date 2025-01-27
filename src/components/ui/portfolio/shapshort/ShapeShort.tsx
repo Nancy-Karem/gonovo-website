@@ -8,7 +8,7 @@ function ShapeShort() {
     <div
       className={`${styles.main_Shape_cont} ${secstyle.specialHight}`}
       style={{
-        backgroundImage: `url(/assets/3.png)`,
+        backgroundImage: `url(/assets/3.webp)`,
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
       }}

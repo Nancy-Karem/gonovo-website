@@ -5,9 +5,9 @@ const companies = [
     width: "98px",
   },
   {
-    logo: "/assets/mml.png",
+    logo: "/assets/mml.webp",
     lgWidth: "187px",
-    lgHeight:"130px",
+    lgHeight: "130px",
     width: "136px",
     height: "100px",
   },
