@@ -24,18 +24,18 @@ export const metadata: Metadata = {
     "growth",
     "services",
     "tech",
-    "gonovo"
+    "gonovo",
   ],
   icons: "/svgs/logo.svg",
   openGraph: {
     title: "Gonovo Company - Innovative Solutions for Your Business",
     description:
       "Gonovo Company provides cutting-edge solutions to help businesses grow. Explore our services and discover how we can help you achieve your goals.",
-    url: "https://gonovo.tech/", 
+    url: "https://gonovo.tech/",
     siteName: "Gonovo Company",
     images: [
       {
-        url: "/svgs/logo.svg", 
+        url: "/svgs/logo.svg",
         width: 1200,
         height: 630,
         alt: "Gonovo Company - Innovative Solutions",
