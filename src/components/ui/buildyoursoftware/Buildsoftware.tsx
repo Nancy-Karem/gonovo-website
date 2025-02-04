@@ -19,7 +19,7 @@ function Buildsoftware() {
     },
     {
       title: "Banking Software Development",
-      image: "/assets/3.webp",
+      image: "/assets/cards.webp",
     },
     {
       title: "Real Estate App Development",
@@ -93,7 +93,7 @@ function Buildsoftware() {
                     alt="view"
                     className={`md:hidden ${
                       index === 2 && "object-[50%_72%] object-cover"
-                    }`}
+                    } ${index === 1 && styles.midImage}`}
                   />
                   <Image
                     src={item.image}
@@ -106,9 +106,9 @@ function Buildsoftware() {
                       width: index === 1 ? "90%" : "100%",
                       margin: index === 1 ? "4px auto 0px" : "0",
                     }}
-                    className={`object-cover ${
+                    className={`object-cover  ${
                       index === 2 && "object-[50%_58%]"
-                    } hidden md:block `}
+                    } hidden md:block`}
                   />
 
                   <div
