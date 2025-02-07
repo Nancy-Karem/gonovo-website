@@ -32,11 +32,14 @@
 .last {
   display: none;
 }
+.main_responsive {
+  overflow-y: scroll;
+}
+
 @media (max-width: 1110px) {
   .main_responsive {
     grid-template-columns: 1fr;
     height: 100vh;
-    overflow-y: scroll;
   }
   .logo_responsive a {
     display: flex;
