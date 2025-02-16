@@ -7,13 +7,13 @@
 }
 .corner_1 {
   position: absolute;
-  background-color: white;
+  background-color: #fff;
   width: 37px;
-  height: 65px;
+  height: 56px;
   right: 266px;
-  top: -9px;
+  top: -1px;
   border-bottom-left-radius: 18px;
-  transform: rotate(-18deg);
+  transform: rotate(-13deg);
 }
 .corner_2 {
   position: absolute;
