@@ -5,6 +5,7 @@ import Footer from "@/components/ui/footer/Footer";
 import { ContactusContext } from "@/components/context/ContactusContext";
 import "aos/dist/aos.css";
 import WithAOS from "@/components/withaos/WithAos";
+import Head from "next/head";
 
 const InterFont = Inter({
   variable: "--font-inter",
@@ -25,6 +26,9 @@ export const metadata: Metadata = {
     "services",
     "tech",
     "gonovo",
+    "software companies in Uk",
+    "software company in uk",
+    "",
   ],
   icons: "/svgs/logo.svg",
   openGraph: {
@@ -76,6 +80,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <ContactusContext>
         <body className={`${InterFont.variable}`}>
           <WithAOS>
