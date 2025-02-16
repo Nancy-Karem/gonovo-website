@@ -30,7 +30,7 @@ function Contactus() {
         )
         .then(
           (result) => {
-            // console.log("Email sent successfully:", result.text);
+             console.log("Email sent successfully:", result.text);
             resetForm();
             toggleOpen();
           },
