@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     "services",
     "tech",
     "gonovo",
-    "software companies in Uk",
-    "software company in uk",
-    "",
+    "software development companies in Uk",
+    "software development company",
+    "software development services uk",
   ],
   icons: "/svgs/logo.svg",
   openGraph: {
