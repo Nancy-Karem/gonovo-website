@@ -9,11 +9,11 @@
   position: absolute;
   background-color: white;
   width: 37px;
-  height: 65px;
+  height: 55px;
   right: 266px;
-  top: -9px;
+  top: 0px;
   border-bottom-left-radius: 18px;
-  transform: rotate(-18deg);
+  transform: rotate(-12deg);
 }
 .corner_2 {
   position: absolute;
