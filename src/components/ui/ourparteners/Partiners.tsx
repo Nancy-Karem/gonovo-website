@@ -19,7 +19,11 @@ function Partiners() {
           {companies.map((item, index) => (
             <Link href={item.link} key={index}>
               <div data-aos="zoom-in-out" data-aos-delay={(index + 1) * 150}>
-                <div className="relative hidden sm:block">
+                <div
+                  className={`relative hidden sm:block ${
+                    index === 1 && "rounded-full overflow-hidden"
+                  }`}
+                >
                   <ImageComponent
                     src={item.logo}
                     width={item.lgWidth}

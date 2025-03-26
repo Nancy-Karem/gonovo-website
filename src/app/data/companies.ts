@@ -6,9 +6,9 @@ const companies = [
     link: "https://www.bling-weddings.com/",
   },
   {
-    logo: "/assets/mml.webp",
-    lgWidth: "187px",
-    lgHeight: "130px",
+    logo: "/assets/mm.webp",
+    lgWidth: "150px",
+    lgHeight: "150px",
     width: "136px",
     height: "100px",
     link: "https://letsmakemoney.vercel.app/",
