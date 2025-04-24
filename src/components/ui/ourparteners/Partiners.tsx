@@ -20,9 +20,15 @@ function Partiners() {
             <Link href={item.link} key={index}>
               <div data-aos="zoom-in-out" data-aos-delay={(index + 1) * 150}>
                 <div
-                  className={`relative hidden sm:block ${
-                    index === 1 && "rounded-full overflow-hidden"
-                  }`}
+                  className="relative hidden sm:block"
+                  style={
+                    index === 1
+                      ? {
+                          borderRadius: "50%",
+                          overflow: "hidden",
+                        }
+                      : {}
+                  }
                 >
                   <ImageComponent
                     src={item.logo}
@@ -31,7 +37,11 @@ function Partiners() {
                     alt="partener company"
                   />
                 </div>
-                <div className="relative block sm:hidden">
+                <div
+                  className={`relative block sm:hidden ${
+                    index === 1 && "rounded-full overflow-hidden"
+                  } `}
+                >
                   <ImageComponent
                     src={item.logo}
                     width={item.width}
