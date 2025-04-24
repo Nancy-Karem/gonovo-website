@@ -2,7 +2,7 @@ const companies = [
   {
     logo: "/assets/bling.webp",
     lgWidth: "160px",
-    width: "98px",
+    width: "108px",
     link: "https://www.bling-weddings.com/",
   },
   {
