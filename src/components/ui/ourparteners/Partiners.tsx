@@ -1,5 +1,5 @@
 import companies from "@/app/data/companies";
-import ImageComponent from "@/components/imagecomponent/ImageComponent";
+// import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React, { useState, useEffect, useRef } from "react";
 import styles from "./partiner.module.css";
 import Link from "next/link";
@@ -67,7 +67,7 @@ function Partiners() {
           London for clients all around the world and we can do it for you too
         </p>
         <div
-          className={`${styles.images_responsive_cont} flex justify-center gap-y-8 gap-x-6  sm:gap-x-4 sm:gap-y-0 flex-wrap items-center`}
+          className={`${styles.images_responsive_cont} flex justify-center gap-y-4 gap-x-3  sm:gap-x-4 sm:gap-y-0 flex-wrap items-center max-w-[1024px] mx-auto`}
         >
           {/* {companies.map((item, index) => (
             <Link href={item.link} key={index}>
@@ -109,11 +109,11 @@ function Partiners() {
             <Link
               href={item.link}
               key={index}
+              className="lg:w-[180px] lg:h-[200px] w-[100px] h-[120px]"
               style={{
                 clipPath:
                   "polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%)",
-                width: "180px",
-                height: "200px",
+
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
@@ -122,8 +122,10 @@ function Partiners() {
                 padding: "10px",
                 backgroundColor: item.bgColor ? item.bgColor : "#ddd",
               }}
+              data-aos="zoom-in-out"
+              data-aos-delay={(index + 1) * 150}
             >
-              <div data-aos="zoom-in-out" data-aos-delay={(index + 1) * 150}>
+              <div>
                 <Image
                   src={item.logo}
                   alt="partener company"

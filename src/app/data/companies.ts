@@ -6,6 +6,10 @@ const companies = [
     link: "https://www.bling-weddings.com/",
   },
   {
+    logo: "/svgs/scaffolding_logo.svg",
+    link: "https://thescaffolding.co.uk/",
+  },
+  {
     logo: "/assets/mm.webp",
     // lgWidth: "150px",
     // lgHeight: "150px",
@@ -36,28 +40,10 @@ const companies = [
     link: "https://sara-o-wedding.vercel.app/",
   },
   {
-    logo: "/assets/sara_o.webp",
+    logo: "/svgs/logo.svg",
     // lgWidth: "160px",
     // width: "125px",
-    link: "https://sara-o-wedding.vercel.app/",
-  },
-  {
-    logo: "/assets/sara_o.webp",
-    // lgWidth: "160px",
-    // width: "125px",
-    link: "https://sara-o-wedding.vercel.app/",
-  },
-  {
-    logo: "/assets/sara_o.webp",
-    // lgWidth: "160px",
-    // width: "125px",
-    link: "https://sara-o-wedding.vercel.app/",
-  },
-  {
-    logo: "/assets/sara_o.webp",
-    // lgWidth: "160px",
-    // width: "125px",
-    link: "https://sara-o-wedding.vercel.app/",
+    link: "/",
   },
 ];
 
