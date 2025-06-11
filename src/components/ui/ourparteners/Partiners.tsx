@@ -17,7 +17,7 @@ function Partiners() {
             setHasAnimated(true);
 
             // Counter animation
-            const duration = 2000; // 2 seconds
+            const duration = 4000; // 2 seconds
             const targetValue = 100;
             const startTime = Date.now();
 
@@ -109,7 +109,9 @@ function Partiners() {
             <Link
               href={item.link}
               key={index}
-              className="lg:w-[180px] lg:h-[200px] w-[100px] h-[120px]"
+              className={`lg:w-[180px] lg:h-[200px] w-[100px] h-[120px] ${
+                index === companies.length - 1 && "!hidden sm:!flex"
+              }`}
               style={{
                 clipPath:
                   "polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%)",
