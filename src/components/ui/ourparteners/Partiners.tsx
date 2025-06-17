@@ -115,14 +115,13 @@ function Partiners() {
               style={{
                 clipPath:
                   "polygon(50% 0, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%)",
-
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 overflow: "hidden",
                 margin: "0 10px",
                 padding: "10px",
-                backgroundColor: item.bgColor ? item.bgColor : "#ddd",
+                background: item.bgColor ? item.bgColor : "#ddd",
               }}
               data-aos="zoom-in-out"
               data-aos-delay={(index + 1) * 150}
