@@ -22,6 +22,7 @@ const companies = [
     logo: "/assets/chef.webp",
     // lgWidth: "187px",
     // width: "145px",
+    bgColor: "#feff76",
     link: "https://www.chefschoicefruits.com/",
   },
 
@@ -30,6 +31,7 @@ const companies = [
     // lgWidth: "166px",
     // lgHeight: "100px",
     // width: "110px",
+    bgColor: "#063763",
     link: "https://echafau-france.vercel.app/",
   },
 
@@ -43,6 +45,8 @@ const companies = [
     logo: "/svgs/logo.svg",
     // lgWidth: "160px",
     // width: "125px",
+    bgColor:
+      "linear-gradient(90deg, #cdc6ee 0%, #d7d3ea 41.47%, #e6e2f9 73.62%, #eeeaff 97.41%)",
     link: "/",
   },
 ];
