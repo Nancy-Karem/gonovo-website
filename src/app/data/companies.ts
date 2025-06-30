@@ -4,10 +4,12 @@ const companies = [
     // lgWidth: "160px",
     // width: "108px",
     link: "https://www.bling-weddings.com/",
+    bgColor: "linear-gradient(68.08deg, #fa722d 9.39%, #c9632f 102.92%)",
   },
   {
     logo: "/svgs/scaffolding_logo.svg",
     link: "https://thescaffolding.co.uk/",
+    bgColor: "linear-gradient(96.71deg, #FED2F2 -1.8%, #9724F5 99.84%)",
   },
   {
     logo: "/assets/mm.webp",
@@ -36,7 +38,7 @@ const companies = [
   },
 
   {
-    logo: "/assets/sara_o.webp",
+    logo: "/assets/sara_o.svg",
     // lgWidth: "160px",
     // width: "125px",
     link: "https://sara-o-wedding.vercel.app/",

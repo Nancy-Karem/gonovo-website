@@ -132,6 +132,9 @@ function Partiners() {
                   alt="partener company"
                   width={180}
                   height={180}
+                  className={`${index === 6 && "ms-1"} ${
+                    index === 5 && "scale-[2]"
+                  }`}
                 />
                 {/* <ImageComponent
                   src={item.logo}
