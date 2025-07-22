@@ -1,0 +1,6 @@
+{
+  "name": "علاء عياد",
+  "welcome": "مرحباً بك في تطبيق Next.js الخاص بي",
+  "description": "هذا تطبيق متعدد اللغات مبني باستخدام Next.js و next-intl",
+  "switchLanguage": "تغيير اللغة"
+}

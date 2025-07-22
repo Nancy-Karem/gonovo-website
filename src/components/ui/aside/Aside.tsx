@@ -1,7 +1,7 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
 import styles from "./aside.module.css";
-
+import { useLocale } from "next-intl";
 import Link from "next/link";
 function Aside({
   handleOpen,
@@ -10,30 +10,31 @@ function Aside({
   handleOpen: () => void;
   handleOpenContact: () => void;
 }) {
+  const locale = useLocale();
   const links = [
     {
       name: "Home",
-      link: "/",
+      link: `/${locale}`,
     },
     {
       name: "About Us",
-      link: "/#about",
+      link: `/${locale}/#about`,
     },
     {
       name: "Software Dev",
-      link: "/softwaredevelopment",
+      link: `/${locale}/softwaredevelopment`,
     },
     {
       name: "Digital marketing",
-      link: "/digitalmarketing",
+      link: `/${locale}/digitalmarketing`,
     },
     {
       name: "Reviews",
-      link: "/#reviews",
+      link: `/${locale}/#reviews`,
     },
     {
       name: "Contact Us",
-      link: "/",
+      link: `/${locale}`,
     },
   ];
   const socilaLinks = [
@@ -69,7 +70,7 @@ function Aside({
           className={`${styles.left_container} relative p-12 flex flex-col justify-between`}
         >
           <div className={`${styles.bottom_top} absolute`}></div>
-          <Link href="/" onClick={handleOpen}>
+          <Link href={`/${locale}`} onClick={handleOpen}>
             <ImageComponent
               src="/svgs/logolight.svg"
               width="229px"
@@ -98,7 +99,7 @@ function Aside({
               className={`${styles.logo_responsive} flex justify-between items-center`}
             >
               <p className="text-thingray">Navigation</p>
-              <Link href="/" onClick={handleOpen}>
+              <Link href={`/${locale}`} onClick={handleOpen}>
                 <ImageComponent
                   src="/svgs/logolight.svg"
                   width="229px"

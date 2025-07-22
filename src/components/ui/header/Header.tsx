@@ -6,9 +6,12 @@ import React, { useEffect, useState } from "react";
 import Aside from "../aside/Aside";
 import { usePathname } from "next/navigation";
 import { useCallusContext } from "@/components/context/ContactusContext";
+import { LangugesSwitcher } from "./LangugesSwitcher";
+import { useLocale } from "next-intl";
 
 function Header() {
   const pathname = usePathname();
+  const locale = useLocale();
   const { toggleOpen } = useCallusContext();
   const [open, setOpen] = useState(false);
 
@@ -25,7 +28,7 @@ function Header() {
   return (
     <header className="h-[50px] flex justify-between items-center">
       <Link
-        href="/"
+        href={`/${locale}`}
         className="relative w-[180px] h-[36px] sm:w-[215px] sm:h-[32px] inline-block"
       >
         <Image src="/svgs/logo.svg" alt="logo of website" fill />
@@ -35,7 +38,7 @@ function Header() {
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link
-                href={link.path}
+                href={`/${locale}/${link.path}`}
                 onClick={(e) => {
                   if (link.name === "Contact Us") {
                     e.preventDefault();
@@ -52,9 +55,10 @@ function Header() {
           ))}
         </ul>
       </div>
+
       <div className="flex gap-4 items-center ">
         <div className="hidden sm:flex">
-          {pathname === "/softwaredevelopment" ? (
+          {pathname === `/${locale}/softwaredevelopment` ? (
             <button
               className="bg-[#4541F1] rounded-full py-[12px] px-[18px] text-[17px] text-white font-medium"
               onClick={toggleOpen}
@@ -70,11 +74,12 @@ function Header() {
             </button>
           )}
         </div>
-
+        <LangugesSwitcher />
         <button onClick={handleToggle} className="relative w-[50px] h-[50px]">
           <Image src="/svgs/burger.svg" alt="burger icon" fill />
         </button>
       </div>
+
       {open && (
         <Aside handleOpen={handleToggle} handleOpenContact={toggleOpen} />
       )}
