@@ -4,6 +4,7 @@ import "../../../ui/portfolio/common.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallusContext } from "@/components/context/ContactusContext";
+import { useTranslations } from "next-intl";
 function ShapeTwo({
   bgColor,
 
@@ -18,6 +19,7 @@ function ShapeTwo({
   link: string;
 }) {
   const { toggleOpen } = useCallusContext();
+  const t = useTranslations("home_Page");
   return (
     <div
       style={{
@@ -49,7 +51,7 @@ function ShapeTwo({
             onClick={toggleOpen}
             className="flex items-center justify-center mx-auto gap-2 text-[#5843FC]"
           >
-            Contact us
+            {t("contact_us")}
             <div className="relative w-[34px] h-[34px]">
               <Image
                 src="/svgs/portfolio/rightarrowpurple.svg"

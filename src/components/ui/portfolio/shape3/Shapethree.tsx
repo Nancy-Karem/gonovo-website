@@ -3,8 +3,11 @@ import styles from "./shapeth.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useCallusContext } from "@/components/context/ContactusContext";
+import { useTranslations } from "next-intl";
 function Shapethree() {
   const { toggleOpen } = useCallusContext();
+
+  const t = useTranslations("home_Page");
   return (
     <div data-aos="flip-left" className={styles.main_Shape_cont}>
       <div className="w-[130px] h-[105px] rounded-es-[18px] bg-white absolute right-[-1px] top-[-1px]">
@@ -29,7 +32,7 @@ function Shapethree() {
               className="text-[28px] sm:text-[35px] text-white font-medium   block"
               onClick={toggleOpen}
             >
-              Contact us
+              {t("contact_us")}
             </button>
           </div>
         </div>

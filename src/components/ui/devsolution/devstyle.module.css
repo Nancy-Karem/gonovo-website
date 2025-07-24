@@ -9,25 +9,6 @@
     transform: scale(0.8);
     margin-inline-start: 70px;
   }
-  /* .main_sec_grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-  .lineOne,
-  .inner_line_one {
-    width: 100%;
-  }
-  .inner_line_one {
-    flex-direction: row;
-  }
-  .inner_line_one image {
-    transform: scale(1.2);
-  }
-  .leftdev {
-    transform: scale(1.1);
-    margin-inline-start: 100px;
-    margin-top: 70px;
-  } */
 }
 @media (max-width: 1165px) {
   .leftdev {

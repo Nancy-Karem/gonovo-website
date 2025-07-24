@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import React from "react";
@@ -7,8 +6,12 @@ import { useCallusContext } from "../context/ContactusContext";
 import { useFormik } from "formik";
 import validationSchema from "../validation schema/contactus";
 import emailjs from "@emailjs/browser";
+import { useTranslations, useLocale } from "next-intl";
+
 function Contactus() {
   const { toggleOpen } = useCallusContext();
+  const t = useTranslations("contact_form");
+  const locale = useLocale();
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -30,7 +33,7 @@ function Contactus() {
         )
         .then(
           (result) => {
-             console.log("Email sent successfully:", result.text);
+            console.log("Email sent successfully:", result.text);
             resetForm();
             toggleOpen();
           },
@@ -61,9 +64,9 @@ function Contactus() {
             <Image src="/svgs/graycloseIcon.svg" alt="" fill />
           </button>
         </div>
-        <div className="m-8">
+        <div className="m-8" dir={locale === "ar" ? "rtl" : "ltr"}>
           <h1 className="text-[#101828] text-[30px] font-semibold mb-12">
-            Let’s level up your brand, together
+            {t("title")}
           </h1>
           <form onSubmit={formik.handleSubmit} className="flex flex-col gap-8">
             {/* Name of client */}
@@ -72,7 +75,7 @@ function Contactus() {
                 htmlFor="name"
                 className="text-[14px] text-[#344054] font-medium cursor-pointer"
               >
-                Name & Company
+                {t("name_label")}
               </label>
               <input
                 id="name"
@@ -82,7 +85,7 @@ function Contactus() {
                     ? "border-red-500"
                     : "border-[#D0D5DD]"
                 } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
-                placeholder="Name & Company"
+                placeholder={t("name_placeholder")}
                 name="name"
                 value={formik.values.name}
                 onChange={formik.handleChange}
@@ -98,7 +101,7 @@ function Contactus() {
                 htmlFor="email"
                 className="text-[14px] text-[#344054] font-medium cursor-pointer"
               >
-                Email
+                {t("email_label")}
               </label>
               <input
                 id="email"
@@ -109,7 +112,7 @@ function Contactus() {
                     ? "border-red-500"
                     : "border-[#D0D5DD]"
                 } border  px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
-                placeholder="you@company.com"
+                placeholder={t("email_placeholder")}
                 value={formik.values.email}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -124,7 +127,7 @@ function Contactus() {
                 htmlFor="phone"
                 className="text-[14px] text-[#344054] font-medium cursor-pointer"
               >
-                Phone Number
+                {t("phone_label")}
               </label>
               <input
                 type="text"
@@ -135,7 +138,7 @@ function Contactus() {
                     ? "border-red-500"
                     : "border-[#D0D5DD]"
                 }} border  px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
-                placeholder="Enter your phone number"
+                placeholder={t("phone_placeholder")}
                 value={formik.values.phone}
                 onChange={formik.handleChange}
                 onBlur={formik.handleBlur}
@@ -149,7 +152,7 @@ function Contactus() {
                 htmlFor="message"
                 className="text-[14px] text-[#344054] font-medium cursor-pointer"
               >
-                Message
+                {t("message_label")}
               </label>
               <textarea
                 id="message"
@@ -159,7 +162,7 @@ function Contactus() {
                     ? "border-red-500"
                     : "border-[#D0D5DD]"
                 } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]  `}
-                placeholder="Leave us a message..."
+                placeholder={t("message_placeholder")}
                 rows={4}
                 value={formik.values.message}
                 onChange={formik.handleChange}
@@ -174,7 +177,7 @@ function Contactus() {
               type="submit"
               className="px-5 py-[14px]  bg-btnbg text-white rounded-3xl font-medium cursor-pointer text-[17px] bg-[#4541F1] w-fit ms-auto outline-none"
             >
-              Submit your request
+              {t("submit_button")}
             </button>
           </form>
         </div>

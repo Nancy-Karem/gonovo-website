@@ -4,14 +4,17 @@ import Badge from "../common/Badge";
 import Image from "next/image";
 import styles from "./aboutstyle.module.css";
 import { useCallusContext } from "@/components/context/ContactusContext";
+import { useLocale, useTranslations } from "next-intl";
 function Aboutcompany() {
   const { toggleOpen } = useCallusContext();
+  const t = useTranslations("home_Page");
+  const locale = useLocale();
   return (
-    <section className="my-10 overflow-x-hidden" id="about">
+    <section className="my-10 overflow-x-hidden" id="about" dir="ltr">
       <Badge
-        text="#ABOUT THE COMPANY#"
-        title="WHO WE ARE !"
-        desc="is founded by driven computer scientists, researchers and developers that combined their decade of expertise in multiple facets of computer science and digital marketing with their passion for client success, to create bespoke strategies and solutions for success in the digital age. At GONOVO we build software and provide digital marketing strategy"
+        text={t("about_the_company")}
+        title={t("who_we_are")}
+        desc={t("description_3")}
         boldText="GONOVO Tech"
         descsize="15px"
       />
@@ -23,24 +26,55 @@ function Aboutcompany() {
             data-aos-delay={200}
             className={styles.clip_cont}
           >
-            <ImageComponent
-              src="/svgs/clip.svg"
-              width="595px"
-              height="271px"
-              alt="image"
-            />
+            {locale === "en" ? (
+              <ImageComponent
+                src="/svgs/clip.svg"
+                width="595px"
+                height="271px"
+                alt="image"
+              />
+            ) : (
+              <div className="relative">
+                <ImageComponent
+                  src="/svgs/large_clip.svg"
+                  width="595px"
+                  height="271px"
+                  alt="image"
+                />
+                <h1 className="text-black text-6xl font-medium absolute top-2  right-24">
+                  {t("creating_great")}
+                </h1>
+                <h1 className="text-black text-6xl font-medium absolute top-[35%] right-6">
+                  {t("experience_seamless")}
+                </h1>
+                <h1 className="text-black text-6xl font-medium absolute bottom-8 right-16 flex items-center gap-2 flex-row-reverse">
+                  <ImageComponent
+                    src="/svgs/Gold_Star.svg"
+                    width="50px"
+                    height="50px"
+                    alt="image"
+                  />{" "}
+                  {t("flow_for_the_user")}
+                </h1>
+              </div>
+            )}
           </div>
           <div className={styles.text}>
-            <p data-aos="fade-right" data-aos-delay={300}>
-              A strategic experience agency crafting brands, websites, Products
-              and pretty much anything you can imagine
+            <p
+              data-aos="fade-right"
+              data-aos-delay={300}
+              className={`${locale === "ar" ? "text-right mt-1" : "text-left"}`}
+            >
+              {t(
+                "a_strategic_experience_agency_crafting_brands_websites_products_and_pretty_much_anything_you_can_imagine"
+              )}
             </p>
-            <p data-aos="fade-right" data-aos-delay={400}>
-              Want to grow your brand and reach more eyes? Our digital marketing
-              team will help you create the perfect user growth, engagement and
-              retention strategies. Our team will tailor custom go to market
-              plans for your product or service. Set up an introductory call to
-              learn what GONOVO can do for you
+            <p
+              data-aos="fade-right"
+              data-aos-delay={400}
+              className={`${locale === "ar" ? "text-right" : "text-left"}`}
+            >
+              {t("want_to_grow_your_brand_and_reach_more_eyes")}
             </p>
             <div
               data-aos="fade-right"
@@ -51,13 +85,13 @@ function Aboutcompany() {
                 onClick={toggleOpen}
                 className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
               >
-                + Become a Client
+                {t("become_a_client")}
               </button>
               <button
                 onClick={toggleOpen}
                 className="ring-1 ring-black rounded-full py-[12px] px-[18px] text-[17px] font-medium"
               >
-                Contact us
+                {t("contact_us")}
               </button>
             </div>
           </div>
@@ -83,30 +117,48 @@ function Aboutcompany() {
   )`,
               }}
             >
-              <h1 className="text-[11px]  font-medium">CREATING GREAT</h1>
-              <h1 className="text-[11px]  mt-[6px] font-medium">
-                EXPERIENCE & Seamless
+              <h1
+                className={`text-[11px]  font-medium ${
+                  locale === "ar" ? "text-right mr-8" : "text-left"
+                }`}
+              >
+                {t("creating_great")}
               </h1>
-              <h1 className="text-[11px]  mt-[6px] font-medium relative flex gap-1 items-center">
+              <h1
+                className={`text-[11px]  mt-[6px] font-medium ${
+                  locale === "ar" ? "text-right mr-2" : "text-left"
+                }`}
+              >
+                {t("experience_seamless")}
+              </h1>
+              <h1
+                className={`text-[11px]  mt-[6px] font-medium relative flex gap-1 items-center ${
+                  locale === "ar" ? "flex-row-reverse mr-5" : ""
+                }`}
+              >
                 <ImageComponent
                   src="/svgs/onestar.svg"
                   alt="image star"
                   width="12px"
                   height="12px"
                 />{" "}
-                Flow For The User
+                {t("flow_for_the_user")}
               </h1>
             </div>
             <div className={styles.blure_box2}>
-              <h1 className="">98%</h1>
-              <p className="">Successful Market Plan</p>
+              <h1 className={`${locale === "ar" ? "text-right" : "text-left"}`}>
+                98%
+              </h1>
+              <p className={`${locale === "ar" ? "text-right" : "text-left"}`}>
+                {t("successful_market_plan")}
+              </p>
             </div>
           </div>
           <div className={styles.divide_th_part}>
             <div className="flex justify-between items-center">
               <div className={styles.text_third}>
                 <div className={styles.line_top}>
-                  <span>Reach More Eyes</span>
+                  <span>{t("reach_more_eyes")}</span>
                   <span className={`${styles.responsive} relative w-6 h-6`}>
                     <Image
                       src="/svgs/star.svg"
@@ -123,7 +175,7 @@ function Aboutcompany() {
                   </span>
                 </div>
                 <p className={styles.line_bottom}>
-                  Transform Your Business Grow With Us
+                  {t("transform_your_business_grow_with_us")}
                 </p>
               </div>
               <div
@@ -152,9 +204,12 @@ function Aboutcompany() {
               }}
             >
               <div className={styles.blur_box1}>
-                <p>
-                  Our Digital Marketing Team Will Help You Create The Perfect
-                  User Growth
+                <p
+                  className={`${locale === "ar" ? "text-right" : "text-left"}`}
+                >
+                  {t(
+                    "our_digital_marketing_team_will_help_you_create_the_perfect_user_growth"
+                  )}
                 </p>
               </div>
             </div>

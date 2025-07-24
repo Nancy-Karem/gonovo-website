@@ -1,19 +1,21 @@
+// Navigation links structure - translations will be handled in components
 const navLinks = [
   {
-    name: "Home",
-    path: "/",
+    name: "home",
+    path: `/`,
   },
   {
-    name: "Software Development",
-    path: "/softwaredevelopment",
+    name: "software_dev",
+    path: `/softwaredevelopment`,
   },
   {
-    name: "Digital Marketing",
+    name: "digital_marketing",
     path: "/digitalmarketing",
   },
   {
-    name: "Contact Us",
+    name: "contact_us",
     path: "/",
   },
 ];
+
 export default navLinks;

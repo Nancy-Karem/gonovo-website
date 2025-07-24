@@ -3,24 +3,26 @@ import styles from "./mainhero.module.css";
 import Header from "../header/Header";
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 function MainHero() {
+  const t = useTranslations("home_Page");
   const advantageData = [
     {
       icon: "/svgs/light.svg",
-      text: "Brand Awareness",
+      text: t("brand_awareness"),
     },
     {
       icon: "/svgs/email.svg",
-      text: "Email Marketing",
+      text: t("email_marketing"),
     },
     {
       icon: "/svgs/pen.svg",
-      text: "Content Creation",
+      text: t("content_creation"),
     },
     {
       icon: "/svgs/search.svg",
-      text: "SEO Services",
+      text: t("seo_services"),
     },
   ];
   return (
@@ -38,7 +40,9 @@ function MainHero() {
           data-aos="fade-up"
           className="flex items-center gap-3 justify-center"
         >
-          <h2 className="font-semibold text-[34px] sm:text-5xl">We Support</h2>
+          <h2 className="font-semibold text-[34px] sm:text-5xl">
+            {t("title")}
+          </h2>
           <ImageComponent
             src="/svgs/bluearrow.svg"
             width="34px"
@@ -51,7 +55,7 @@ function MainHero() {
           data-aos-delay={200}
           className="flex items-center font-semibold text-[64px] sm:text-[102px] leading-[90px] sm:leading-[123px] gap-3 justify-center"
         >
-          gr
+          {t("gr")}
           <span
             className="w-[105px] h-[45px] sm:w-[126px] sm:h-[54px]  rounded-[26px] flex items-center justify-center sm:mt-[25px]"
             style={{
@@ -61,7 +65,7 @@ function MainHero() {
           >
             <span className="w-[82.5px] h-[26.6px] sm:w-[99px] sm:h-[32px] bg-white rounded-[26px] inline-block"></span>
           </span>
-          wth
+          {t("wth")}
         </h1>
         <div
           data-aos="fade-up"
@@ -74,16 +78,14 @@ function MainHero() {
             width="38.59px"
             height="36.59px"
           />
-          of your business
+          {t("of_your_business")}
         </div>
         <p
           data-aos="fade-up"
           data-aos-delay={600}
           className="lg:w-[730px] lg:mx-auto text-center sm:font-medium text-grayLight text-[18px] leading-[26px] mt-4"
         >
-          We’re a marketing and software company with a speciality in direct to
-          consumer and challenger brands: those that think differently, act
-          differently and walk their talk.
+          {t("description")}
         </p>
         <div
           className={`${styles.point_bottom} w-[19px] h-[19px] rounded-full bg-yellowLight`}
@@ -100,6 +102,7 @@ function MainHero() {
             backgroundImage:
               " linear-gradient(90deg, #8F5CE3 0%, #D9CAF4 55.89%, #E3DEF7 97.41%)",
           }}
+          dir="ltr"
         >
           <div className="relative w-[115px] h-[193px]">
             <Image
@@ -137,10 +140,10 @@ function MainHero() {
             }}
           >
             <p className="text-xl text-linksColor leading-6 h-1/2  border-b border-b-linksColor">
-              Digital Marketing
+              {t("digital_marketing")}
             </p>
             <p className="text-xl text-linksColor leading-6">
-              Software Development
+              {t("software_development")}
             </p>
           </div>
           <div
@@ -162,9 +165,9 @@ function MainHero() {
           }}
         >
           <div className="w-full sm:w-[332px] text-center flex flex-col gap-4">
-            <p className="text-base">Grow your brand & Increase revenue</p>
+            <p className="text-base">{t("grow_your_brand")}</p>
             <h1 className="text-[23px] sm:text-[26px] font-semibold leading-[31px]">
-              Appear On the Front Page of Google !
+              {t("appear_on_the_front_page_of_google")}
             </h1>
           </div>
           {/* advantage */}

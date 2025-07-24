@@ -1,6 +1,8 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
 import React from "react";
+import { useTranslations } from "next-intl";
+
 interface IPServices {
   category: string;
   bg: string;
@@ -9,7 +11,10 @@ interface IPServices {
   mainBg?: string;
   bggradient?: string;
 }
+
 function ServicesCard({ item }: { item: IPServices }) {
+  const t = useTranslations("services");
+
   return (
     <div
       data-aos="fade-up"
@@ -45,7 +50,7 @@ function ServicesCard({ item }: { item: IPServices }) {
           />
         </div>
         <p className="px-4 py-2 rounded-2xl bg-badgecolor text-textbadge w-fit font-semibold">
-          {item.category}
+          {t(item.category)}
         </p>
       </div>
       <div className="pl-12 pr-11 py-6 ">
@@ -55,7 +60,7 @@ function ServicesCard({ item }: { item: IPServices }) {
             className="flex gap-4 items-center text-darkGray leading-5 mb-3"
           >
             <span className="w-[6px] h-[6px] rounded-full bg-semiblue"></span>
-            {service}
+            {t(service)}
           </p>
         ))}
       </div>

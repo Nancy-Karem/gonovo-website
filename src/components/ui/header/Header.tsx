@@ -7,11 +7,12 @@ import Aside from "../aside/Aside";
 import { usePathname } from "next/navigation";
 import { useCallusContext } from "@/components/context/ContactusContext";
 import { LangugesSwitcher } from "./LangugesSwitcher";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 function Header() {
   const pathname = usePathname();
   const locale = useLocale();
+  const t = useTranslations("aside_links");
   const { toggleOpen } = useCallusContext();
   const [open, setOpen] = useState(false);
 
@@ -34,13 +35,13 @@ function Header() {
         <Image src="/svgs/logo.svg" alt="logo of website" fill />
       </Link>
       <div>
-        <ul className="w-[651px] py-[13px] hidden xl:flex px-[52px] bg-white  justify-between gap-10 rounded-full">
+        <ul className="w-[551px] py-[13px] hidden xl:flex px-[52px] bg-white  justify-between gap-6 rounded-full">
           {navLinks.map((link, index) => (
             <li key={index}>
               <Link
                 href={`/${locale}/${link.path}`}
                 onClick={(e) => {
-                  if (link.name === "Contact Us") {
+                  if (link.name === "contact_us") {
                     e.preventDefault();
                     toggleOpen();
                   }
@@ -49,7 +50,7 @@ function Header() {
                   link.path === pathname && pathname !== "/" && "activeLink"
                 }`}
               >
-                {link.name}
+                {t(link.name)}
               </Link>
             </li>
           ))}
@@ -63,14 +64,17 @@ function Header() {
               className="bg-[#4541F1] rounded-full py-[12px] px-[18px] text-[17px] text-white font-medium"
               onClick={toggleOpen}
             >
-              + Become a Client
+              + {t("become_a_client")}
             </button>
           ) : (
             <button
-              className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium"
+              className={`bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium flex items-center gap-2 ${
+                locale === "ar" ? "flex-row-reverse" : ""
+              }`}
               onClick={toggleOpen}
             >
-              + Become a Client
+              <span className="text-[17px] font-medium">+</span>
+              {t("become_a_client")}
             </button>
           )}
         </div>

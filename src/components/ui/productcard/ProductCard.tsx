@@ -1,11 +1,16 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
+import { useTranslations } from "next-intl";
+
 interface IPProduct {
   icon: string;
   title: string;
   desc: string;
 }
+
 function ProductCard({ item, index }: { item: IPProduct; index: number }) {
+  const t = useTranslations("products");
+
   return (
     <div
       data-aos="zoom-in-out"
@@ -29,9 +34,11 @@ function ProductCard({ item, index }: { item: IPProduct; index: number }) {
           height="72px"
           alt="heart icon"
         />
-        <h1 className="text-base font-semibold text-textbadge">{item.title}</h1>
+        <h1 className="text-base font-semibold text-textbadge">
+          {t(item.title)}
+        </h1>
       </div>
-      <p className="text-sm leading-5 text-darkGray  mt-4">{item.desc}</p>
+      <p className="text-sm leading-5 text-darkGray  mt-4">{t(item.desc)}</p>
     </div>
   );
 }

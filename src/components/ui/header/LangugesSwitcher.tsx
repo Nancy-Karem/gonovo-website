@@ -6,6 +6,7 @@ export const LangugesSwitcher = () => {
   const pathname = usePathname();
   const router = useRouter();
   const [currentLang, setCurrentLang] = useState("en");
+  const [isOpen, setIsOpen] = useState(false);
 
   // Get language from cookie or pathname
   useEffect(() => {
@@ -28,8 +29,18 @@ export const LangugesSwitcher = () => {
     }
   }, [pathname]);
 
-  const switchLanguage = () => {
-    const newLang = currentLang === "en" ? "ar" : "en";
+  // Update document language and direction when language changes
+  useEffect(() => {
+    if (typeof document !== "undefined") {
+      document.documentElement.lang = currentLang;
+      document.documentElement.dir = currentLang === "ar" ? "rtl" : "ltr";
+      document.body.lang = currentLang;
+      document.body.dir = currentLang === "ar" ? "rtl" : "ltr";
+    }
+  }, [currentLang]);
+
+  const switchLanguage = (newLang: string) => {
+    if (newLang === currentLang) return;
 
     // Save to cookie
     document.cookie = `language=${newLang}; path=/; max-age=31536000`; // 1 year
@@ -47,43 +58,109 @@ export const LangugesSwitcher = () => {
       newPath = `/${newLang}${pathname}`;
     }
 
+    setCurrentLang(newLang);
+    setIsOpen(false);
     router.push(newPath);
   };
 
-  return (
-    <button
-      onClick={switchLanguage}
-      className={`
-        relative inline-flex items-center justify-center w-[70px] h-8 rounded-full transition-all duration-300 ease-in-out bg-gray-300
-        shadow-md hover:shadow-lg cursor-pointer
-      `}
-      aria-label={`Switch to ${currentLang === "en" ? "Arabic" : "English"}`}
-    >
-      {/* Current language text - positioned opposite to the thumb */}
-      <span
-        className={`
-          absolute text-sm font-bold transition-all duration-300 z-10 text-gray-700
-          ${
-            currentLang === "en"
-              ? " right-2" // Dark text on right when English is active (thumb on left)
-              : " left-2" // White text on left when Arabic is active (thumb on right)
-          }
-        `}
-      >
-        {currentLang === "en" ? "EN" : "عربي"}
-      </span>
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as Element;
+      if (!target.closest(".language-dropdown")) {
+        setIsOpen(false);
+      }
+    };
 
-      {/* Toggle thumb */}
-      <div
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
+  return (
+    <div className="relative language-dropdown">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
         className={`
-          absolute w-6 h-6 bg-white rounded-full shadow-md transition-all duration-300 ease-in-out z-20
-          ${
-            currentLang === "en"
-              ? "left-1" // Left position for English (off state)
-              : "right-1" // Right position for Arabic (on state)
-          }
+          relative inline-flex items-center justify-center w-[70px] h-10 rounded-full transition-all duration-300 ease-in-out bg-white
+          shadow-md hover:shadow-lg cursor-pointer gap-1 px-2 border border-gray-200
         `}
-      />
-    </button>
+        aria-label="Language selector"
+      >
+        {/* Earth Icon */}
+        <svg
+          className="w-4 h-4 text-semipurple"
+          fill="currentColor"
+          viewBox="0 0 20 20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            fillRule="evenodd"
+            d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+            clipRule="evenodd"
+          />
+        </svg>
+
+        {/* Current language text */}
+        <span
+          className="text-sm font-bold text-semipurple"
+          lang={currentLang === "ar" ? "ar" : "en"}
+        >
+          {currentLang === "en" ? "EN" : "AR"}
+        </span>
+      </button>
+
+      {/* Dropdown menu */}
+      {isOpen && (
+        <div className="absolute top-full mt-2 right-0 bg-white rounded-lg shadow-lg border border-gray-200 py-2 min-w-[120px] z-50">
+          <button
+            onClick={() => switchLanguage("en")}
+            className={`
+              w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2
+              ${
+                currentLang === "en"
+                  ? "bg-blue-50 text-blue-600"
+                  : "text-gray-700"
+              }
+            `}
+          >
+            <span className="text-sm font-medium">English</span>
+            {currentLang === "en" && (
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            )}
+          </button>
+          <button
+            onClick={() => switchLanguage("ar")}
+            className={`
+              w-full px-4 py-2 text-left hover:bg-gray-100 transition-colors duration-200 flex items-center gap-2
+              ${
+                currentLang === "ar"
+                  ? "bg-blue-50 text-blue-600"
+                  : "text-gray-700"
+              }
+            `}
+            style={{ fontFamily: "var(--font-noto-sans-arabic) !important" }}
+          >
+            <span className="text-sm font-medium">العربية</span>
+            {currentLang === "ar" && (
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fillRule="evenodd"
+                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            )}
+          </button>
+        </div>
+      )}
+    </div>
   );
 };

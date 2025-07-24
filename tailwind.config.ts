@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        "noto-sans-arabic": ["var(--font-noto-sans-arabic)", "sans-serif"],
+      },
       colors: {
         linksColor: "var(--headlinks-color)",
         purpleLight: "var(--lightpurple-color)",

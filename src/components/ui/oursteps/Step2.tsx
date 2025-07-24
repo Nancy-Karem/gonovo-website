@@ -1,6 +1,10 @@
 import React from "react";
+import { useTranslations, useLocale } from "next-intl";
 
 function Step2() {
+  const t = useTranslations("our_steps.step2");
+  const locale = useLocale();
+
   return (
     <div
       data-aos="fade-left"
@@ -18,19 +22,25 @@ function Step2() {
       <div className="grid grid-cols-1  ml-auto xl:gap-20 xl:grid-cols-[1fr_378px] xl:p-20  xl:px-16 h-full w-full  xl:justify-items-center justify-items-end lg:px-10 lg:py-20 px-5 py-10 ">
         <div className="mt-5 w-fit ml-auto xl:order-0 order-1">
           <p className="ring-2 text-[12px] px-2 py-[1px] text-white ring-white w-fit rounded-full xl:px-[14px] xl:py-[2px] xl:text-sm font-medium ">
-            STEP 2
+            {t("step_number")}
           </p>
-          <h1 className="text-[24px] xl:text-3xl font-medium text-white mt-3 sm:mt-10 mb-2 sm:mb-4">
-            Design and Prototyping
+          <h1
+            className="text-[24px] xl:text-3xl font-medium text-white mt-3 sm:mt-10 mb-2 sm:mb-4"
+            dir={locale === "ar" ? "rtl" : "ltr"}
+          >
+            {t("title")}
           </h1>
-          <p className="text-sm xl:text-base text-white leading-[23px] max-w-[460px]">
-            Next, we create a software design, focusing on building a Minimum
-            Viable Product (MVP). We actively seek feedback from relevant
-            parties during this stage. Our goal is to refine the software’s
-            architecture through iterative prototypes.
+          <p
+            className="text-sm xl:text-base text-white leading-[23px] max-w-[460px]"
+            dir={locale === "ar" ? "rtl" : "ltr"}
+          >
+            {t("description")}
           </p>
         </div>
-        <div className="w-[65%] h-auto sm:h-[176px] xl:h-auto xl:w-[378px] rounded-[12px] sm:rounded-3xl  bg-white relative order-0 xl:order-1">
+        <div
+          className="w-[65%] h-auto sm:h-[176px] xl:h-auto xl:w-[378px] rounded-[12px] sm:rounded-3xl  bg-white relative order-0 xl:order-1"
+          dir={locale === "ar" ? "rtl" : "ltr"}
+        >
           <div className="pt-3 px-4 sm:pt-5 sm:px-7 pb-2 border-b border-[#f2f2f2]">
             <div className="flex gap-1">
               <span className="w-[6px] h-[6px] sm:w-3 sm:h-3 rounded-full inline-block bg-[#999999]"></span>
@@ -38,25 +48,25 @@ function Step2() {
               <span className="w-[6px] h-[6px] sm:w-3 sm:h-3 rounded-full inline-block bg-[#DBDBDB]"></span>
             </div>
             <p className="text-[12px] xl:text-[22px] leading-5 font-medium mt-2 xl:mt-6">
-              Design Phase
+              {t("design_phase")}
             </p>
           </div>
           <div className="px-2 pt-7 b sm:px-4 sm:pt-10 pb-2 xl:px-10 xl:pt-24 xl:pb-4">
             <div className=" flex flex-wrap gap-3">
               <p className="text-[9px] px-2 py-1 xl:text-sm text-white xl:px-4 xl:py-2 rounded-full bg-[#212121]">
-                Wireframes
+                {t("wireframes")}
               </p>
               <p className="text-[9px] px-2 py-1 xl:text-sm text-white xl:px-4 xl:py-2 rounded-full bg-[#212121] ml-[-23px] origin-right rotate-[20deg]">
-                User Flow
+                {t("user_flow")}
               </p>
               <p className="text-[9px] px-2 py-1 xl:text-sm text-white xl:px-4 xl:py-2 rounded-full bg-[#212121] ml-[-7px]">
-                Prototype
+                {t("prototype")}
               </p>
               <p className="text-[9px] px-2 py-1 xl:text-sm text-white xl:px-4 xl:py-2 rounded-full bg-[#212121]">
-                Design System
+                {t("design_system")}
               </p>
               <p className="text-[9px] px-2 py-1 xl:text-sm text-white xl:px-4 xl:py-2 rounded-full bg-[#212121]">
-                User Journey
+                {t("user_journey")}
               </p>
             </div>
           </div>

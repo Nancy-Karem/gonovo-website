@@ -1,5 +1,5 @@
 import React from "react";
-
+import { useLocale } from "next-intl";
 interface IPBage {
   text: string;
   title: string;
@@ -8,6 +8,7 @@ interface IPBage {
   descsize?: string;
 }
 function Badge({ text, title, desc, descsize, boldText }: IPBage) {
+  const locale = useLocale();
   return (
     <div className="py-1">
       <p
@@ -29,9 +30,20 @@ function Badge({ text, title, desc, descsize, boldText }: IPBage) {
         className={`max-w-[100%] md:max-w-[720px] md:mx-auto mx-4 xl:max-w-[1216px] sm:text-[20px] ${
           descsize ? "text-[16px]" : "text-[17px]"
         } lg:mx-auto text-center text-secondaryblack md:leading-7 lg:leading-[43px] mt-6 mb-10`}
+        dir={locale === "ar" ? "rtl" : "ltr"}
         // style={{ fontSize: descsize }}
       >
-        {boldText && <span className="font-semibold">{boldText}</span>} {desc}
+        {locale === "en" ? (
+          <>
+            {boldText && <span className="font-semibold">{boldText}</span>}{" "}
+            {desc}
+          </>
+        ) : (
+          <>
+            {boldText && <span className="font-semibold">{boldText}</span>}{" "}
+            {desc}
+          </>
+        )}
       </p>
     </div>
   );

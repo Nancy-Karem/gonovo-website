@@ -1,6 +1,276 @@
 {
-  "name": "علاء عياد",
-  "welcome": "مرحباً بك في تطبيق Next.js الخاص بي",
-  "description": "هذا تطبيق متعدد اللغات مبني باستخدام Next.js و next-intl",
-  "switchLanguage": "تغيير اللغة"
+  "home_Page": {
+    "title": "نحن ندعم",
+    "gr": "النــ",
+    "wth": "ــو",
+    "of_your_business": "لشركتك و عملك الخاص",
+    "description": "نحن شركة مسوقة وبرمجية متخصصة في العلامات التجارية المباشرة والعلامات التنافسية: تلك التي تفكر بشكل مختلف، تتصرف بشكل مختلف وتتحرك بشكل مختلف.",
+    "grow_your_brand": "تطوير علامتك التجارية وزيادة الإيرادات",
+    "appear_on_the_front_page_of_google": "ظهورك على صفحة البداية من جوجل !",
+    "brand_awareness": "العلامة التجارية",
+    "email_marketing": "التسويق بالبريد ",
+    "content_creation": "إنشاء المحتوى",
+    "seo_services": "خدمات SEO",
+    "digital_marketing": "الـتسويـق الرقـمـي",
+    "software_development": "تطوير البرمجيات",
+    "join": "انضم",
+    "clients": "العملاء",
+    "description_2": "نحن نبني علامات تجارية ومواقع وتطبيقات جميلة لعملاء الذين يحتاجون إلى مساعدة لإنشاء شيء حقاً خاص. نقوم بذلك بالحب في لندن لعملاء حول العالم ونحن يمكن أن نفعل ذلك لك أيضاً",
+    "about_the_company": "#عن الشركة#",
+    "who_we_are": "! من نحن",
+    "description_3": "تأسست على يد مجموعة من علماء الحاسوب والباحثين والمطورين الشغوفين، الذين جمعوا بين خبرة تمتد لأكثر من عقد في مختلف مجالات علوم الحاسوب والتسويق الرقمي، مع شغفهم بنجاح العملاء، لابتكار استراتيجيات وحلول مخصصة لتحقيق النجاح في العصر الرقمي. في نبني برمجيات ونقدم استراتيجيات التسويق الرقمي ",
+    "creating_great": "إنشاء جيد",
+    "experience_seamless": "تجربة & سهلة",
+    "flow_for_the_user": "تدفق للمستخدم",
+    "successful_market_plan": "خطة تسوقية ناجحة",
+    "transform_your_business_grow_with_us": "تحويل شركتك لتنمو معنا",
+    "reach_more_eyes": "إلى أكثر من مشاهد",
+    "our_digital_marketing_team_will_help_you_create_the_perfect_user_growth": "فريق التسويق الرقمي الخاص بنا سيساعدك في إنشاء النمو المثالي للمستخدم",
+    "a_strategic_experience_agency_crafting_brands_websites_products_and_pretty_much_anything_you_can_imagine": "شركة تجربة إستراتيجية لإنشاء علامات تجارية ومواقع ومنتجات وأي شيء تريده",
+    "want_to_grow_your_brand_and_reach_more_eyes": "تريد تطوير علامتك التجارية وزيادة الإيرادات؟ يمكن لفريق التسويق الرقمي الخاص بنا أن يساعدك في إنشاء النمو المثالي للمستخدم، والتعرف على العملاء والحفاظ عليهم. يمكن لفريقنا أن يطوع خطط التسويق المخصصة لمنتجك أو خدمتك. قم بالاتصال بنا لتعرف أكثر عن ما يمكن أن نفعله لك",
+    "become_a_client": "+ اصبح عميلا",
+    "contact_us": "اتصل بنا",
+    "lets_build_your_software": " دعنا نبني برمجياتك !",
+    "g_provides_a_complete_end_to_end_solution_for_your_needs": "نحن نقدم حلول متكاملة لإحتياجاتك. نحن نبني برمجيات ونقدم استراتيجيات التسويق الرقمي",
+    "our_software_development_services": "خدمات تطوير البرمجيات الخاصة بنا",
+    "we_offer_bespoke_software_development_services_that_are_customized_to_your_exact_requirements": "نحن نقدم خدمات تطوير البرمجيات المخصصة لإحتياجاتك الدقيقة. يعمل فريقنا من الخبراء معك من التصميم إلى التسليم لضمان أن تحصل على حلول برمجية معقولة ومتطورة تناسب إحتياجاتك المحددة",
+    "healthcare_software_development": "تطوير برمجيات الصحة العامة",
+    "banking_software_development": "تطوير برمجيات البنوك والمصارف",
+    "real_estate_app_development": "تطوير تطبيقات العقارات والمشاريع العقارية",
+    "our_software_development_services_are_designed_to_meet_your_specific_needs": "خدمات تطوير البرمجيات الخاصة بنا مصممة لتلبية إحتياجاتك المحددة",
+    "company_portfolio": "#سجل اعمال الشركة#",
+    "some_of_our_work": "! بعض اعمالنا ",
+    "explore_some_of_the_exciting_projects_we_ve_worked_on": "استكشف بعض المشاريع المثيرة التي عملنا عليها! من تطبيقات محمولة مبتكرة إلى مواقع ويب ديناميكية، نصنع حلول رقمية مخصصة لتلبية إحتياجات العملاء الفريدة",
+    "what_people_say_about_us": "#ما يقوله الناس عنا#",
+    "friends": "اصدقائنا",
+    "our": " عملائنا ",
+    "clients_growing": "العملاء المتزايدون",
+    "are_our_why": "هم سببنا للنجاح !",
+    "amazing_work": "عمل رائع",
+    "i_want_to_express_my_heartfelt_gratitude_for_your_outstanding_work_thank_you_for_meticulously_attending_to_every_detail_and_delivering_exactly_what_i_envisioned_i_appreciate_your_patience_and_efficiency_in_creating_the_bling_website": "أريد أن أعبر شكري العميق لعملك المثير. شكراً لك على تناول كل التفاصيل بدقة وتسليم ما كنت أتصور. أقدر صبرك وكفاءتك في إنشاء موقع البلينغ",
+    "dedicated_team": "فريق متخصص",
+    "gonovo_has_been_instrumental_in_transforming_our_business_with_their_exceptional_work_on_our_grocery_app_software_platform_and_website_their_team_delivered_innovative_user_friendly_solutions_tailored_to_our_needs": "جونوفو كانت مهمة في تحويل عملنا مع عملها المثير على تطبيق الأطعمة المنزلية الخاص بنا، ومنصة البرمجيات والموقع. فريقها أدى حلولًا مبتكرة ومستخدمة بشكل جيد تناسب إحتياجاتنا",
+    "had_a_great_experience_with_gonovo": "كانت التجربة رائعة بشكل كبير مع جونوفو",
+    "gonovo_delivered_exceptional_results_for_our_business_their_team_demonstrated_a_high_level_of_professionalism_patience_and_dedication_throughout_the_entire_process_ensuring_that_every_detail_was_handled_with_care_and_precision": "جونوفو أدت نتائج رائعة لعملنا. فريقها أظهر مستوى عالي من المهنية والصبر والتركيز طوال العملية، مضمناً أن كل التفاصيل تمت عناية بها ودقة",
+    "exceptional_job": "عمل رائع",
+    "gonovo_has_done_an_exceptional_job_developing_our_app_and_providing_ongoing_maintenance_to_ensure_it_runs_without_a_single_glitch_their_team_demonstrated_outstanding_professionalism_technical_expertise_and_a_deep_understanding_of_our_needs": "جونوفو قدمت عملًا رائعًا في تطوير تطبيقنا وتوفير الصيانة المستمرة لضمان تشغيله دون أي خلل. فريقها أظهر مستوى عالي من المهنية والخبرة الفنية وفهم عميق لإحتياجاتنا",
+    "professional_work": "عمل مهني",
+    "we_are_thoroughly_impressed_with_gonovo_s_professionalism_expertise_and_dedication_their_team_demonstrated_exceptional_attention_to_detail_clear_communication_and_a_commitment_to_delivering_high_quality_results": "نحن مثيرون بشكل كبير بالمهنية والخبرة والتركيز المتميزين لجونوفو. فريقها أظهر اهتمامًا فائقًا بالتفاصيل والتواصل الواضح والتزامًا بتسليم نتائج عالية الجودة",
+    "gonovo_delivered_outstanding_results_for_our_software_and_website_development_their_team_showcased_exceptional_professionalism_technical_expertise_and_a_deep_understanding_of_our_requirements": "جونوفو أدت نتائج رائعة لتطوير برمجياتنا ومواقعنا. فريقها أظهر مستوى عالي من المهنية والخبرة الفنية وفهم عميق لإحتياجاتنا"
+  },
+  "aside_links": {
+    "home": "الرئيسية",
+    "about": "عن الشركة",
+    "software_dev": "تطوير البرمجيات",
+    "digital_marketing": "التسويق الرقمي",
+    "reviews": "التقييمات",
+    "contact_us": "اتصل بنا",
+    "become_a_client": "اصبح عميلا",
+    "whatsapp": "واتساب",
+    "awesome_design": "تصميم رائع للشركات الرائعة",
+    "navigation": "التنقل"
+  },
+  "contact_form": {
+    "title": "دعنا نطور علامتك التجارية معاً",
+    "name_label": "الاسم والشركة",
+    "name_placeholder": "الاسم والشركة",
+    "email_label": "البريد الإلكتروني",
+    "email_placeholder": "you@company.com",
+    "phone_label": "رقم الهاتف",
+    "phone_placeholder": "أدخل رقم هاتفك",
+    "message_label": "الرسالة",
+    "message_placeholder": "اترك لنا رسالة...",
+    "submit_button": "إرسال طلبك"
+  },
+  "footer": {
+    "navigation": "التنقل",
+    "home": "الرئيسية",
+    "about_us": "عن الشركة",
+    "software_dev": "تطوير البرمجيات",
+    "digital_marketing": "التسويق الرقمي",
+    "reviews": "التقييمات",
+    "contact_us": "اتصل بنا",
+    "contact_us_title": "اتصل بنا",
+    "follow_us": "تابعنا",
+    "linkedin": "لينكد إن",
+    "instagram": "إنستغرام",
+    "facebook": "فيسبوك",
+    "love_to_hear": "نود أن نسمع منك.",
+    "feel_free": "لا تتردد في التواصل معنا إذا كنت تريد التعاون معنا، أو ببساطة لديك محادثة",
+    "become_client": "+ اصبح عميلا",
+    "move_faster": "تحرك أسرع مع جونوفو",
+    "save_hours": "وفر ساعات لا تحصى من التصميم واصنع تصاميم جميلة المظهر بشكل أسرع.",
+    "copyright": "© 2077 Untitled UI. جميع الحقوق محفوظة."
+  },
+  "dev_solution": {
+    "title": "حلول التطوير",
+    "subtitle": "سريع، سهل، فريد",
+    "design": "التصميم",
+    "scroll_down": "مرر للأسفل",
+    "projects_completed": "100+",
+    "projects_description": "مشاريع برمجيات الجوال والويب المكتملة",
+    "streamlining_efficiency": "تحسين الكفاءة",
+    "elevating_standards": "رفع المعايير",
+    "ensuring_security": "ضمان الأمان",
+    "all_rights_reserved": "جميع الحقوق محفوظة",
+    "year": "@2025"
+  },
+  "our_offers": {
+    "badge_text": "#ما نقدمه#",
+    "title": "المنتجات التي نقدمها لك",
+    "description": "بغض النظر عن الصناعة أو حجم الشركة أو تعقيد التحدي البرمجي، نحن مستعدون له!"
+  },
+  "services": {
+    "services_category": "الخدمات",
+    "on_demand_solutions": "الحلول عند الطلب",
+    "digital_transformation": "التحول الرقمي",
+    "saas_development": "تطوير SaaS",
+    "outsource_app_development": "تطوير التطبيقات الخارجية",
+    "crm_solution": "حلول إدارة علاقات العملاء",
+    "cloud_computing": "الحوسبة السحابية",
+    "php_development": "تطوير PHP",
+    "mean_stack_development": "تطوير MEAN Stack",
+    "nodejs_development": "تطوير Node.js",
+    "devops_development": "تطوير DevOps",
+    "angular_js_development": "تطوير Angular JS",
+    "unity_game_development": "تطوير ألعاب Unity",
+    "on_demand_app_development": "تطوير التطبيقات عند الطلب",
+    "taxi_app_solution": "حلول تطبيقات التاكسي",
+    "food_delivering_app_solutions": "حلول تطبيقات توصيل الطعام",
+    "e_learning_app_solutions": "حلول تطبيقات التعلم الإلكتروني",
+    "on_demand_ewallet_app_solutions": "حلول تطبيقات المحفظة الإلكترونية عند الطلب",
+    "grocery_delivery_app_development": "تطوير تطبيقات توصيل البقالة",
+    "live_streaming_app_development": "تطوير تطبيقات البث المباشر",
+    "iot_app_development": "تطوير تطبيقات إنترنت الأشياء",
+    "ar_app_development": "تطوير تطبيقات الواقع المعزز",
+    "vr_app_development": "تطوير تطبيقات الواقع الافتراضي",
+    "ibeacon_app_development": "تطوير تطبيقات iBeacon",
+    "progressive_web_app": "تطبيقات الويب التقدمية",
+    "ai_development": "تطوير الذكاء الاصطناعي",
+    "ml_development": "تطوير التعلم الآلي"
+  },
+  "products": {
+    "badge_text": "#خدمات تطوير البرمجيات#",
+    "title": "المنتجات التي نقدمها لك",
+    "description": "فريق جونوفو المخصص من مطوري البرمجيات يصنع بحرص حلول برمجية مخصصة. التزامنا مكننا من توسيع بصمتنا الرقمية عبر صناعات متنوعة.",
+    "healthcare_software_development": "تطوير برمجيات الرعاية الصحية",
+    "healthcare_description": "نقدم حلول برمجية مخصصة للرعاية الصحية، تشمل السجلات الطبية الإلكترونية، التطبيب عن بعد، الوصفات الإلكترونية، نظام المعلومات الصحية، وإنترنت الأشياء. فريقنا الخبير يتعاون مع العملاء لتخصيص البرمجيات لاحتياجاتهم الفريدة.",
+    "banking_software_development": "تطوير برمجيات البنوك",
+    "banking_description": "نقدم خدمات تطوير تطبيقات البرمجيات المخصصة لعملائنا في التكنولوجيا المالية. خدماتنا تغطي مجموعة واسعة من المجالات، بما في ذلك برمجيات إدارة البطاقات، برمجيات خدمة القروض، والمزيد.",
+    "real_estate_app_development": "تطوير تطبيقات العقارات",
+    "real_estate_description": "نقدم خدمات تطوير تطبيقات البرمجيات المخصصة لعملائنا في العقارات. برمجيات إدارة علاقات العملاء وإدارة الموارد المؤسسية المبتكرة مصممة لتعزيز مبيعات وكالات العقارات.",
+    "travel_software_development": "تطوير برمجيات السفر",
+    "travel_description": "ارفع مستوى عمليات النقل والفنادق والمطاعم وحجز التذاكر مع برمجيات السفر المتقدمة لدينا. حلولنا الرقمية توفر خدمات ضيافة سلسة وبدون تلامس.",
+    "ecommerce_retail": "التجارة الإلكترونية والتجزئة",
+    "ecommerce_description": "انتقل بعملك التجاري إلى العالم الرقمي للوصول لجمهور أوسع. استخدم حلول برمجيات التجزئة لتقديم المنتجات من خلال واجهة رقمية، مما يسهل المعاملات السلسة وإدارة المخزون",
+    "on_demand_software_development": "تطوير البرمجيات عند الطلب",
+    "on_demand_description": "حول مفهومك الرقمي إلى واقع مع خدمات تطوير البرمجيات المخصصة. اصنع حل مخصص يتوافق مع احتياجات العمل وخصائص الجمهور. حسّن التكاليف من خلال الدفع فقط للمنتج الأساسي."
+  },
+  "our_steps": {
+    "badge_text": "#رحلة المنتجات#",
+    "title": "! اربع خطوات بسيطة",
+    "description": "فريق جونوفو من المطورين المهرة ملتزم بصنع حلول برمجية مخصصة تلبي الاحتياجات المحددة لكل عميل.",
+    "step1": {
+      "project_requirements": "متطلبات المشروع",
+      "target_audience_question": "من هم جمهورك المستهدف؟",
+      "competitors_question": "هل لديك منافسين",
+      "products_features": "ميزات المنتجات",
+      "project_almost_finished": "المشروع يكاد ينتهي",
+      "user_research": "بحث المستخدم",
+      "market_research": "بحث السوق",
+      "step_number": "الخطوة 1",
+      "title": "استكشاف المتطلبات",
+      "description": "في هذه المرحلة الأولية، نحلل بعمق متطلبات المشروع، نفهم الجمهور المستهدف، نقيم المشهد التنافسي، ونقيّم ظروف السوق. التواصل الفعال بين جميع أصحاب المصلحة هو المفتاح."
+    },
+    "step2": {
+      "step_number": "الخطوة 2",
+      "title": "التصميم والنماذج الأولية",
+      "description": "بعد ذلك، ننشئ تصميم برمجي، مع التركيز على بناء منتج قابل للتطبيق (MVP). نسعى بنشاط للحصول على تعليقات من الأطراف المعنية خلال هذه المرحلة. هدفنا هو تحسين هندسة البرمجيات من خلال النماذج الأولية التكرارية.",
+      "design_phase": "مرحلة التصميم",
+      "wireframes": "الإطارات السلكية",
+      "user_flow": "تدفق المستخدم",
+      "prototype": "النموذج الأولي",
+      "design_system": "نظام التصميم",
+      "user_journey": "رحلة المستخدم"
+    },
+    "step3": {
+      "step_number": "الخطوة 3",
+      "title": "التطوير والتكامل",
+      "description": "هنا، نقسم جهودنا إلى تطوير الواجهة الأمامية والخلفية. ننسج معًا واجهات برمجة التطبيقات والتكاملات الخارجية لضخ البرمجيات بوظائفها الأساسية. تضمن هذه الخطوة أساسًا قويًا للمنتج النهائي.",
+      "software_development": "تطوير البرمجيات"
+    },
+    "step4": {
+      "step_number": "الخطوة 4",
+      "title": "الاختبار وضمان الجودة",
+      "description": "قبل النشر، يتم إجراء اختبارات صارمة. نقيم الأداء والسرعة والوظائف لالتقاط أي أخطاء أو عيوب. التزامنا هو تقديم تجربة مستخدم سلسة، خالية من المشاكل."
+    }
+  },
+  "smart_solutions": {
+    "badge_text": "#خدمات تطوير البرمجيات#",
+    "title": "حلول برمجية ذكية",
+    "description": "في جونوفو، نقدم مجموعة شاملة من خدمات تطوير البرمجيات المصممة لتلبية احتياجات عملك. من البرمجيات المخصصة وتطوير إدارة علاقات العملاء إلى الحلول المؤسسية وتكامل البرمجيات، نركز على تقديم حلول مبتكرة وفعالة.",
+    "custom_software_development": {
+      "title": "تطوير البرمجيات المخصصة",
+      "description": "في مواجهة سوق ديناميكي وتنافسي، نحدد المتطلبات المحددة لمؤسستك، ندرس عملاءك المحتملين، نفهم نموذج عملك، ونصمم حلول برمجية دائمة مصممة لاحتياجاتك."
+    },
+    "software_consulting_services": {
+      "title": "خدمات الاستشارات البرمجية",
+      "description": "نحول أفكارك إلى واقع في العالم الرقمي، نقيم احتياجاتك ونقترح أكثر التقنيات فعالية لبرمجياتك. التزامنا تجاهك ثابت، نقدم الدعم قبل وأثناء وبعد تنفيذ المشروع."
+    },
+    "enterprise_software_development": {
+      "title": "تطوير البرمجيات المؤسسية",
+      "description": "ككيان رائد في مجال إنشاء البرمجيات، جونوفو مكرسة لدفع الشركات نحو الحلول الآلية. عروضنا لتطوير البرمجيات المخصصة للمؤسسات مصممة لتعزيز العمل الجماعي الفعال."
+    },
+    "software_integration_services": {
+      "title": "خدمات تكامل البرمجيات",
+      "description": "دمج البرمجيات المبتكرة في الشركات القائمة يعزز الكفاءة بشكل كبير. ندير ببراعة جميع الجوانب، من التصميم إلى الاختبار والتنفيذ، طوال دورة حياة تكامل البرمجيات."
+    },
+    "custom_crm_development": {
+      "title": "تطوير إدارة علاقات العملاء المخصصة",
+      "description": "بناء علاقات قوية مع عملائنا قد يكون صعبًا، لكننا نحققه من خلال برمجيات إدارة علاقات العملاء المخصصة. عزز كفاءة عملك بأدواتنا البرمجية الرقمية."
+    },
+    "software_product_development_services": {
+      "title": "خدمات تطوير المنتجات البرمجية",
+      "description": "نحن خبراء في إنشاء برمجيات مصممة خصيصًا لك. نبدأ من الصفر، نضيف ميزات تناسب احتياجاتك تمامًا. بالإضافة إلى ذلك، نتعامل مع كل شيء من دراسة السوق إلى رعاية البرمجيات بمجرد بنائها."
+    }
+  },
+  "hero_digital": {
+    "title": "تصميم متين",
+    "title_highlight": "حلول",
+    "become_client_button": "+ كن عميلاً",
+    "contact_us_button": "اتصل بنا",
+    "build_strategy_title": "بناء الاستراتيجية",
+    "projects_completed": "لقد أكملنا بنجاح ما مجموعه 300+ مشروع",
+    "success_rate": "97%",
+    "trending_content": "أنشئ محتوى رائج لتعزيز وسائل التواصل الاجتماعي الخاصة بك"
+  },
+  "digital_marketing": {
+    "badge_text": "#التسويق الرقمي#",
+    "title": "خدمات التسويق الرقمي",
+    "description": "في جونوفو، نتخصص في تقديم استراتيجيات التسويق الرقمي المخصصة التي تدفع النمو وترفع من وجود علامتك التجارية عبر الإنترنت. يركز فريقنا الخبير على تعظيم النتائج من خلال مجموعة متنوعة من الخدمات المصممة للوصول إلى جمهورك المستهدف والتفاعل معه.",
+    "brand_awareness": {
+      "title": "الوعي بالعلامة التجارية",
+      "description": "دعنا نساعدك في زيادة ظهور علامتك التجارية والوصول إلى جمهور أوسع."
+    },
+    "social_media_management": {
+      "title": "إدارة وسائل التواصل الاجتماعي",
+      "description": "يمكن لخبرائنا التعامل مع حسابات وسائل التواصل الاجتماعي الخاصة بك، والتفاعل مع جمهورك وإنشاء محتوى مقنع."
+    },
+    "email_marketing": {
+      "title": "التسويق عبر البريد الإلكتروني",
+      "description": "تواصل مع عملائك مباشرة من خلال حملات البريد الإلكتروني المستهدفة التي تحقق النتائج."
+    },
+    "search_engine_optimization": {
+      "title": "تحسين محركات البحث",
+      "description": "حسّن ترتيب موقعك في نتائج البحث وادفع حركة مرور عضوية من خلال خدمات تحسين محركات البحث لدينا."
+    },
+    "content_creation": {
+      "title": "إنشاء المحتوى",
+      "description": "يمكن لفريقنا من الكتاب والمصممين إنشاء محتوى جذاب لموقعك وقنوات وسائل التواصل الاجتماعي."
+    },
+    "pay_per_click_advertising": {
+      "title": "الإعلان بنظام الدفع لكل نقرة",
+      "description": "دعنا ننشئ وندير حملات الدفع لكل نقرة المستهدفة لدفع حركة المرور والتحويلات لعملك."
+    }
+  }
 }

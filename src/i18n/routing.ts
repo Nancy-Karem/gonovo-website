@@ -7,8 +7,8 @@ export const routing = defineRouting({
   pathnames: {
     "/": "/",
     "/pathnames": {
-      ar: "/pathnames-ar",
-      en: "/pathnames",
+      // ar: "/pathnames-ar",
+      // en: "/pathnames",
     },
   },
 });

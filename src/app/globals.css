@@ -12,7 +12,7 @@
   --bgdrop-color: #bfbfbf4d;
   --ringlight-color: #ffffff80;
   --dotlight-color: #ffffff8c;
-  --offwhite-color: #ffffff4d;
+  --offwight-color: #ffffff4d;
   --semiblue-color: #4541f1;
   --lightpurple-color: #96b0fc;
   --semilightpurple-color: #aca0f8;
@@ -36,9 +36,17 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: var(--font-inter), sans-serif;
   overflow-x: hidden;
 }
+body[lang="ar"],
+body[dir="rtl"] {
+  font-family: var(--font-noto-sans-arabic), sans-serif !important;
+}
+body[lang="en"],
+body[dir="ltr"] {
+  font-family: var(--font-inter), sans-serif !important;
+}
+
 ul {
   list-style: none;
   display: flex;

@@ -2,7 +2,11 @@ import Image from "next/image";
 import React from "react";
 import { useCallusContext } from "@/components/context/ContactusContext";
 import styles from "./build.module.css";
+import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 function Buildsoftware() {
+  const locale = useLocale();
+  const t = useTranslations("home_Page");
   const skills = [
     "JavaScript",
     "React",
@@ -14,15 +18,15 @@ function Buildsoftware() {
   ];
   const data = [
     {
-      title: "Healthcare Software Development ",
+      title: t("healthcare_software_development"),
       image: "/assets/1.webp",
     },
     {
-      title: "Banking Software Development",
+      title: t("banking_software_development"),
       image: "/assets/cards.webp",
     },
     {
-      title: "Real Estate App Development",
+      title: t("real_estate_app_development"),
       image: "/assets/2.webp",
     },
   ];
@@ -30,12 +34,20 @@ function Buildsoftware() {
   return (
     <section className="py-4 md:py-16 overflow-x-hidden">
       <div className="bg-semipurple py-16">
-        <div className="max-w-[full] mx-9 lg:max-w-[829px] lg:m-auto flex flex-col gap-5">
+        <div
+          className={`max-w-[full] mx-9 lg:max-w-[829px] lg:m-auto flex flex-col gap-5 ${
+            locale === "ar" ? "items-center" : ""
+          }`}
+        >
           <h1
             data-aos="fade-down"
-            className="text-[30px] lg:text-[60px] leading-[38px] lg:leading-[72px] sm:flex  justify-center font-semibold lg:justify-between items-center block text-center"
+            className={`text-[30px] lg:text-[60px] leading-[38px] lg:leading-[72px] sm:flex  justify-center font-semibold lg:justify-between items-center block text-center ${
+              locale === "ar"
+                ? "text-right flex-row-reverse w-fit"
+                : "text-left"
+            }`}
           >
-            Lets Build Your Software!
+            {t("lets_build_your_software")}
             <span className="relative w-[30px]  h-[30px] lg:w-[58px] lg:h-[58px] inline-block">
               <Image
                 src="/svgs/angels.svg"
@@ -49,9 +61,7 @@ function Buildsoftware() {
             data-aos="fade-up"
             className="text-lightblack leading-[28px] font-medium text-center"
           >
-            GONOVO provides a complete end to end solution for your needs. Our
-            unique approach to client success has helped us deliver robust
-            products
+            {t("g_provides_a_complete_end_to_end_solution_for_your_needs")}
           </p>
         </div>
         <div className="max-w-full mx-9 md:max-w-[766px]  md:mx-auto flex  justify-center lg:justify-between mt-6 gap-4 flex-wrap">
@@ -128,27 +138,25 @@ function Buildsoftware() {
             className={`${styles.margin_Top2s} flex gap-5 mt-10 flex-col  md:ms-20 justify-end`}
           >
             <h1 className="text-lg md:text-3xl font-semibold">
-              Our Software Development Services
+              {t("our_software_development_services")}
             </h1>
             <p className="leading-[28px] text-lightblack">
-              We offer bespoke software development services that are customized
-              to your exact requirements. Our team of experts will work with you
-              from conception to delivery to ensure that you receive
-              intelligent, high-tech software solutions that are tailored to
-              your specific needs.
+              {t(
+                "we_offer_bespoke_software_development_services_that_are_customized_to_your_exact_requirements"
+              )}
             </p>
             <div className="flex gap-7 mt-4">
               <button
                 onClick={toggleOpen}
                 className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
               >
-                + Become a Client
+                {t("become_a_client")}
               </button>
               <button
                 onClick={toggleOpen}
                 className="text-black bg-[#FFF] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
               >
-                Contact us
+                {t("contact_us")}
               </button>
             </div>
           </div>

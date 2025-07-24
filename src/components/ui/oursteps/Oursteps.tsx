@@ -4,14 +4,17 @@ import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
 import Step4 from "./Step4";
+import { useTranslations } from "next-intl";
 
 function Oursteps() {
+  const t = useTranslations("our_steps");
+
   return (
-    <section className="py-16 overflow-x-hidden">
+    <section className="py-16 overflow-x-hidden" dir="ltr">
       <Badge
-        text="#Products Journey#"
-        title="Four Simple Steps!"
-        desc="Gonovo’s team of skilled developers is committed to crafting tailor-made software solutions that meet the specific needs of each client."
+        text={t("badge_text")}
+        title={t("title")}
+        desc={t("description")}
       />
       <div className="mx-auto grid lg:grid-cols-2  xl:grid-cols-1 xl:max-w-[1216px] grid-cols-1 justify-center gap-6">
         <Step1 />

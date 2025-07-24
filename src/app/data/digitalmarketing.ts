@@ -1,33 +1,33 @@
 const digitalMarketingServices = [
   {
     icon: "/svgs/digitalMarketing/light.svg",
-    title: "Brand Awareness",
-    desc: "Let us help you increase your brand's visibility and reach a wider audience.",
+    title: "digital_marketing.brand_awareness.title",
+    desc: "digital_marketing.brand_awareness.description",
   },
   {
     icon: "/svgs/digitalMarketing/hash.svg",
-    title: "Social Media Management",
-    desc: "Our experts can handle your social media accounts, engaging with your audience and creating compelling content.",
+    title: "digital_marketing.social_media_management.title",
+    desc: "digital_marketing.social_media_management.description",
   },
   {
     icon: "/svgs/digitalMarketing/email.svg",
-    title: "Email Marketing",
-    desc: "Reach your customers directly with targeted email campaigns that drive results.",
+    title: "digital_marketing.email_marketing.title",
+    desc: "digital_marketing.email_marketing.description",
   },
   {
     icon: "/svgs/digitalMarketing/search.svg",
-    title: "Search Engine Optimization",
-    desc: "Improve your website's ranking in search results and drive organic traffic with our SEO services.",
+    title: "digital_marketing.search_engine_optimization.title",
+    desc: "digital_marketing.search_engine_optimization.description",
   },
   {
     icon: "/svgs/digitalMarketing/edit.svg",
-    title: "Content Creation",
-    desc: "Our team of writers and designers can create engaging content for your website and social media channels.",
+    title: "digital_marketing.content_creation.title",
+    desc: "digital_marketing.content_creation.description",
   },
   {
     icon: "/svgs/digitalMarketing/cursor.svg",
-    title: "Pay-Per-Click Advertising",
-    desc: "Let us create and manage targeted PPC campaigns to drive traffic and conversions for your business.",
+    title: "digital_marketing.pay_per_click_advertising.title",
+    desc: "digital_marketing.pay_per_click_advertising.description",
   },
 ];
 

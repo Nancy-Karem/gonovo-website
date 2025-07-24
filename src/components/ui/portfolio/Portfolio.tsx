@@ -6,28 +6,30 @@ import Shapethree from "./shape3/Shapethree";
 import styles from "./mainsection.module.css";
 import ShapeShort from "./shapshort/ShapeShort";
 import { useCallusContext } from "@/components/context/ContactusContext";
+import { useTranslations } from "next-intl";
 function Portfolio() {
   const { toggleOpen } = useCallusContext();
+  const t = useTranslations("home_Page");
   return (
-    <section className="py-12">
+    <section className="py-12" dir="ltr">
       <Badge
-        text="#Company Portfolio#"
-        title="Some of our work!"
-        desc="Explore some of the exciting projects we've worked on! From innovative mobile apps to dynamic websites, we craft digital solutions that are tailored to meet the unique needs of our clients."
+        text={t("company_portfolio")}
+        title={t("some_of_our_work")}
+        desc={t("explore_some_of_the_exciting_projects_we_ve_worked_on")}
       />
       <div data-aos="fade-up" className="flex justify-center gap-4">
         <button
           onClick={toggleOpen}
           className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
         >
-          + Become a Client
+          {t("become_a_client")}
         </button>
 
         <button
           onClick={toggleOpen}
           className="ring-1 ring-black rounded-full py-[12px] px-[18px] text-[17px] font-medium"
         >
-          Contact us
+          {t("contact_us")}
         </button>
       </div>
       <div

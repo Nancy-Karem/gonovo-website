@@ -1,6 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import { useTranslations, useLocale } from "next-intl";
+
 function Step3() {
+  const t = useTranslations("our_steps.step3");
+  const locale = useLocale();
+
   const tech = [
     "/svgs/js.svg",
     "/svgs/html.svg",
@@ -51,8 +56,11 @@ function Step3() {
                 <span className="w-[6px] h-[6px] sm:w-3 sm:h-3 rounded-full inline-block bg-[#C8C8C8]"></span>
                 <span className="w-[6px] h-[6px] sm:w-3 sm:h-3 rounded-full inline-block bg-[#DBDBDB]"></span>
               </div>
-              <p className="text-[12px] xl:text-sm font-medium mt-3 xl:mt-6">
-                Software Developments
+              <p
+                className="text-[12px] xl:text-sm font-medium mt-3 xl:mt-6"
+                dir={locale === "ar" ? "rtl " : "ltr"}
+              >
+                {t("software_development")}
               </p>
             </div>
             <div className="py-4 px-2 xl:p-10">
@@ -95,16 +103,19 @@ sm:-right-[40px]"
         </div>
         <div className="mt-10 sm:mt-5 w-fit ml-auto">
           <p className="ring-2 ring-black w-fit rounded-full xl:px-[14px] xl:py-[2px] text-[12px] px-2 py-[1px] xl:text-sm font-medium">
-            STEP 3
+            {t("step_number")}
           </p>
-          <h1 className="text-[24px] xl:text-3xl font-medium text-[#111111]  mt-3 sm:mt-10 mb-2 sm:mb-4">
-            Development and Integration
+          <h1
+            className="text-[24px] xl:text-3xl font-medium text-[#111111]  mt-3 sm:mt-10 mb-2 sm:mb-4"
+            dir={locale === "ar" ? "rtl" : "ltr"}
+          >
+            {t("title")}
           </h1>
-          <p className="text-sm xl:text-base text-darkGray leading-[23px] max-w-[460px]">
-            Here, we split our efforts into front-end and back-end development.
-            We weave together APIs and third-party integrations to infuse the
-            software with its core functionalities. This step ensures a robust
-            foundation for the final product.
+          <p
+            className="text-sm xl:text-base text-darkGray leading-[23px] max-w-[460px]"
+            dir={locale === "ar" ? "rtl" : "ltr"}
+          >
+            {t("description")}
           </p>
         </div>
       </div>

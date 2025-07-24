@@ -13,6 +13,7 @@ const intlMiddleware = createMiddleware({
 
 export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
+  console.log("pathname");
 
   if (
     pathname.startsWith("/_next") ||

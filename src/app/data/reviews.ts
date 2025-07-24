@@ -1,8 +1,8 @@
 const reviews = {
   line1: [
     {
-      title: "Amazing Work",
-      desc: "I want to express my heartfelt gratitude for your outstanding work. Thank you for meticulously attending to every detail and delivering exactly what I envisioned. I appreciate your patience and efficiency in creating the Bling website.",
+      title: "amazing_work",
+      desc: "i_want_to_express_my_heartfelt_gratitude_for_your_outstanding_work_thank_you_for_meticulously_attending_to_every_detail_and_delivering_exactly_what_i_envisioned_i_appreciate_your_patience_and_efficiency_in_creating_the_bling_website",
       clientImage: "/assets/bling.webp",
       width: "84px",
       height: "36px",
@@ -11,40 +11,39 @@ const reviews = {
       bgImage: "/assets/market.webp",
     },
     {
-      title: "Dedicated Team",
-      desc: "Gonovo has been instrumental in transforming our business with their exceptional work on our grocery app, software platform, and website. Their team delivered innovative, user-friendly solutions tailored to our needs.",
+      title: "dedicated_team",
+      desc: "gonovo_has_been_instrumental_in_transforming_our_business_with_their_exceptional_work_on_our_grocery_app_software_platform_and_website_their_team_delivered_innovative_user_friendly_solutions_tailored_to_our_needs",
       clientImage: "/assets/chef.webp",
       width: "97px",
       height: "36px",
     },
     {
-      title: "Had a Great experience with Gonovo",
-      desc: "Gonovo delivered exceptional results for our business. Their team demonstrated a high level of professionalism, patience, and Dedication throughout the entire process, ensuring that every detail was handled with care and precision.",
+      title: "had_a_great_experience_with_gonovo",
+      desc: "gonovo_delivered_exceptional_results_for_our_business_their_team_demonstrated_a_high_level_of_professionalism_patience_and_dedication_throughout_the_entire_process_ensuring_that_every_detail_was_handled_with_care_and_precision",
       clientImage: "/svgs/lightbox.svg",
       width: "303px",
       height: "36px",
     },
     {
-      title: "Exceptional Job",
-      desc: "Gonovo has done an exceptional job developing our app and providing ongoing maintenance to ensure it runs flawlessly. Their team demonstrated outstanding professionalism, technical expertise, and a deep understanding of our needs.",
+      title: "exceptional_job",
+      desc: "gonovo_has_done_an_exceptional_job_developing_our_app_and_providing_ongoing_maintenance_to_ensure_it_runs_without_a_single_glitch_their_team_demonstrated_outstanding_professionalism_technical_expertise_and_a_deep_understanding_of_our_needs",
       logotxt: "CCH",
     },
     {
       bgImage: "/assets/cov1.webp",
     },
     {
-      title: "Professional Work",
-      desc: "We are thoroughly impressed with Gonovo's professionalism, expertise, and dedication. Their team demonstrated exceptional attention to detail, clear communication, and a commitment to delivering high-quality results.",
+      title: "professional_work",
+      desc: "we_are_thoroughly_impressed_with_gonovo_s_professionalism_expertise_and_dedication_their_team_demonstrated_exceptional_attention_to_detail_clear_communication_and_a_commitment_to_delivering_high_quality_results",
       logotxt: "Oxford Finance International Ltd",
     },
     {
-      title: "Had a Great experience with Gonovo",
-      desc: "Gonovo delivered outstanding results for our software and website development. Their team showcased exceptional professionalism, technical expertise, and a deep understanding of our requirements.",
+      title: "had_a_great_experience_with_gonovo",
+      desc: "gonovo_delivered_outstanding_results_for_our_software_and_website_development_their_team_showcased_exceptional_professionalism_technical_expertise_and_a_deep_understanding_of_our_requirements",
       clientImage: "/assets/mm.webp",
       width: "36px",
       height: "36px",
     },
-   
   ],
   line2: [
     {
@@ -52,13 +51,13 @@ const reviews = {
     },
 
     {
-      title: "Professional Work",
-      desc: "We are thoroughly impressed with Gonovo's professionalism, expertise, and dedication. Their team demonstrated exceptional attention to detail, clear communication, and a commitment to delivering high-quality results.",
+      title: "professional_work",
+      desc: "we_are_thoroughly_impressed_with_gonovo_s_professionalism_expertise_and_dedication_their_team_demonstrated_exceptional_attention_to_detail_clear_communication_and_a_commitment_to_delivering_high_quality_results",
       logotxt: "Oxford Finance International Ltd",
     },
     {
-      title: "Had a Great experience with Gonovo",
-      desc: "Gonovo delivered outstanding results for our software and website development. Their team showcased exceptional professionalism, technical expertise, and a deep understanding of our requirements.",
+      title: "had_a_great_experience_with_gonovo",
+      desc: "gonovo_delivered_outstanding_results_for_our_software_and_website_development_their_team_showcased_exceptional_professionalism_technical_expertise_and_a_deep_understanding_of_our_requirements",
       clientImage: "/assets/mm.webp",
       width: "36px",
       height: "36px",
@@ -69,27 +68,27 @@ const reviews = {
     },
 
     {
-      title: "Dedicated Team",
-      desc: "Gonovo has been instrumental in transforming our business with their exceptional work on our grocery app, software platform, and website. Their team delivered innovative, user-friendly solutions tailored to our needs.",
+      title: "dedicated_team",
+      desc: "gonovo_has_been_instrumental_in_transforming_our_business_with_their_exceptional_work_on_our_grocery_app_software_platform_and_website_their_team_delivered_innovative_user_friendly_solutions_tailored_to_our_needs",
       clientImage: "/assets/chef.webp",
       width: "97px",
       height: "36px",
     },
     {
-      title: "Amazing Work",
-      desc: "I want to express my heartfelt gratitude for your outstanding work. Thank you for meticulously attending to every detail and delivering exactly what I envisioned. I appreciate your patience and efficiency in creating the Bling website.",
+      title: "amazing_work",
+      desc: "i_want_to_express_my_heartfelt_gratitude_for_your_outstanding_work_thank_you_for_meticulously_attending_to_every_detail_and_delivering_exactly_what_i_envisioned_i_appreciate_your_patience_and_efficiency_in_creating_the_bling_website",
       clientImage: "/assets/bling.webp",
       width: "84px",
       height: "36px",
     },
     {
-      title: "Exceptional Job",
-      desc: "Gonovo has done an exceptional job developing our app and providing ongoing maintenance to ensure it runs flawlessly. Their team demonstrated outstanding professionalism, technical expertise, and a deep understanding of our needs.",
+      title: "exceptional_job",
+      desc: "gonovo_has_done_an_exceptional_job_developing_our_app_and_providing_ongoing_maintenance_to_ensure_it_runs_flawlessly_their_team_demonstrated_outstanding_professionalism_technical_expertise_and_a_deep_understanding_of_our_needs",
       logotxt: "CCH",
     },
     {
-      title: "Had a Great experience with Gonovo",
-      desc: "Gonovo delivered exceptional results for our business. Their team demonstrated a high level of professionalism, patience, and Dedication throughout the entire process, ensuring that every detail was handled with care and precision.",
+      title: "had_a_great_experience_with_gonovo",
+      desc: "gonovo_delivered_exceptional_results_for_our_business_their_team_demonstrated_a_high_level_of_professionalism_patience_and_dedication_throughout_the_entire_process_ensuring_that_every_detail_was_handled_with_care_and_precision",
       clientImage: "/svgs/lightbox.svg",
       width: "303px",
       height: "36px",

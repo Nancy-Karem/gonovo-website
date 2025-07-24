@@ -2,9 +2,275 @@
 // See: https://next-intl.dev/docs/workflows/typescript#messages-arguments
 
 declare const messages: {
-  "name": "AlAA AYAAD",
-  "welcome": "Welcome to my Next.js application",
-  "description": "This is a multilingual application built with Next.js and next-intl",
-  "switchLanguage": "Switch Language"
+  "home_Page": {
+    "title": "We Support",
+    "gr": "gr",
+    "wth": "wth",
+    "of_your_business": "of your business",
+    "description": "We’re a marketing and software company with a speciality in direct to consumer and challenger brands: those that think differently, act differently and walk their talk.",
+    "grow_your_brand": "Grow your brand & Increase revenue",
+    "appear_on_the_front_page_of_google": "Appear On the Front Page of Google !",
+    "brand_awareness": "Brand Awareness",
+    "email_marketing": "Email Marketing",
+    "content_creation": "Content Creation",
+    "seo_services": "SEO Services",
+    "digital_marketing": "Digital Marketing",
+    "software_development": "Software Development",
+    "join": "Join",
+    "clients_growing": "clients already growing",
+    "description_2": "We build brands and beautiful websites and apps for clients who need a little help to create something truly special. We do it with love in London for clients all around the world and we can do it for you too",
+    "about_the_company": "#ABOUT THE COMPANY#",
+    "who_we_are": "WHO WE ARE !",
+    "description_3": "is founded by driven computer scientists, researchers and developers that combined their decade of expertise in multiple facets of computer science and digital marketing with their passion for client success, to create bespoke strategies and solutions for success in the digital age. At GONOVO we build software and provide digital marketing strategy",
+    "creating_great": "CREATING GREAT",
+    "experience_seamless": "EXPERIENCE & Seamless",
+    "flow_for_the_user": "Flow For The User",
+    "successful_market_plan": "Successful Market Plan",
+    "transform_your_business_grow_with_us": "Transform Your Business Grow With Us",
+    "reach_more_eyes": "Reach More Eyes",
+    "our_digital_marketing_team_will_help_you_create_the_perfect_user_growth": "Our Digital Marketing Team Will Help You Create The Perfect User Growth",
+    "a_strategic_experience_agency_crafting_brands_websites_products_and_pretty_much_anything_you_can_imagine": "A strategic experience agency crafting brands, websites, Products and pretty much anything you can imagine",
+    "want_to_grow_your_brand_and_reach_more_eyes": "Want to grow your brand and reach more eyes? Our digital marketing team will help you create the perfect user growth, engagement and retention strategies. Our team will tailor custom go to market plans for your product or service. Set up an introductory call to learn what GONOVO can do for you",
+    "become_a_client": "+ Become a Client",
+    "contact_us": "Contact Us",
+    "lets_build_your_software": "Let's Build Your Software !",
+    "g_provides_a_complete_end_to_end_solution_for_your_needs": "G provides a complete end to end solution for your needs. We build software and provide digital marketing strategy",
+    "our_software_development_services": "Our Software Development Services",
+    "we_offer_bespoke_software_development_services_that_are_customized_to_your_exact_requirements": "We offer bespoke software development services that are customized to your exact requirements. Our team of experts will work with you from conception to delivery to ensure that you receive intelligent, high-tech software solutions that are tailored to your specific needs.",
+    "healthcare_software_development": "Healthcare Software Development",
+    "banking_software_development": "Banking Software Development",
+    "real_estate_app_development": "Real Estate App Development",
+    "what_people_say_about_us": "#What People Say About Us#",
+    "friends": "Friends",
+    "our": "Our",
+    "clients": "Clients",
+    "are_our_why": " Are Our Why!",
+    "amazing_work": "Amazing Work",
+    "i_want_to_express_my_heartfelt_gratitude_for_your_outstanding_work_thank_you_for_meticulously_attending_to_every_detail_and_delivering_exactly_what_i_envisioned_i_appreciate_your_patience_and_efficiency_in_creating_the_bling_website": "I want to express my heartfelt gratitude for your outstanding work. Thank you for meticulously attending to every detail and delivering exactly what I envisioned. I appreciate your patience and efficiency in creating the Bling website",
+    "dedicated_team": "Dedicated Team",
+    "gonovo_has_been_instrumental_in_transforming_our_business_with_their_exceptional_work_on_our_grocery_app_software_platform_and_website_their_team_delivered_innovative_user_friendly_solutions_tailored_to_our_needs": "Gonovo has been instrumental in transforming our business with their exceptional work on our grocery app, software platform, and website. Their team delivered innovative, user-friendly solutions tailored to our needs.",
+    "had_a_great_experience_with_gonovo": "Had a Great experience with Gonovo",
+    "gonovo_delivered_exceptional_results_for_our_business_their_team_demonstrated_a_high_level_of_professionalism_patience_and_dedication_throughout_the_entire_process_ensuring_that_every_detail_was_handled_with_care_and_precision": "Gonovo delivered exceptional results for our business. Their team demonstrated a high level of professionalism, patience, and Dedication throughout the entire process, ensuring that every detail was handled with care and precision.",
+    "exceptional_job": "Exceptional Job",
+    "gonovo_has_done_an_exceptional_job_developing_our_app_and_providing_ongoing_maintenance_to_ensure_it_runs_without_a_single_glitch_their_team_demonstrated_outstanding_professionalism_technical_expertise_and_a_deep_understanding_of_our_needs": "Gonovo has done an exceptional job developing our app and providing ongoing maintenance to ensure it runs flawlessly. Their team demonstrated outstanding professionalism, technical expertise, and a deep understanding of our needs.",
+    "professional_work": "Professional Work",
+    "we_are_thoroughly_impressed_with_gonovo_s_professionalism_expertise_and_dedication_their_team_demonstrated_exceptional_attention_to_detail_clear_communication_and_a_commitment_to_delivering_high_quality_results": "We are thoroughly impressed with Gonovo's professionalism, expertise, and dedication. Their team demonstrated exceptional attention to detail, clear communication, and a commitment to delivering high-quality results.",
+    "gonovo_delivered_outstanding_results_for_our_software_and_website_development_their_team_showcased_exceptional_professionalism_technical_expertise_and_a_deep_understanding_of_our_requirements": "Gonovo delivered outstanding results for our software and website development. Their team showcased exceptional professionalism, technical expertise, and a deep understanding of our requirements."
+  },
+  "aside_links": {
+    "home": "Home",
+    "about": "About Us",
+    "software_dev": "Software Dev",
+    "digital_marketing": "Digital Marketing",
+    "reviews": "Reviews",
+    "contact_us": "Contact Us",
+    "become_a_client": "Become a Client",
+    "whatsapp": "WhatsApp",
+    "awesome_design": "Awesome Design For Awesome Businesses",
+    "navigation": "Navigation"
+  },
+  "contact_form": {
+    "title": "Let's level up your brand, together",
+    "name_label": "Name & Company",
+    "name_placeholder": "Name & Company",
+    "email_label": "Email",
+    "email_placeholder": "you@company.com",
+    "phone_label": "Phone Number",
+    "phone_placeholder": "Enter your phone number",
+    "message_label": "Message",
+    "message_placeholder": "Leave us a message...",
+    "submit_button": "Submit your request"
+  },
+  "footer": {
+    "navigation": "Navigation",
+    "home": "Home",
+    "about_us": "About Us",
+    "software_dev": "Software Dev",
+    "digital_marketing": "Digital Marketing",
+    "reviews": "Reviews",
+    "contact_us": "Contact Us",
+    "contact_us_title": "Contact us",
+    "follow_us": "Follow us",
+    "linkedin": "Linkedin",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "love_to_hear": "We would love to hear from you.",
+    "feel_free": "Feel free to reach our if you want to collaborate with us, or simply have a chat",
+    "become_client": "+ Become a Client",
+    "move_faster": "Move faster with GONOVO",
+    "save_hours": "Save countless hours of design and ship great looking designs faster.",
+    "copyright": "© 2077 Untitled UI. All rights reserved."
+  },
+  "dev_solution": {
+    "title": "Development Solutions",
+    "subtitle": "Fast, Easy, Unique",
+    "design": "Design",
+    "scroll_down": "Scroll Down",
+    "projects_completed": "100+",
+    "projects_description": "Mobile, Web Software Projects Completed",
+    "streamlining_efficiency": "Streamlining Efficiency",
+    "elevating_standards": "Elevating Standards",
+    "ensuring_security": "Ensuring Security",
+    "all_rights_reserved": "All Right Reserved",
+    "year": "@2025"
+  },
+  "our_offers": {
+    "badge_text": "#What We Offer#",
+    "title": "Products Provide For You",
+    "description": "No matter the industry, company size, or complexity of the software challenge, we're up for it!"
+  },
+  "services": {
+    "services_category": "Services",
+    "on_demand_solutions": "On Demand Solutions",
+    "digital_transformation": "Digital Transformation",
+    "saas_development": "SaaS Development",
+    "outsource_app_development": "Outsource App Development",
+    "crm_solution": "CRM Solution",
+    "cloud_computing": "Cloud Computing",
+    "php_development": "PHP Development",
+    "mean_stack_development": "MEAN Stack Development",
+    "nodejs_development": "Nodejs Development",
+    "devops_development": "DevOps Development",
+    "angular_js_development": "Angular JS Development",
+    "unity_game_development": "Unity Game Development",
+    "on_demand_app_development": "On Demand App Development",
+    "taxi_app_solution": "Taxi App Solution",
+    "food_delivering_app_solutions": "Food Delivering App Solutions",
+    "e_learning_app_solutions": "E Learning App Solutions",
+    "on_demand_ewallet_app_solutions": "On Demand eWallet App Solutions",
+    "grocery_delivery_app_development": "Grocery Delivery App Development",
+    "live_streaming_app_development": "Live Streaming App Development",
+    "iot_app_development": "IoT App Development",
+    "ar_app_development": "AR App Development",
+    "vr_app_development": "VR App Development",
+    "ibeacon_app_development": "I beacon App Development",
+    "progressive_web_app": "Progressive Web App",
+    "ai_development": "AI Development",
+    "ml_development": "ML Development"
+  },
+  "products": {
+    "badge_text": "#Software Development Services#",
+    "title": "Products Provide For You",
+    "description": "Gonovo's dedicated team of software developers diligently crafts bespoke software solutions. Our commitment has enabled us to extend our digital footprint across diverse industries.",
+    "healthcare_software_development": "Healthcare Software Development",
+    "healthcare_description": "We provide bespoke software solutions for healthcare, encompassing EHR/EMR, telemedicine, e-prescription, HIS, and IoT. Our expert team collaborates with clients to tailor software to their unique needs.",
+    "banking_software_development": "Banking Software Development",
+    "banking_description": "We offer custom software application development services to our fintech clients. Our services cover a wide range of areas, including card management software, loan servicing software, and more.",
+    "real_estate_app_development": "Real Estate App Development",
+    "real_estate_description": "We offer custom software application development services to our real estate clients. Our innovative CRM and ERP software is designed to embolden the sales of real estate agencies.",
+    "travel_software_development": "Travel Software Development",
+    "travel_description": "Elevate your transportation, hotel, restaurant, and ticket booking operations with our advanced travel software. Our digital solutions provide seamless and contactless hospitality services.",
+    "ecommerce_retail": "E-Commerce and Retail",
+    "ecommerce_description": "Transition your retail business to the digital realm for expanded audience reach. Employ retail software solutions to present products through a digital interface, facilitating seamless transactions, inventory management",
+    "on_demand_software_development": "On-demand Software Development",
+    "on_demand_description": "Transform your digital concept into reality with tailored software development services. Craft a customised solution aligned with business needs and audience characteristics. Optimise costs by paying only for essential product."
+  },
+  "our_steps": {
+    "badge_text": "#Products Journey#",
+    "title": "Four Simple Steps!",
+    "description": "Gonovo's team of skilled developers is committed to crafting tailor-made software solutions that meet the specific needs of each client.",
+    "step1": {
+      "project_requirements": "Project Requirements",
+      "target_audience_question": "Who are your target audience?",
+      "competitors_question": "Do you have a compatitors",
+      "products_features": "Products Features",
+      "project_almost_finished": "Project almost finished",
+      "user_research": "User Research",
+      "market_research": "Market Research",
+      "step_number": "STEP 1",
+      "title": "Requirements Exploration",
+      "description": "In this initial phase, we deeply analyze project requirements, understand the target audience, assess the competitive landscape, and evaluate market conditions. Effective communication between all stakeholders is key."
+    },
+    "step2": {
+      "step_number": "STEP 2",
+      "title": "Design and Prototyping",
+      "description": "Next, we create a software design, focusing on building a Minimum Viable Product (MVP). We actively seek feedback from relevant parties during this stage. Our goal is to refine the software's architecture through iterative prototypes.",
+      "design_phase": "Design Phase",
+      "wireframes": "Wireframes",
+      "user_flow": "User Flow",
+      "prototype": "Prototype",
+      "design_system": "Design System",
+      "user_journey": "User Journey"
+    },
+    "step3": {
+      "step_number": "STEP 3",
+      "title": "Development and Integration",
+      "description": "Here, we split our efforts into front-end and back-end development. We weave together APIs and third-party integrations to infuse the software with its core functionalities. This step ensures a robust foundation for the final product.",
+      "software_development": "Software Developments"
+    },
+    "step4": {
+      "step_number": "STEP 4",
+      "title": "Testing and Quality Assurance",
+      "description": "Before deployment, rigorous testing takes place. We evaluate performance, speed, and functionality to catch any bugs or errors. Our commitment is to deliver a seamless user experience, free from glitches."
+    }
+  },
+  "smart_solutions": {
+    "badge_text": "#Software Development Services#",
+    "title": "Smart Software Solutions",
+    "description": "At Gonovo, we offer a comprehensive range of software development services tailored to meet your business needs. From custom software and CRM development to enterprise solutions and software integration, we focus on delivering innovative and efficient solutions.",
+    "custom_software_development": {
+      "title": "Custom Software Development",
+      "description": "In the face of a dynamic and competitive market, we identify the specific requirements of your enterprise, study your potential customers, comprehend your business model, and design enduring software solutions tailored to your needs."
+    },
+    "software_consulting_services": {
+      "title": "Software consulting services",
+      "description": "We bring your ideas to life in the digital world, evaluating your needs and suggesting the most effective technologies for your software. Our commitment to you is steadfast, providing support before, during, and after the project's implementation."
+    },
+    "enterprise_software_development": {
+      "title": "Enterprise Software Development",
+      "description": "As a premier entity in the realm of software creation, Gonovo is dedicated to propelling businesses towards automated solutions. Our bespoke software development offerings for enterprises are designed to enhance efficient teamwork."
+    },
+    "software_integration_services": {
+      "title": "Software Integration Services",
+      "description": "Incorporating innovative software into established businesses significantly enhances efficiency. We proficiently manage all aspects, from design to testing and implementation, throughout the software integration lifecycle."
+    },
+    "custom_crm_development": {
+      "title": "Custom CRM Development",
+      "description": "Building strong relationships with our customers can be tough, but we make it happen with our personalised customer relationship management (CRM) software. Boost your business efficiency with our digital software tools."
+    },
+    "software_product_development_services": {
+      "title": "Software Product Development Services",
+      "description": "We're experts at creating software that's tailor-made for you. We start from the ground up, adding features that fit your needs perfectly. Plus, we handle everything from studying the market to looking after the software once it's built."
+    }
+  },
+  "hero_digital": {
+    "title": "Solid Design",
+    "title_highlight": "Solutions",
+    "become_client_button": "+ Become a Client",
+    "contact_us_button": "Contact us",
+    "build_strategy_title": "Build Strategy",
+    "projects_completed": "We have successfully completed a total of 300+ projects",
+    "success_rate": "97%",
+    "trending_content": "Generate trending content to boost your social media"
+  },
+  "digital_marketing": {
+    "badge_text": "#Digital Marketing#",
+    "title": "Digital Marketing services",
+    "description": "At Gonovo, we specialize in delivering tailored digital marketing strategies that drive growth and elevate your brand's online presence. Our expert team focuses on maximizing results through a variety of services designed to reach and engage your target audience.",
+    "brand_awareness": {
+      "title": "Brand Awareness",
+      "description": "Let us help you increase your brand's visibility and reach a wider audience."
+    },
+    "social_media_management": {
+      "title": "Social Media Management",
+      "description": "Our experts can handle your social media accounts, engaging with your audience and creating compelling content."
+    },
+    "email_marketing": {
+      "title": "Email Marketing",
+      "description": "Reach your customers directly with targeted email campaigns that drive results."
+    },
+    "search_engine_optimization": {
+      "title": "Search Engine Optimization",
+      "description": "Improve your website's ranking in search results and drive organic traffic with our SEO services."
+    },
+    "content_creation": {
+      "title": "Content Creation",
+      "description": "Our team of writers and designers can create engaging content for your website and social media channels."
+    },
+    "pay_per_click_advertising": {
+      "title": "Pay-Per-Click Advertising",
+      "description": "Let us create and manage targeted PPC campaigns to drive traffic and conversions for your business."
+    }
+  }
 };
 export default messages;

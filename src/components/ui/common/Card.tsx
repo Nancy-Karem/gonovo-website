@@ -1,11 +1,17 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
+import { useTranslations, useLocale } from "next-intl";
+
 interface IPCard {
   icon: string;
   title: string;
   desc: string;
 }
+
 function Card({ item, index }: { item: IPCard; index: number }) {
+  const t = useTranslations();
+  const locale = useLocale();
+
   return (
     <div
       data-aos="zoom-out"
@@ -23,11 +29,15 @@ function Card({ item, index }: { item: IPCard; index: number }) {
         className={`${
           index === 1 ? "text-white" : " text-linksColor"
         } font-semibold mt-16 mb-4`}
+        dir={locale === "ar" ? "rtl" : "ltr"}
       >
-        {item.title}
+        {t(item.title)}
       </h2>
-      <p className={`${index === 1 ? "text-white" : "text-darkGray"} text-sm`}>
-        {item.desc}
+      <p
+        className={`${index === 1 ? "text-white" : "text-darkGray"} text-sm`}
+        dir={locale === "ar" ? "rtl" : "ltr"}
+      >
+        {t(item.desc)}
       </p>
     </div>
   );

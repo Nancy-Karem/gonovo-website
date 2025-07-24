@@ -1,43 +1,47 @@
 "use client";
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
-
 import Link from "next/link";
 import { useCallusContext } from "@/components/context/ContactusContext";
+import { useTranslations, useLocale } from "next-intl";
 
 function Footer() {
+  const t = useTranslations("footer");
+  const locale = useLocale();
+  const { toggleOpen } = useCallusContext();
+
   const columns = [
     {
-      title: "Navigation",
+      title: t("navigation"),
       elements: [
         {
-          text: "Home",
-          link: "/",
+          text: t("home"),
+          link: `/${locale}`,
         },
         {
-          text: "About Us",
-          link: "/#about",
+          text: t("about_us"),
+          link: `/${locale}/#about`,
         },
         {
-          text: "Software Dev",
-          link: "/softwaredevelopment",
+          text: t("software_dev"),
+          link: `/${locale}/softwaredevelopment`,
         },
         {
-          text: "Digital Marketing",
-          link: "/digitalmarketing",
+          text: t("digital_marketing"),
+          link: `/${locale}/digitalmarketing`,
         },
         {
-          text: "Reviews",
-          link: "/#reviews",
+          text: t("reviews"),
+          link: `/${locale}/#reviews`,
         },
         {
-          text: "Contact Us",
+          text: t("contact_us"),
           link: "#",
         },
       ],
     },
     {
-      title: "Contact us",
+      title: t("contact_us_title"),
       elements: [
         {
           text: "info@gonovo.tech",
@@ -50,27 +54,29 @@ function Footer() {
       ],
     },
     {
-      title: "Follow us",
+      title: t("follow_us"),
       elements: [
         {
-          text: "Linkedin",
+          text: t("linkedin"),
           link: "https://www.linkedin.com/company/gonovo/",
         },
         {
-          text: "Instagram",
+          text: t("instagram"),
           link: "/",
         },
         {
-          text: "Facebook",
+          text: t("facebook"),
           link: "/",
         },
       ],
     },
   ];
-  const { toggleOpen } = useCallusContext();
 
   return (
-    <footer className="bg-semiblue pt-[100px] pb-7 mt-[-40px] flex flex-col gap-10 sm:gap-16">
+    <footer
+      className="bg-semiblue pt-[100px] pb-7 mt-[-40px] flex flex-col gap-10 sm:gap-16"
+      dir={locale === "ar" ? "rtl" : "ltr"}
+    >
       <div className="w-[92%] sm:w-[96%] xl:w-[1216px] gap-16 xl:gap-0 m-auto grid grid-cols-1 xl:grid-cols-[0.9fr_1.1fr]">
         <div className="flex flex-col gap-10">
           <ImageComponent
@@ -80,17 +86,14 @@ function Footer() {
             alt="company logo"
           />
           <h1 className="text-2xl font-semibold text-white">
-            We would love to hear from you.
+            {t("love_to_hear")}
           </h1>
-          <p className="max-w-[397px] text-thingray">
-            Feel free to reach our if you want to collaborate with us, or simply
-            have a chat
-          </p>
+          <p className="max-w-[397px] text-thingray">{t("feel_free")}</p>
           <button
             className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium w-fit text-[#2e2f30] outline-none"
             onClick={toggleOpen}
           >
-            + Become a Client
+            {t("become_client")}
           </button>
         </div>
         <div className="flex justify-between flex-wrap gap-8">
@@ -104,7 +107,7 @@ function Footer() {
                     <Link
                       href={listItem?.link}
                       onClick={(e) => {
-                        if (listItem.text === "Contact Us") {
+                        if (listItem.text === t("contact_us")) {
                           e.preventDefault();
                           toggleOpen();
                         }
@@ -133,16 +136,11 @@ function Footer() {
       </div>
       <div className="w-[96%] xl:w-[1216px] m-auto border-t border-lightborder">
         <h1 className="text-xl font-semibold text-white leading-8 mt-4 mb-2">
-          Move faster with GONOVO
+          {t("move_faster")}
         </h1>
         <div className="flex justify-between flex-wrap gap-3">
-          <p className="text-thingray">
-            Save countless hours of design and ship great looking designs
-            faster.
-          </p>
-          <p className="text-semidarkgray">
-            © 2077 Untitled UI. All rights reserved.
-          </p>
+          <p className="text-thingray">{t("save_hours")}</p>
+          <p className="text-semidarkgray">{t("copyright")}</p>
         </div>
       </div>
     </footer>

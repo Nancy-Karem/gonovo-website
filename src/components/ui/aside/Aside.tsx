@@ -1,7 +1,7 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
 import styles from "./aside.module.css";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 function Aside({
   handleOpen,
@@ -11,29 +11,30 @@ function Aside({
   handleOpenContact: () => void;
 }) {
   const locale = useLocale();
+  const t = useTranslations("aside_links");
   const links = [
     {
-      name: "Home",
+      name: t("home"),
       link: `/${locale}`,
     },
     {
-      name: "About Us",
+      name: t("about"),
       link: `/${locale}/#about`,
     },
     {
-      name: "Software Dev",
+      name: t("software_dev"),
       link: `/${locale}/softwaredevelopment`,
     },
     {
-      name: "Digital marketing",
+      name: t("digital_marketing"),
       link: `/${locale}/digitalmarketing`,
     },
     {
-      name: "Reviews",
+      name: t("reviews"),
       link: `/${locale}/#reviews`,
     },
     {
-      name: "Contact Us",
+      name: t("contact_us"),
       link: `/${locale}`,
     },
   ];
@@ -86,7 +87,7 @@ function Aside({
               alt="stars"
             />
             <p className="max-w-[243px] text-sm font-semibold text-thingray relative">
-              Awesome Design For Awesome Businesses
+              {t("awesome_design")}
             </p>
           </div>
         </div>
@@ -98,7 +99,7 @@ function Aside({
             <div
               className={`${styles.logo_responsive} flex justify-between items-center`}
             >
-              <p className="text-thingray">Navigation</p>
+              <p className="text-thingray">{t("navigation")}</p>
               <Link href={`/${locale}`} onClick={handleOpen}>
                 <ImageComponent
                   src="/svgs/logolight.svg"
@@ -116,7 +117,7 @@ function Aside({
                       handleOpen();
                     }}
                   >
-                    Become a client
+                    {t("become_a_client")}
                   </button>
                 </div>
                 <button onClick={handleOpen}>
@@ -152,7 +153,11 @@ function Aside({
               ))}
             </div>
             <div
-              className={`${styles.mid_cont} absolute flex gap-10 right-[-20px] bottom-[-20px]`}
+              className={`${styles.mid_cont} absolute flex gap-10 ${
+                locale === "en"
+                  ? "right-[20px] bottom-[-20px]"
+                  : "left-[20px] bottom-[-20px]"
+              }`}
             >
               <div>
                 <Link
@@ -160,7 +165,9 @@ function Aside({
                   target="_blanck"
                   className="flex  items-center"
                 >
-                  <span className="text-thingray text-[32px]">WhatsApp</span>
+                  <span className="text-thingray text-[32px]">
+                    {t("whatsapp")}
+                  </span>
                   <ImageComponent
                     src="/svgs/arrow.svg"
                     width="43px"
@@ -204,7 +211,7 @@ function Aside({
                   alt="stars"
                 />
                 <p className="max-w-[243px] text-sm font-semibold text-thingray relative">
-                  Awesome Design For Awesome Businesses
+                  {t("awesome_design")}
                 </p>
               </div>
             </div>

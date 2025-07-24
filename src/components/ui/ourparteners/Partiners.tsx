@@ -4,7 +4,9 @@ import React, { useState, useEffect, useRef } from "react";
 import styles from "./partiner.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 function Partiners() {
+  const t = useTranslations("home_Page");
   const [count, setCount] = useState(0);
   const [hasAnimated, setHasAnimated] = useState(false);
   const counterRef = useRef<HTMLParagraphElement>(null);
@@ -55,56 +57,18 @@ function Partiners() {
           data-aos="fade-down"
           className="text-darkGray text-[19px] font-medium"
         >
-          Join{" "}
-          <span className="text-2xl font-bold text-[var(--semiblue-color)]">
+          {t("join")}
+          <span className="text-2xl mx-4 font-bold text-[var(--semiblue-color)]">
             {count}+
-          </span>{" "}
-          clients already growing
+          </span>
+          {t("clients")}
         </p>
         <p className="text-darkGray max-w-[900px] mx-auto">
-          We build brands and beautiful websites and apps for clients who need a
-          little help to create something truly special. We do it with love in
-          London for clients all around the world and we can do it for you too
+          {t("description_2")}
         </p>
         <div
           className={`${styles.images_responsive_cont} flex justify-center gap-y-4 gap-x-3  sm:gap-x-4 sm:gap-y-0 flex-wrap items-center max-w-[1024px] mx-auto`}
         >
-          {/* {companies.map((item, index) => (
-            <Link href={item.link} key={index}>
-              <div data-aos="zoom-in-out" data-aos-delay={(index + 1) * 150}>
-                <div
-                  className="relative hidden sm:block"
-                  style={
-                    index === 1
-                      ? {
-                          borderRadius: "50%",
-                          overflow: "hidden",
-                        }
-                      : {}
-                  }
-                >
-                  <ImageComponent
-                    src={item.logo}
-                    width={item.lgWidth}
-                    height={item.lgHeight ? item.lgHeight : "48px"}
-                    alt="partener company"
-                  />
-                </div>
-                <div
-                  className={`relative block sm:hidden ${
-                    index === 1 && "rounded-full overflow-hidden"
-                  } `}
-                >
-                  <ImageComponent
-                    src={item.logo}
-                    width={item.width}
-                    height={item.height ? item.height : "48px"}
-                    alt="partener company"
-                  />
-                </div>
-              </div>
-            </Link>
-          ))} */}
           {companies.map((item, index) => (
             <Link
               href={item.link}
@@ -136,14 +100,6 @@ function Partiners() {
                     index === 5 && "scale-[2]"
                   }`}
                 />
-                {/* <ImageComponent
-                  src={item.logo}
-                  // width={item.lgWidth}
-                  // height={item.lgHeight ? item.lgHeight : "48px"}
-                  width={100}
-                  height={100}
-                  alt="partener company"
-                /> */}
               </div>
             </Link>
           ))}

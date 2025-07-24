@@ -2,8 +2,12 @@ import React from "react";
 // import styles from "./steps.module.css";
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
+import { useTranslations, useLocale } from "next-intl";
 
 function Step4() {
+  const t = useTranslations("our_steps.step4");
+  const locale = useLocale();
+
   return (
     <div
       data-aos="fade-left"
@@ -21,16 +25,19 @@ function Step4() {
       <div className="grid grid-cols-1  ml-auto xl:gap-20 xl:grid-cols-[1fr_378px] xl:p-20  xl:px-16 h-full w-full  xl:justify-items-center justify-items-end lg:px-10 lg:py-20 px-5 py-10 ">
         <div className="xl:flex flex-col justify-center mt-10 mg:mt-5 w-fit ml-auto xl:order-1 order-2">
           <p className="ring-2 ring-black w-fit rounded-full xl:px-[14px] xl:py-[2px] text-[12px] px-2 py-[1px] xl:text-sm font-medium">
-            STEP 4
+            {t("step_number")}
           </p>
-          <h1 className="text-[24px] xl:text-3xl font-medium text-[#111111]  mt-3 sm:mt-10 mb-2 sm:mb-4">
-            Testing and Quality Assurance
+          <h1
+            className="text-[24px] xl:text-3xl font-medium text-[#111111]  mt-3 sm:mt-10 mb-2 sm:mb-4"
+            dir={locale === "ar" ? "rtl" : "ltr"}
+          >
+            {t("title")}
           </h1>
-          <p className="text-sm xl:text-base text-darkGray leading-[23px] max-w-[460px]">
-            Before deployment, rigorous testing takes place. We evaluate
-            performance, speed, and functionality to catch any bugs or errors.
-            Our commitment is to deliver a seamless user experience, free from
-            glitches.
+          <p
+            className="text-sm xl:text-base text-darkGray leading-[23px] max-w-[460px]"
+            dir={locale === "ar" ? "rtl" : "ltr"}
+          >
+            {t("description")}
           </p>
         </div>
         <div className="relative xl:order-2 order-1 w-full md:w-fit">

@@ -2,9 +2,16 @@ import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
 import React from "react";
 import styles from "./devstyle.module.css";
+import { useTranslations,} from "next-intl";
+
 function Devsolution() {
+  const t = useTranslations("dev_solution");
+
   return (
-    <section className="relative my-16 max-w-[1310px] mx-auto overflow-x-hidden">
+    <section
+      className="relative my-16 max-w-[1310px] mx-auto overflow-x-hidden "
+      dir="ltr"
+    >
       <div className={`${styles.main_sec_grid} grid grid-cols-[1fr_637px]`}>
         <div data-aos="fade-right" className={`${styles.lineOne} flex`}>
           <div
@@ -12,13 +19,13 @@ function Devsolution() {
           >
             <div>
               <h1 className="max-w-[427px] text-[48px] md:text-[64px] font-semibold leading-[58px] md:leading-[77.4px]">
-                Development Solutions
+                {t("title")}
               </h1>
-              <p className="text-lg md:text-xl mt-8">Fast, Easy, Unique</p>
+              <p className="text-lg md:text-xl mt-8">{t("subtitle")}</p>
             </div>
             <div className="relative w-[321px] mb-10">
               <div className="flex absolute right-10 top-6 items-center gap-1 text-xl">
-                Design
+                {t("design")}
                 <ImageComponent
                   src="/svgs/star.svg"
                   width="15px"
@@ -53,7 +60,7 @@ function Devsolution() {
               />
             </div>
             <span className="text-[12px] md:text-sm font-semibold ">
-              Scroll Down
+              {t("scroll_down")}
             </span>
           </div>
           <div className="block md:hidden absolute right-8 top-8">
@@ -66,7 +73,9 @@ function Devsolution() {
           </div>
           <div className="hidden  absolute top-10 right-12 p-6 rounded-[20px] bg-white w-[251px] md:flex flex-col gap-6 ">
             <div className="flex justify-between items-center">
-              <p className="text-[41px] font-semibold leading-7">100+</p>{" "}
+              <p className="text-[41px] font-semibold leading-7">
+                {t("projects_completed")}
+              </p>{" "}
               <ImageComponent
                 src="/svgs/grow.svg"
                 width="68px"
@@ -74,9 +83,7 @@ function Devsolution() {
                 alt="grow badge"
               />
             </div>
-            <p className="font-medium leading-7">
-              Mobile, Web Software Projects Completed
-            </p>
+            <p className="font-medium leading-7">{t("projects_description")}</p>
             <ImageComponent
               src="/svgs/goldstars.svg"
               width="116px"
@@ -87,7 +94,7 @@ function Devsolution() {
           <div className="absolute bottom-6 right-10 md:bottom-20 md:left-36">
             <ul className="border-l-2 pl-2 border-black flex flex-col gap-2 md:gap-5">
               <li className="text-[12px] md:text-lg font-medium leading-4">
-                Streamlining Efficiency
+                {t("streamlining_efficiency")}
               </li>
               <li>
                 <div className="relative md:w-6 md:h-6 sm:w-[14px] h-[14px]">
@@ -95,7 +102,7 @@ function Devsolution() {
                 </div>
               </li>
               <li className="text-[12px] md:text-lg font-medium leading-4">
-                Elevating Standards
+                {t("elevating_standards")}
               </li>
               <li>
                 <div className="relative md:w-6 md:h-6 sm:w-[14px] h-[14px]">
@@ -103,7 +110,7 @@ function Devsolution() {
                 </div>
               </li>
               <li className="text-[12px] md:text-lg font-medium leading-4">
-                Ensuring Security
+                {t("ensuring_security")}
               </li>
             </ul>
           </div>
@@ -112,8 +119,8 @@ function Devsolution() {
               <Image src="/assets/softmobile.webp" alt="mobile" fill />
             </div>
             <div className="absolute top-[46%] -left-40 md:top-1/2 md:left-[-230px] flex justify-between -rotate-90 h-[24px] w-[288px] md:w-[384px]">
-              <p className="">All Right Reserved</p>
-              <p className="">@2025</p>
+              <p className="">{t("all_rights_reserved")}</p>
+              <p className="">{t("year")}</p>
             </div>
           </div>
         </div>
