@@ -2,7 +2,7 @@ import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
 import React from "react";
 import styles from "./devstyle.module.css";
-import { useTranslations,} from "next-intl";
+import { useTranslations } from "next-intl";
 
 function Devsolution() {
   const t = useTranslations("dev_solution");
@@ -64,24 +64,36 @@ function Devsolution() {
             </span>
           </div>
           <div className="block md:hidden absolute right-8 top-8">
-            <ImageComponent
-              src="/svgs/grow.svg"
-              width="52px"
-              height="16px"
-              alt="grow badge"
-            />
+            <div className="bg-green-100 text-green-700 text-xs font-medium px-2 py-1 rounded-full flex items-center gap-1">
+              <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  fillRule="evenodd"
+                  d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              {t("grow_badge")}
+            </div>
           </div>
           <div className="hidden  absolute top-10 right-12 p-6 rounded-[20px] bg-white w-[251px] md:flex flex-col gap-6 ">
             <div className="flex justify-between items-center">
               <p className="text-[41px] font-semibold leading-7">
                 {t("projects_completed")}
               </p>{" "}
-              <ImageComponent
-                src="/svgs/grow.svg"
-                width="68px"
-                height="24px"
-                alt="grow badge"
-              />
+              <div className="bg-green-100 text-green-700 text-sm font-medium px-3 py-1 rounded-full flex items-center gap-1">
+                <svg
+                  className="w-4 h-4"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M3.293 9.707a1 1 0 010-1.414l6-6a1 1 0 011.414 0l6 6a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L4.707 9.707a1 1 0 01-1.414 0z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                {t("grow_badge")}
+              </div>
             </div>
             <p className="font-medium leading-7">{t("projects_description")}</p>
             <ImageComponent

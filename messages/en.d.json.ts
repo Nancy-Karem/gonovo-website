@@ -40,6 +40,9 @@ declare const messages: {
     "healthcare_software_development": "Healthcare Software Development",
     "banking_software_development": "Banking Software Development",
     "real_estate_app_development": "Real Estate App Development",
+    "company_portfolio": "#Company Portfolio#",
+    "some_of_our_work": "! Some of our work ",
+    "explore_some_of_the_exciting_projects_we_ve_worked_on": "Explore some of the exciting projects we've worked on! From innovative mobile apps to dynamic websites, we create tailored digital solutions to meet your unique needs",
     "what_people_say_about_us": "#What People Say About Us#",
     "friends": "Friends",
     "our": "Our",
@@ -112,7 +115,8 @@ declare const messages: {
     "elevating_standards": "Elevating Standards",
     "ensuring_security": "Ensuring Security",
     "all_rights_reserved": "All Right Reserved",
-    "year": "@2025"
+    "year": "@2025",
+    "grow_badge": "GROW"
   },
   "our_offers": {
     "badge_text": "#What We Offer#",
