@@ -27,7 +27,10 @@ function Header() {
     }
   }, [open]);
   return (
-    <header className="h-[50px] flex justify-between items-center">
+    <header
+      className="h-[50px] flex justify-between items-center"
+      dir={locale === "ar" ? "rtl" : "ltr"}
+    >
       <Link
         href={`/${locale}`}
         className="relative w-[180px] h-[36px] sm:w-[215px] sm:h-[32px] inline-block"
