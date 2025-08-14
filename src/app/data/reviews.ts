@@ -83,7 +83,7 @@ const reviews = {
     },
     {
       title: "exceptional_job",
-      desc: "gonovo_has_done_an_exceptional_job_developing_our_app_and_providing_ongoing_maintenance_to_ensure_it_runs_flawlessly_their_team_demonstrated_outstanding_professionalism_technical_expertise_and_a_deep_understanding_of_our_needs",
+      desc: "gonovo_has_done_an_exceptional_job_developing_our_app_and_providing_ongoing_maintenance_to_ensure_it_runs_without_a_single_glitch_their_team_demonstrated_outstanding_professionalism_technical_expertise_and_a_deep_understanding_of_our_needs",
       logotxt: "CCH",
     },
     {

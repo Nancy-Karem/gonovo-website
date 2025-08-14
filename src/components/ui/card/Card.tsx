@@ -21,14 +21,14 @@ function Card({ review }: { review: IPelements }) {
                 locale === "ar" ? "text-right" : "text-left"
               }`}
             >
-              {t(review.title!)}
+              {t(review?.title ?? "")}
             </h1>
             <p
               className={`text-darkGray text-[14px] leading-[22px] ${
                 locale === "ar" ? "text-right" : "text-left"
               }`}
             >
-              {t(review.desc!)}
+              {t(review?.desc ?? "")}
             </p>
           </div>
           <div className="flex gap-4">
