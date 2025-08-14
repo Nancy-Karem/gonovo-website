@@ -29,7 +29,7 @@ function Shapethree() {
         <div className="relative h-full w-[10%] ">
           <div className="absolute -rotate-90 right-[-25px] sm:right-[-45px] bottom-[120px] lg:bottom-[85px] xl:bottom-[120px] w-max">
             <button
-              className="text-[28px] sm:text-[35px] text-white font-medium   block"
+              className="text-[28px] sm:text-[35px] text-white font-medium block"
               onClick={toggleOpen}
             >
               {t("contact_us")}

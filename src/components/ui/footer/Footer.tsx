@@ -62,7 +62,7 @@ function Footer() {
         },
         {
           text: t("instagram"),
-          link: "/",
+          link: "https://www.instagram.com/gonovo.tech",
         },
         {
           text: t("facebook"),
