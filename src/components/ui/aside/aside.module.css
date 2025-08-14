@@ -33,7 +33,7 @@
   display: none;
 }
 .main_responsive {
-  overflow-y: scroll;
+  overflow: auto;
 }
 
 @media (max-width: 1110px) {
