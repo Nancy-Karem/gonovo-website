@@ -1,9 +1,9 @@
 import Image from "next/image";
 import React from "react";
-import { useCallusContext } from "@/components/context/ContactusContext";
 import styles from "./build.module.css";
 import { useTranslations } from "next-intl";
 import { useLocale } from "next-intl";
+import { ContactButton } from "@/components/common/ContactButton";
 function Buildsoftware() {
   const locale = useLocale();
   const t = useTranslations("home_Page");
@@ -30,7 +30,6 @@ function Buildsoftware() {
       image: "/assets/2.webp",
     },
   ];
-  const { toggleOpen } = useCallusContext();
   return (
     <section className="py-4 md:py-16 overflow-x-hidden">
       <div className="bg-semipurple py-16">
@@ -146,18 +145,14 @@ function Buildsoftware() {
               )}
             </p>
             <div className="flex gap-7 mt-4">
-              <button
-                onClick={toggleOpen}
+              <ContactButton
+                text={t("become_a_client")}
                 className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-              >
-                {t("become_a_client")}
-              </button>
-              <button
-                onClick={toggleOpen}
+              />
+              <ContactButton
+                text={t("contact_us")}
                 className="text-black bg-[#FFF] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-              >
-                {t("contact_us")}
-              </button>
+              />
             </div>
           </div>
         </div>

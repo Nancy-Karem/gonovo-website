@@ -114,7 +114,6 @@ function Aside({
                     className="bg-white rounded-full py-[12px] px-[18px] text-[17px] font-medium"
                     onClick={() => {
                       handleOpenContact();
-                      handleOpen();
                     }}
                   >
                     {t("become_a_client")}
@@ -143,7 +142,6 @@ function Aside({
                       handleOpen();
                     } else {
                       e.preventDefault();
-                      handleOpen();
                       handleOpenContact();
                     }
                   }}

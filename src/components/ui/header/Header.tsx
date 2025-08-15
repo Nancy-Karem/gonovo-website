@@ -35,7 +35,12 @@ function Header() {
         href={`/${locale}`}
         className="relative w-[180px] h-[36px] sm:w-[215px] sm:h-[32px] inline-block"
       >
-        <Image src="/svgs/logo.svg" alt="logo of website" fill />
+        <Image
+          src="/svgs/logo.svg"
+          alt="logo of website"
+          fill
+          sizes="(max-width: 640px) 180px, 215px"
+        />
       </Link>
       <div>
         <ul className="w-[551px] py-[13px] hidden xl:flex px-[52px] bg-white  justify-between gap-6 rounded-full">

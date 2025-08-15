@@ -3,10 +3,11 @@ import React from "react";
 import Badge from "../common/Badge";
 import Image from "next/image";
 import styles from "./aboutstyle.module.css";
-import { useCallusContext } from "@/components/context/ContactusContext";
+// import { useCallusContext } from "@/components/context/ContactusContext";
 import { useLocale, useTranslations } from "next-intl";
+import { ContactButton } from "@/components/common/ContactButton";
 function Aboutcompany() {
-  const { toggleOpen } = useCallusContext();
+  // const { toggleOpen } = useCallusContext();
   const t = useTranslations("home_Page");
   const locale = useLocale();
   return (
@@ -81,18 +82,14 @@ function Aboutcompany() {
               data-aos-delay={500}
               className="flex gap-4 pb-1"
             >
-              <button
-                onClick={toggleOpen}
+              <ContactButton
+                text={t("become_a_client")}
                 className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-              >
-                {t("become_a_client")}
-              </button>
-              <button
-                onClick={toggleOpen}
+              />
+              <ContactButton
+                text={t("contact_us")}
                 className="ring-1 ring-black rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-              >
-                {t("contact_us")}
-              </button>
+              />
             </div>
           </div>
         </div>

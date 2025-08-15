@@ -3,11 +3,10 @@ import Header from "../header/Header";
 
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
-import { useCallusContext } from "@/components/context/ContactusContext";
 import { useTranslations, useLocale } from "next-intl";
+import { ContactButton } from "@/components/common/ContactButton";
 
 function HeroDigital() {
-  const { toggleOpen } = useCallusContext();
   const t = useTranslations("hero_digital");
   const locale = useLocale();
 
@@ -34,18 +33,14 @@ function HeroDigital() {
               </span>
             </h1>
             <div className="sm:ml-[-24px]  my-10 lg:mb-0 sm:mt-10 flex gap-3">
-              <button
-                onClick={toggleOpen}
+              <ContactButton
+                text={t("become_client_button")}
                 className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-              >
-                {t("become_client_button")}
-              </button>
-              <button
-                onClick={toggleOpen}
+              />
+              <ContactButton
+                text={t("contact_us_button")}
                 className="text-black bg-[#FFF] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-              >
-                {t("contact_us_button")}
-              </button>
+              />
             </div>
             <div className="hidden lg:flex mt-16 sm:ml-[-24px] gap-6">
               <div className="relative max-h-[187px] max-w-[402px] overflow-hidden rounded-[41px]">

@@ -6,12 +6,16 @@ const InterFont = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  preload: true,
 });
 
 const NotoSansArabicFont = Noto_Sans_Arabic({
   variable: "--font-noto-sans-arabic",
   subsets: ["arabic"],
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
+  preload: true,
 });
 
 export const metadata: Metadata = {

@@ -1,68 +1,17 @@
 import companies from "@/app/data/companies";
-// import ImageComponent from "@/components/imagecomponent/ImageComponent";
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import styles from "./partiner.module.css";
 import Link from "next/link";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Counter } from "./counter/Counter";
 function Partiners() {
   const t = useTranslations("home_Page");
-  const [count, setCount] = useState(0);
-  const [hasAnimated, setHasAnimated] = useState(false);
-  const counterRef = useRef<HTMLParagraphElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !hasAnimated) {
-            setHasAnimated(true);
-
-            // Counter animation
-            const duration = 4000; // 2 seconds
-            const targetValue = 100;
-            const startTime = Date.now();
-
-            const animateCounter = () => {
-              const elapsed = Date.now() - startTime;
-              const progress = Math.min(elapsed / duration, 1);
-              const currentValue = Math.floor(progress * targetValue);
-
-              setCount(currentValue);
-
-              if (progress < 1) {
-                requestAnimationFrame(animateCounter);
-              }
-            };
-
-            animateCounter();
-          }
-        });
-      },
-      { threshold: 0.5 }
-    );
-
-    if (counterRef.current) {
-      observer.observe(counterRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, [hasAnimated]);
 
   return (
     <section className="pb-12 pt-16 px-4 sm:p-16  ">
       <div className="flex flex-col gap-8 max-w-[1280px] mx-auto text-center">
-        <p
-          ref={counterRef}
-          data-aos="fade-down"
-          className="text-darkGray text-[19px] font-medium"
-        >
-          {t("join")}
-          <span className="text-2xl mx-4 font-bold text-[var(--semiblue-color)]">
-            {count}+
-          </span>
-          {t("clients")}
-        </p>
+        <Counter />
         <p className="text-darkGray max-w-[900px] mx-auto">
           {t("description_2")}
         </p>

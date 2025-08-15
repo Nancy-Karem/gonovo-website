@@ -1,9 +1,10 @@
 import Footer from "@/components/ui/footer/Footer";
-import { ContactusContext } from "@/components/context/ContactusContext";
 import "aos/dist/aos.css";
 import WithAOS from "@/components/withaos/WithAos";
 import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
+import { ContactusContext } from "@/components/context/ContactusContext";
+import { Contact } from "@/components/contactcomp/Contact";
 
 export default async function LocaleLayout({
   children,
@@ -17,14 +18,15 @@ export default async function LocaleLayout({
 
   return (
     <NextIntlClientProvider messages={messages}>
-      <ContactusContext>
-        <div lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
-          <WithAOS>
-            {children}
+      <div lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
+        <WithAOS>
+          {children}
+          <ContactusContext>
             <Footer />
-          </WithAOS>
-        </div>
-      </ContactusContext>
+            <Contact />
+          </ContactusContext>
+        </WithAOS>
+      </div>
     </NextIntlClientProvider>
   );
 }

@@ -2,10 +2,10 @@ import React from "react";
 import styles from "./shapeth.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallusContext } from "@/components/context/ContactusContext";
+// import { useCallusContext } from "@/components/context/ContactusContext";
 import { useTranslations } from "next-intl";
 function Shapethree() {
-  const { toggleOpen } = useCallusContext();
+  // const { toggleOpen } = useCallusContext();
 
   const t = useTranslations("home_Page");
   return (
@@ -30,7 +30,7 @@ function Shapethree() {
           <div className="absolute -rotate-90 right-[-25px] sm:right-[-45px] bottom-[120px] lg:bottom-[85px] xl:bottom-[120px] w-max">
             <button
               className="text-[28px] sm:text-[35px] text-white font-medium block"
-              onClick={toggleOpen}
+              // onClick={toggleOpen}
             >
               {t("contact_us")}
             </button>

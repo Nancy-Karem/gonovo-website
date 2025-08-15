@@ -3,7 +3,7 @@ import styles from "./shapetwo.module.css";
 import "../../../ui/portfolio/common.css";
 import Image from "next/image";
 import Link from "next/link";
-import { useCallusContext } from "@/components/context/ContactusContext";
+// import { useCallusContext } from "@/components/context/ContactusContext";
 import { useTranslations } from "next-intl";
 function ShapeTwo({
   bgColor,
@@ -18,7 +18,7 @@ function ShapeTwo({
   text: string;
   link: string;
 }) {
-  const { toggleOpen } = useCallusContext();
+  // const { toggleOpen } = useCallusContext();
   const t = useTranslations("home_Page");
   return (
     <div
@@ -48,7 +48,7 @@ function ShapeTwo({
       <h1 className=" bg-white absolute bottom-[-1px] left-[-1px] z-10  rounded-se-[18px] text-lg sm:text-[26px] leading-[40px] h-12 pt-2 w-[140px] sm:w-[212px]">
         {index === 2 && (
           <button
-            onClick={toggleOpen}
+            // onClick={toggleOpen}
             className="flex items-center justify-center mx-auto gap-2 text-[#5843FC]"
           >
             {t("contact_us")}

@@ -37,7 +37,7 @@ function MainHero() {
           className={`${styles.point} w-[19px] h-[19px] rounded-full bg-purpleLight`}
         ></div>
         <div
-          data-aos="fade-up"
+          // data-aos="fade-up"
           className="flex items-center gap-3 justify-center"
         >
           <h2 className="font-semibold text-[34px] sm:text-5xl">
@@ -51,8 +51,8 @@ function MainHero() {
           />
         </div>
         <h1
-          data-aos="fade-up"
-          data-aos-delay={200}
+          // data-aos="fade-up"
+          // data-aos-delay={200}
           className="flex items-center font-semibold text-[64px] sm:text-[102px] leading-[90px] sm:leading-[123px] gap-3 justify-center"
         >
           {t("gr")}

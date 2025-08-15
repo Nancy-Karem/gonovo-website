@@ -5,10 +5,9 @@ import ShapeTwo from "./shape2/ShapeTwo";
 import Shapethree from "./shape3/Shapethree";
 import styles from "./mainsection.module.css";
 import ShapeShort from "./shapshort/ShapeShort";
-import { useCallusContext } from "@/components/context/ContactusContext";
 import { useTranslations } from "next-intl";
+import { ContactButton } from "@/components/common/ContactButton";
 function Portfolio() {
-  const { toggleOpen } = useCallusContext();
   const t = useTranslations("home_Page");
   return (
     <section className="py-12" dir="ltr">
@@ -18,19 +17,15 @@ function Portfolio() {
         desc={t("explore_some_of_the_exciting_projects_we_ve_worked_on")}
       />
       <div data-aos="fade-up" className="flex justify-center gap-4">
-        <button
-          onClick={toggleOpen}
+        <ContactButton
+          text={t("become_a_client")}
           className="text-white bg-[#FF732C] rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-        >
-          {t("become_a_client")}
-        </button>
+        />
 
-        <button
-          onClick={toggleOpen}
+        <ContactButton
+          text={t("contact_us")}
           className="ring-1 ring-black rounded-full py-[12px] px-[18px] text-[17px] font-medium"
-        >
-          {t("contact_us")}
-        </button>
+        />
       </div>
       <div
         className={`${styles.main_sec_cont} my-10 grid grid-cols-2 gap-x-5 sm:gap-y-10 gap-y-6 max-w-[1307px] mx-auto justify-items-center`}
