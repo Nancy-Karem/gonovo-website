@@ -23,7 +23,7 @@ function Shapethree() {
       <div className={styles.corner_1}></div>
       <div className={styles.corner_2}></div>
       <div className="w-[96%] mr-auto h-full flex items-center justify-between">
-        <div className="w-[350px] h-[234px] ms-[-30px] mt-[96px] sm:mt-0 sm:h-[350px] sm:w-[500px] lg:w-[370px] lg:h-[250px] xl:w-[500px] sm:ms-[-5px] xl:h-[350px] relative">
+        <div className="w-[350px] h-[234px] -ms-[10px] mt-[96px] sm:mt-0 sm:h-[350px] sm:w-[500px] lg:w-[370px] lg:h-[250px] xl:w-[500px] sm:ms-[-5px] xl:h-[350px] relative">
           <Image src="/assets/1s4.webp" alt="mob" fill />
         </div>
         <div className="relative h-full w-[10%] ">
