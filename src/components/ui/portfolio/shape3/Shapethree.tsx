@@ -4,10 +4,12 @@ import Image from "next/image";
 import Link from "next/link";
 // import { useCallusContext } from "@/components/context/ContactusContext";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 function Shapethree() {
   // const { toggleOpen } = useCallusContext();
 
   const t = useTranslations("home_Page");
+  const locale = useLocale();
   return (
     <div data-aos="flip-left" className={styles.main_Shape_cont}>
       <div className="w-[130px] h-[105px] rounded-es-[18px] bg-white absolute right-[-1px] top-[-1px]">
@@ -27,7 +29,11 @@ function Shapethree() {
           <Image src="/assets/1s4.webp" alt="mob" fill />
         </div>
         <div className="relative h-full w-[10%] ">
-          <div className="absolute -rotate-90 right-[-25px] sm:right-[-45px] bottom-[120px] lg:bottom-[85px] xl:bottom-[120px] w-max">
+          <div
+            className={`absolute -rotate-90 ${
+              locale === "en" ? "right-[-50px]" : "right-[-22px]"
+            } sm:right-[-45px] bottom-[120px] lg:bottom-[85px] xl:bottom-[120px] w-max`}
+          >
             <button
               className="text-[28px] sm:text-[35px] text-white font-medium block"
               // onClick={toggleOpen}
