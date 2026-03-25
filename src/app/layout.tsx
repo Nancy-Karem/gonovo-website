@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Noto_Sans_Arabic } from "next/font/google";
+import Script from "next/script";
+import { GOOGLE_ADS_ID } from "@/lib/googleAds";
 import "./globals.css";
 
 const InterFont = Inter({
@@ -41,7 +43,15 @@ export const metadata: Metadata = {
       "ar-EG": "https://gonovo.tech/ar/",
     },
   },
-  icons: ["/svgs/logo.svg", "/assets/logo.png"],
+  manifest: "/favicon_io/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon_io/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/favicon_io/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+    ],
+    shortcut: "/favicon_io/favicon.ico",
+    apple: "/favicon_io/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Gonovo Company - Innovative Solutions for Your Business",
     description:
@@ -80,8 +90,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={`${InterFont.variable} ${NotoSansArabicFont.variable}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        suppressHydrationWarning
+        className={`${InterFont.variable} ${NotoSansArabicFont.variable}`}
+      >
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_ADS_ID}');
+          `}
+        </Script>
         {children}
       </body>
     </html>

@@ -7,6 +7,7 @@ import { useFormik } from "formik";
 import validationSchema from "../validation schema/contactus";
 import emailjs from "@emailjs/browser";
 import { useTranslations, useLocale } from "next-intl";
+import { fireLeadFormConversion } from "@/lib/googleAds";
 
 function Contactus() {
   const { toggleOpen } = useCallusContext();
@@ -34,6 +35,7 @@ function Contactus() {
         .then(
           (result) => {
             console.log("Email sent successfully:", result.text);
+            fireLeadFormConversion();
             resetForm();
             toggleOpen();
           },
