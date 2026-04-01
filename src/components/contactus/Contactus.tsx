@@ -13,6 +13,8 @@ function Contactus() {
   const { toggleOpen } = useCallusContext();
   const t = useTranslations("contact_form");
   const locale = useLocale();
+  const [submitError, setSubmitError] = React.useState<string | null>(null);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const formik = useFormik({
     initialValues: {
       name: "",
@@ -22,6 +24,8 @@ function Contactus() {
     },
     validationSchema,
     onSubmit: (values, { resetForm }) => {
+      setSubmitError(null);
+      setIsSubmitting(true);
       emailjs
         .send(
           "service_ta6dex9",
@@ -29,21 +33,20 @@ function Contactus() {
           { ...values },
 
           {
-            publicKey: "XdPuBFT_MODIwWQPc",
-          }
-        )
-        .then(
-          (result) => {
-            console.log("Email sent successfully:", result.text);
-            fireLeadFormConversion();
-            resetForm();
-            toggleOpen();
+            publicKey: "D9Y3Gx-Na5-iUIgIY",
           },
-          (error) => {
-            console.error("Failed to send email:", error.text);
-          }
-        );
-      // console.log("Form submitted:", values);
+        )
+        .then((result) => {
+          console.log("Email sent successfully:", result.text);
+          fireLeadFormConversion();
+          resetForm();
+          toggleOpen();
+        })
+        .catch((error) => {
+          console.error("Failed to send email:", error.text);
+          setSubmitError(t("submit_error"));
+        })
+        .finally(() => setIsSubmitting(false));
     },
   });
   return (
@@ -174,12 +177,18 @@ function Contactus() {
                 <p className="text-red-500">{formik.errors.message}</p>
               )}
             </div>
+            {submitError && (
+              <p className="text-red-500 text-sm" role="alert">
+                {submitError}
+              </p>
+            )}
             {/* Submit */}
             <button
               type="submit"
-              className="px-5 py-[14px]  bg-btnbg text-white rounded-3xl font-medium cursor-pointer text-[17px] bg-[#4541F1] w-fit ms-auto outline-none"
+              disabled={isSubmitting}
+              className="px-5 py-[14px]  bg-btnbg text-white rounded-3xl font-medium cursor-pointer text-[17px] bg-[#4541F1] w-fit ms-auto outline-none disabled:opacity-60 disabled:cursor-not-allowed"
             >
-              {t("submit_button")}
+              {isSubmitting ? t("submitting") : t("submit_button")}
             </button>
           </form>
         </div>

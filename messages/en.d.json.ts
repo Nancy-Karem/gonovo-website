@@ -82,7 +82,9 @@ declare const messages: {
     "phone_placeholder": "Enter your phone number",
     "message_label": "Message",
     "message_placeholder": "Leave us a message...",
-    "submit_button": "Submit your request"
+    "submit_button": "Submit your request",
+    "submitting": "Sending…",
+    "submit_error": "Something went wrong. Please try again later or email us directly."
   },
   "footer": {
     "navigation": "Navigation",

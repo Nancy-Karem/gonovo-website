@@ -80,7 +80,9 @@
     "phone_placeholder": "أدخل رقم هاتفك",
     "message_label": "الرسالة",
     "message_placeholder": "اترك لنا رسالة...",
-    "submit_button": "إرسال طلبك"
+    "submit_button": "إرسال طلبك",
+    "submitting": "جاري الإرسال…",
+    "submit_error": "حدث خطأ. يرجى المحاولة لاحقاً أو مراسلتنا عبر البريد مباشرة."
   },
   "footer": {
     "navigation": "التنقل",
