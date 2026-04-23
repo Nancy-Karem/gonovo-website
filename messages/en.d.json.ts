@@ -33,6 +33,9 @@ declare const messages: {
     "want_to_grow_your_brand_and_reach_more_eyes": "Want to grow your brand and reach more eyes? Our digital marketing team will help you create the perfect user growth, engagement and retention strategies. Our team will tailor custom go to market plans for your product or service. Set up an introductory call to learn what GONOVO can do for you",
     "become_a_client": "+ Become a Client",
     "contact_us": "Contact Us",
+    "book_free_consultation": "Book Now — Get Free Consultation",
+    "book_free_consultation_short": "Book Free Consultation",
+    "hero_cta_subtext": "15-minute discovery call. No commitment.",
     "lets_build_your_software": "Let's Build Your Software !",
     "g_provides_a_complete_end_to_end_solution_for_your_needs": "G provides a complete end to end solution for your needs. We build software and provide digital marketing strategy",
     "our_software_development_services": "Our Software Development Services",
@@ -242,7 +245,7 @@ declare const messages: {
   "hero_digital": {
     "title": "Solid Design",
     "title_highlight": "Solutions",
-    "become_client_button": "+ Become a Client",
+    "become_client_button": "Book Free Consultation",
     "contact_us_button": "Contact us",
     "build_strategy_title": "Build Strategy",
     "projects_completed": "We have successfully completed a total of 300+ projects",
@@ -277,6 +280,62 @@ declare const messages: {
       "title": "Pay-Per-Click Advertising",
       "description": "Let us create and manage targeted PPC campaigns to drive traffic and conversions for your business."
     }
+  },
+  "lead_form": {
+    "badge": "#Ready to Grow?#",
+    "title": "Book your free consultation",
+    "subtitle": "Tell us about your project and we'll get back within 24 hours.",
+    "name_label": "Full name",
+    "name_placeholder": "Your name",
+    "email_label": "Work email",
+    "email_placeholder": "you@company.com",
+    "phone_label": "Phone (WhatsApp preferred)",
+    "phone_placeholder": "e.g. +44 7123 456789",
+    "service_label": "I'm interested in",
+    "service_placeholder": "Select a service",
+    "service_options": {
+      "software_development": "Software Development",
+      "digital_marketing": "Digital Marketing",
+      "branding_design": "Branding & Design",
+      "consultation": "Free Consultation",
+      "other": "Other"
+    },
+    "message_label": "Tell us about your project",
+    "message_placeholder": "Brief description, timeline, budget…",
+    "submit": "Book my free consultation",
+    "submitting": "Sending…",
+    "success_title": "Thanks — your request is in!",
+    "success_message": "We received your details and will be in touch within 24 hours.",
+    "error": "Something went wrong. Please try again or email info@gonovo.tech.",
+    "privacy": "By submitting, you agree to our privacy-first approach. We never share your details.",
+    "trust_response_time": "24-hour response",
+    "trust_free": "Free, no-commitment",
+    "trust_experts": "Talk directly with experts"
+  },
+  "floating_cta": {
+    "label": "Become a Client",
+    "label_short": "Book a Call",
+    "aria_label": "Become a client — open the contact form"
+  },
+  "service_landing": {
+    "home_link": "Home",
+    "services_overview": "Our Services",
+    "benefits_title": "What you get",
+    "features_title": "What's included",
+    "why_gonovo_title": "Why choose Gonovo",
+    "why_gonovo_items": {
+      "dedicated_team": "A dedicated team assigned to your project",
+      "transparent_pricing": "Transparent pricing with no surprise costs",
+      "proven_track_record": "100+ projects delivered across industries",
+      "ongoing_support": "Ongoing support after launch"
+    },
+    "cta_banner_title": "Ready to move forward?",
+    "cta_banner_subtitle": "Book a free 15-minute consultation with one of our experts today.",
+    "cta_banner_button": "Book Free Consultation",
+    "back_to_services": "All services",
+    "form_title": "Tell us about your project",
+    "form_subtitle": "Fill in the form below and we'll get back within 24 hours.",
+    "hero_eyebrow": "Gonovo — Dedicated Landing"
   }
 };
 export default messages;

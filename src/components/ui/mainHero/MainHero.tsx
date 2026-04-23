@@ -4,6 +4,7 @@ import Header from "../header/Header";
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { ContactButton } from "@/components/common/ContactButton";
 
 function MainHero() {
   const t = useTranslations("home_Page");
@@ -87,6 +88,19 @@ function MainHero() {
         >
           {t("description")}
         </p>
+        <div
+          data-aos="fade-up"
+          data-aos-delay={750}
+          className="mt-8 flex flex-col items-center gap-3"
+        >
+          <ContactButton
+            text={t("book_free_consultation")}
+            className="inline-flex items-center justify-center bg-[#FF732C] hover:bg-[#e85f1a] text-white rounded-full px-8 py-4 text-[17px] sm:text-[18px] font-semibold shadow-lg shadow-[#FF732C]/25 transition-colors"
+          />
+          <p className="text-[14px] text-grayLight">
+            {t("hero_cta_subtext")}
+          </p>
+        </div>
         <div
           className={`${styles.point_bottom} w-[19px] h-[19px] rounded-full bg-yellowLight`}
         ></div>

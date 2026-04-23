@@ -30,6 +30,9 @@
     "want_to_grow_your_brand_and_reach_more_eyes": "تريد تطوير علامتك التجارية وزيادة الإيرادات؟ يمكن لفريق التسويق الرقمي الخاص بنا أن يساعدك في إنشاء النمو المثالي للمستخدم، والتعرف على العملاء والحفاظ عليهم. يمكن لفريقنا أن يطوع خطط التسويق المخصصة لمنتجك أو خدمتك. قم بالاتصال بنا لتعرف أكثر عن ما يمكن أن نفعله لك",
     "become_a_client": "+ اصبح عميلا",
     "contact_us": "اتصل بنا",
+    "book_free_consultation": "احجز الآن — استشارة مجانية",
+    "book_free_consultation_short": "احجز استشارة مجانية",
+    "hero_cta_subtext": "مكالمة تعريفية 15 دقيقة. بدون أي التزام.",
     "lets_build_your_software": " دعنا نبني برمجياتك !",
     "g_provides_a_complete_end_to_end_solution_for_your_needs": "نحن نقدم حلول متكاملة لإحتياجاتك. نحن نبني برمجيات ونقدم استراتيجيات التسويق الرقمي",
     "our_software_development_services": "خدمات تطوير البرمجيات الخاصة بنا",
@@ -240,7 +243,7 @@
   "hero_digital": {
     "title": "تصميم متين",
     "title_highlight": "حلول",
-    "become_client_button": "+ كن عميلاً",
+    "become_client_button": "احجز استشارة مجانية",
     "contact_us_button": "اتصل بنا",
     "build_strategy_title": "بناء الاستراتيجية",
     "projects_completed": "لقد أكملنا بنجاح ما مجموعه 300+ مشروع",
@@ -275,5 +278,61 @@
       "title": "الإعلان بنظام الدفع لكل نقرة",
       "description": "دعنا ننشئ وندير حملات الدفع لكل نقرة المستهدفة لدفع حركة المرور والتحويلات لعملك."
     }
+  },
+  "lead_form": {
+    "badge": "#جاهز للنمو؟#",
+    "title": "احجز استشارتك المجانية",
+    "subtitle": "حدّثنا عن مشروعك وسنعود إليك خلال 24 ساعة.",
+    "name_label": "الاسم الكامل",
+    "name_placeholder": "اسمك",
+    "email_label": "البريد الإلكتروني",
+    "email_placeholder": "you@company.com",
+    "phone_label": "رقم الهاتف (واتساب مفضل)",
+    "phone_placeholder": "مثال: ‎+44 7123 456789",
+    "service_label": "أنا مهتم بـ",
+    "service_placeholder": "اختر الخدمة",
+    "service_options": {
+      "software_development": "تطوير البرمجيات",
+      "digital_marketing": "التسويق الرقمي",
+      "branding_design": "العلامة التجارية والتصميم",
+      "consultation": "استشارة مجانية",
+      "other": "أخرى"
+    },
+    "message_label": "حدّثنا عن مشروعك",
+    "message_placeholder": "وصف مختصر، الجدول الزمني، الميزانية…",
+    "submit": "احجز استشارتي المجانية",
+    "submitting": "جارٍ الإرسال…",
+    "success_title": "شكرًا — تم استلام طلبك!",
+    "success_message": "استلمنا بياناتك وسنتواصل معك خلال 24 ساعة.",
+    "error": "حدث خطأ ما. يرجى المحاولة لاحقًا أو مراسلتنا على info@gonovo.tech.",
+    "privacy": "بإرسالك النموذج فأنت توافق على سياسة الخصوصية. لن نشارك بياناتك أبدًا.",
+    "trust_response_time": "رد خلال 24 ساعة",
+    "trust_free": "مجاني ودون أي التزام",
+    "trust_experts": "تواصل مباشر مع الخبراء"
+  },
+  "floating_cta": {
+    "label": "اصبح عميلاً",
+    "label_short": "احجز مكالمة",
+    "aria_label": "اصبح عميلاً — افتح نموذج التواصل"
+  },
+  "service_landing": {
+    "home_link": "الرئيسية",
+    "services_overview": "خدماتنا",
+    "benefits_title": "ما ستحصل عليه",
+    "features_title": "ما يتضمنه",
+    "why_gonovo_title": "لماذا تختار جونوفو",
+    "why_gonovo_items": {
+      "dedicated_team": "فريق مخصص لمشروعك",
+      "transparent_pricing": "أسعار شفافة بدون تكاليف مفاجئة",
+      "proven_track_record": "أكثر من 100 مشروع ناجح عبر صناعات متعددة",
+      "ongoing_support": "دعم مستمر بعد الإطلاق"
+    },
+    "cta_banner_title": "جاهز لتبدأ؟",
+    "cta_banner_subtitle": "احجز استشارة مجانية مدتها 15 دقيقة مع أحد خبرائنا اليوم.",
+    "cta_banner_button": "احجز استشارة مجانية",
+    "back_to_services": "كل الخدمات",
+    "form_title": "حدّثنا عن مشروعك",
+    "form_subtitle": "املأ النموذج أدناه وسنتواصل معك خلال 24 ساعة.",
+    "hero_eyebrow": "جونوفو — صفحة مخصصة"
   }
 }

@@ -5,6 +5,7 @@ import { getMessages } from "next-intl/server";
 import { NextIntlClientProvider } from "next-intl";
 import { ContactusContext } from "@/components/context/ContactusContext";
 import { Contact } from "@/components/contactcomp/Contact";
+import FloatingCTA from "@/components/ui/floatingcta/FloatingCTA";
 
 export default async function LocaleLayout({
   children,
@@ -20,10 +21,11 @@ export default async function LocaleLayout({
     <NextIntlClientProvider messages={messages}>
       <div lang={locale} dir={locale === "ar" ? "rtl" : "ltr"}>
         <WithAOS>
-          {children}
           <ContactusContext>
+            {children}
             <Footer />
             <Contact />
+            <FloatingCTA />
           </ContactusContext>
         </WithAOS>
       </div>

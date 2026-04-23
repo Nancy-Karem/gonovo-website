@@ -1,15 +1,20 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
 import React from "react";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
+import { useTranslations, useLocale } from "next-intl";
 
 interface IPProduct {
   icon: string;
   title: string;
   desc: string;
+  slug?: string;
 }
 
 function ProductCard({ item, index }: { item: IPProduct; index: number }) {
   const t = useTranslations("products");
+  const locale = useLocale();
+  const learnMore = locale === "ar" ? "اعرف المزيد" : "Learn more";
+  const arrow = locale === "ar" ? "←" : "→";
 
   return (
     <div
@@ -23,7 +28,7 @@ function ProductCard({ item, index }: { item: IPProduct; index: number }) {
             }
           : {}
       }
-      className={`rounded-2xl border border-thingray px-8 py-10 w-fit max-w-[384px] ${
+      className={`rounded-2xl border border-thingray px-8 py-10 w-fit max-w-[384px] flex flex-col ${
         index === 1 && "bg-semiyellow"
       }`}
     >
@@ -34,11 +39,19 @@ function ProductCard({ item, index }: { item: IPProduct; index: number }) {
           height="72px"
           alt="heart icon"
         />
-        <h1 className="text-base font-semibold text-textbadge">
+        <h3 className="text-base font-semibold text-textbadge">
           {t(item.title)}
-        </h1>
+        </h3>
       </div>
-      <p className="text-sm leading-5 text-darkGray  mt-4">{t(item.desc)}</p>
+      <p className="text-sm leading-5 text-darkGray mt-4">{t(item.desc)}</p>
+      {item.slug && (
+        <Link
+          href={`/${locale}/services/${item.slug}`}
+          className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#4541F1] hover:text-[#2e2ab8] transition-colors"
+        >
+          {learnMore} <span aria-hidden>{arrow}</span>
+        </Link>
+      )}
     </div>
   );
 }
