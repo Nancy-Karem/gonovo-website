@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./shapetwo.module.css";
 import "../../../ui/portfolio/common.css";
 import Image from "next/image";

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./mainhero.module.css";
 import Header from "../header/Header";
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
@@ -32,7 +31,7 @@ function MainHero() {
     >
       <Header />
       <div
-        className={`${styles.pos_relative} xl:absolute mt-16 xl:mt-0 xl:top-[194px] left-[50%] translate-x-[-50%]`}
+        className={`${styles.pos_relative} xl:absolute mt-16 xl:mt-0 xl:top-[180px] left-[50%] translate-x-[-50%]`}
       >
         <div
           className={`${styles.point} w-[19px] h-[19px] rounded-full bg-purpleLight`}
@@ -51,11 +50,7 @@ function MainHero() {
             alt="support arrow"
           />
         </div>
-        <h1
-          // data-aos="fade-up"
-          // data-aos-delay={200}
-          className="flex items-center font-semibold text-[64px] sm:text-[102px] leading-[90px] sm:leading-[123px] gap-3 justify-center"
-        >
+        <h1 className="flex items-center font-semibold text-[64px] sm:text-[102px] leading-[90px] sm:leading-[123px] gap-3 justify-center">
           {t("gr")}
           <span
             className="w-[105px] h-[45px] sm:w-[126px] sm:h-[54px]  rounded-[26px] flex items-center justify-center sm:mt-[25px]"
@@ -84,7 +79,7 @@ function MainHero() {
         <p
           data-aos="fade-up"
           data-aos-delay={600}
-          className="lg:w-[730px] lg:mx-auto text-center sm:font-medium text-grayLight text-[18px] leading-[26px] mt-4"
+          className="lg:w-[730px] lg:mx-auto text-center sm:font-medium text-grayLight text-lg leading-[26px] mt-4"
         >
           {t("description")}
         </p>
@@ -95,9 +90,9 @@ function MainHero() {
         >
           <ContactButton
             text={t("book_free_consultation")}
-            className="inline-flex items-center justify-center bg-[#FF732C] hover:bg-[#e85f1a] text-white rounded-full px-8 py-4 text-[17px] sm:text-[18px] font-semibold shadow-lg shadow-[#FF732C]/25 transition-colors"
+            className="inline-flex items-center justify-center bg-gradient-to-r from-[#C8C2E8] to-[#5B5FFC] hover:scale-105 rounded-full px-8 py-4 text-sm sm:text-lg font-semibold shadow-lg  transition-colors"
           />
-          <p className="text-[14px] text-grayLight">
+          <p className="sm:font-medium text-grayLight text-lg leading-[26px] text-center">
             {t("hero_cta_subtext")}
           </p>
         </div>
@@ -106,7 +101,7 @@ function MainHero() {
         ></div>
       </div>
       <div
-        className={`${styles.responsive} relative flex mx-auto xl:top-[515px] gap-2 max-w-[1300px]  lg:justify-between  xl:flex-nowrap`}
+        className={`${styles.responsive} relative flex mx-auto xl:top-[580px] gap-2 max-w-[1300px]  lg:justify-between  xl:flex-nowrap`}
       >
         <div
           data-aos="zoom-in-out"

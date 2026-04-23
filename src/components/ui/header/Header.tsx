@@ -2,7 +2,7 @@
 import navLinks from "@/app/data/links";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Aside from "../aside/Aside";
 import { usePathname } from "next/navigation";
 import { useCallusContext } from "@/components/context/ContactusContext";

@@ -1,5 +1,4 @@
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
-import React from "react";
 import styles from "./aside.module.css";
 import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
@@ -56,7 +55,7 @@ function Aside({
       link: "/",
     },
   ];
-  const phoneNumber = "01212973305"; // Replace with the actual phone number
+  const phoneNumber = "447768936321";
   const message = "Hello, I’d like to chat with you!"; // Optional pre-filled message
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(

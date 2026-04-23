@@ -1,6 +1,5 @@
 "use client";
 import ImageComponent from "@/components/imagecomponent/ImageComponent";
-import React from "react";
 import Link from "next/link";
 import { useCallusContext } from "@/components/context/ContactusContext";
 import { useTranslations, useLocale } from "next-intl";
@@ -47,9 +46,14 @@ function Footer() {
           text: "info@gonovo.tech",
           link: "mailto:info@gonovo.tech",
         },
+
         {
           text: "GONOVO LTD, 554 Streatham High Road, London, England, SW16 3QG",
           link: "https://www.google.com/maps/place/554+Streatham+High+Rd,+London+SW16+3QG,+UK/@51.4172097,-0.1316108,17z/data=!4m10!1m2!2m1!1sGONOVO+LTD,+554+Streatham+High+Road,+London,+England,+SW16+3QG!3m6!1s0x48760691b0602a8d:0xabbe3c9e7b33ebdf!8m2!3d51.4172098!4d-0.1267399!15sCj5HT05PVk8gTFRELCA1NTQgU3RyZWF0aGFtIEhpZ2ggUm9hZCwgTG9uZG9uLCBFbmdsYW5kLCBTVzE2IDNRR5IBEWNvbXBvdW5kX2J1aWxkaW5n4AEA!16s%2Fg%2F11cncg_4hs?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D",
+        },
+        {
+          text: "WhatsApp: +44 7768 936321",
+          link: "https://wa.me/447768936321",
         },
       ],
     },

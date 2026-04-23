@@ -12,6 +12,8 @@ import { fireLeadFormConversion } from "@/lib/googleAds";
 function Contactus() {
   const { toggleOpen } = useCallusContext();
   const t = useTranslations("contact_form");
+  const tServiceLanding = useTranslations("service_landing");
+  const tLead = useTranslations("lead_form");
   const locale = useLocale();
   const [submitError, setSubmitError] = React.useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -54,12 +56,67 @@ function Contactus() {
       className={`${styles.main_section} overflow-y-auto fixed inset-0 bg-white z-20 grid grid-cols-1 lg:grid-cols-[1fr_630px] min-h-[100vh]`}
     >
       <div
-        className="hidden lg:block"
+        className="hidden lg:flex lg:flex-col h-full"
         style={{
           background:
             "linear-gradient(180deg, #DFE6F7 0%, #E8E4F1 46.19%, #FBDFE6 100%)",
         }}
-      ></div>
+      >
+        <div
+          data-aos="fade-right"
+          className="h-full min-h-[100vh] p-8 xl:px-14 xl:py-12 flex flex-col justify-between gap-10"
+        >
+          <div>
+            <p className="font-medium w-fit px-3 py-1.5 text-sm ring-2 ring-black/80 rounded-full bg-white/50">
+              {tLead("badge")}
+            </p>
+            <h2 className="mt-6 text-[36px] xl:text-[52px] font-semibold leading-tight text-[#101828] max-w-xl">
+              {tServiceLanding("form_title")}
+            </h2>
+            <p className="mt-4 text-[16px] xl:text-[18px] text-[#475467] leading-relaxed max-w-lg">
+              {tServiceLanding("form_subtitle")}
+            </p>
+            <ul className="mt-8 flex flex-col gap-4">
+              {[
+                tLead("trust_response_time"),
+                tLead("trust_free"),
+                tLead("trust_experts"),
+                "Clear communication from start to finish",
+                "Structured process with measurable outcomes",
+              ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <span
+                    className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-[#4541F1]/10 text-[#4541F1]"
+                    aria-hidden
+                  >
+                    <svg
+                      viewBox="0 0 20 20"
+                      className="w-4 h-4"
+                      fill="currentColor"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                      />
+                    </svg>
+                  </span>
+                  <span className="text-[16px] text-[#344054]">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-white/70 bg-white/55 backdrop-blur-sm p-5 shadow-[0_8px_30px_rgba(16,24,40,0.08)] max-w-xl">
+            <p className="text-[#101828] text-base font-semibold">
+              Let&apos;s build something meaningful.
+            </p>
+            <p className="text-[#475467] text-sm mt-2 leading-relaxed">
+              Share your goals in the form and our team will get back with a
+              focused plan tailored to your business.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="">
         <div className=" relative flex justify-end border-b border-[#F2F4F7]">
           <button

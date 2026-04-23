@@ -4,8 +4,6 @@ import Ouroffers from "@/components/ui/ouroffers/Ouroffers";
 import Oursteps from "@/components/ui/oursteps/Oursteps";
 import Products from "@/components/ui/products/Products";
 import Smartsolutions from "@/components/ui/smartsolution/Smartsolutions";
-import HomeLeadSection from "@/components/homePage/HomeLeadSection";
-import React from "react";
 
 function Page() {
   return (
@@ -18,7 +16,6 @@ function Page() {
         <Oursteps />
       </div>
       <Smartsolutions />
-      <HomeLeadSection />
     </>
   );
 }

@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
@@ -302,8 +301,8 @@ export default function ServiceLanding({
               />
               <ContactPoint
                 label={locale === "ar" ? "واتساب" : "WhatsApp"}
-                value="+20 121 297 3305"
-                href="https://wa.me/201212973305"
+                value="+44 7768 936321"
+                href="https://wa.me/447768936321"
               />
             </div>
           </div>

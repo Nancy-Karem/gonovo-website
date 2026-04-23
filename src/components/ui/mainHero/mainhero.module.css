@@ -8,8 +8,7 @@
     #e6e2f9 73.62%,
     #eeeaff 97.41%
   );
-
-  height: 833px;
+  height: 900px;
   position: relative;
 }
 .point_bottom {
@@ -19,6 +18,7 @@
   /* animation-direction: reverse; */
   animation-fill-mode: forwards;
   margin-left: auto;
+  transform: translateY(15px);
 }
 .point {
   animation-name: pointAnimation;

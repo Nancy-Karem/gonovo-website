@@ -1,4 +1,3 @@
-import React from "react";
 import Badge from "../common/Badge";
 import ShapeOne from "./shape1/ShapeOne";
 import ShapeTwo from "./shape2/ShapeTwo";
