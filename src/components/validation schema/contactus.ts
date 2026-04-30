@@ -6,6 +6,11 @@ const validationSchema = Yup.object({
     .max(50, "Name must be 50 characters or less")
     .required("Name is required"),
 
+  company_name: Yup.string()
+    .min(2, "Company name must be at least 2 characters")
+    .max(80, "Company name must be 80 characters or less")
+    .required("Company name is required"),
+
   email: Yup.string()
     .email("Invalid email address")
     .required("Email is required"),

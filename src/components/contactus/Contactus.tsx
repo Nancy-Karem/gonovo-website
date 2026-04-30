@@ -15,12 +15,28 @@ function Contactus() {
   const tServiceLanding = useTranslations("service_landing");
   const tLead = useTranslations("lead_form");
   const locale = useLocale();
-  const serviceKeys = [
-    "software_development",
-    "digital_marketing",
-    "branding_design",
-    "consultation",
-    "other",
+  const softwareDevelopmentOptions = [
+    "Web Development",
+    "Mobile App Development (iOS / Android)",
+    "E-commerce Development",
+    "Healthcare Software",
+    "Banking & Finance Software",
+    "Custom Software / SaaS",
+    "API & Backend Development",
+  ];
+  const digitalMarketingOptions = [
+    "SEO (Search Engine Optimisation)",
+    "Social Media Marketing",
+    "Email Marketing",
+    "Content Creation",
+    "Paid Ads (Google / Meta)",
+    "Brand Strategy & Identity",
+  ];
+  const generalOptions = [
+    "Full Package (Dev + Marketing)",
+    "Free Consultation / Discovery Call",
+    "Ongoing Maintenance & Support",
+    "Other",
   ];
   const [submitError, setSubmitError] = React.useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
@@ -141,84 +157,87 @@ function Contactus() {
           </h1>
           <form onSubmit={formik.handleSubmit} className="flex flex-col gap-8">
             {/* Name of client */}
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="name"
-                className="text-[14px] text-[#344054] font-medium cursor-pointer"
-              >
-                {t("name_label")}
-              </label>
-              <input
-                id="name"
-                type="text"
-                className={`${
-                  formik.touched.name && formik.errors.name
-                    ? "border-red-500"
-                    : "border-[#D0D5DD]"
-                } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
-                placeholder={t("name_placeholder")}
-                name="name"
-                value={formik.values.name}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.name && formik.errors.name && (
-                <p className="text-red-500">{formik.errors.name}</p>
-              )}
-            </div>
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="company_name"
-                className="text-[14px] text-[#344054] font-medium cursor-pointer"
-              >
-                {t("company_name_label")}
-              </label>
-              <input
-                id="company_name"
-                type="text"
-                className={`${
-                  formik.touched.company_name && formik.errors.company_name
-                    ? "border-red-500"
-                    : "border-[#D0D5DD]"
-                } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
-                placeholder={t("company_name_placeholder")}
-                name="company_name"
-                value={formik.values.company_name}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.company_name && formik.errors.company_name && (
-                <p className="text-red-500">{formik.errors.company_name}</p>
-              )}
-            </div>
-            {/* email of client */}
-            <div className="flex flex-col gap-2">
-              <label
-                htmlFor="email"
-                className="text-[14px] text-[#344054] font-medium cursor-pointer"
-              >
-                {t("email_label")}
-              </label>
-              <input
-                id="email"
-                type="email"
-                name="email"
-                className={`${
-                  formik.touched.email && formik.errors.email
-                    ? "border-red-500"
-                    : "border-[#D0D5DD]"
-                } border  px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
-                placeholder={t("email_placeholder")}
-                value={formik.values.email}
-                onChange={formik.handleChange}
-                onBlur={formik.handleBlur}
-              />
-              {formik.touched.email && formik.errors.email && (
-                <p className="text-red-500">{formik.errors.email}</p>
-              )}
-            </div>
-            {/* client Phone */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="name"
+                  className="text-[14px] text-[#344054] font-medium cursor-pointer"
+                >
+                  {t("name_label")}
+                </label>
+                <input
+                  id="name"
+                  type="text"
+                  className={`${
+                    formik.touched.name && formik.errors.name
+                      ? "border-red-500"
+                      : "border-[#D0D5DD]"
+                  } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  placeholder={t("name_placeholder")}
+                  name="name"
+                  value={formik.values.name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.name && formik.errors.name && (
+                  <p className="text-red-500">{formik.errors.name}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="company_name"
+                  className="text-[14px] text-[#344054] font-medium cursor-pointer"
+                >
+                  {t("company_name_label")}
+                </label>
+                <input
+                  id="company_name"
+                  type="text"
+                  className={`${
+                    formik.touched.company_name && formik.errors.company_name
+                      ? "border-red-500"
+                      : "border-[#D0D5DD]"
+                  } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  placeholder={t("company_name_placeholder")}
+                  name="company_name"
+                  value={formik.values.company_name}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.company_name && formik.errors.company_name && (
+                  <p className="text-red-500">{formik.errors.company_name}</p>
+                )}
+              </div>
+            </div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              {/* email of client */}
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="email"
+                  className="text-[14px] text-[#344054] font-medium cursor-pointer"
+                >
+                  {t("email_label")}
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  className={`${
+                    formik.touched.email && formik.errors.email
+                      ? "border-red-500"
+                      : "border-[#D0D5DD]"
+                  } border  px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  placeholder={t("email_placeholder")}
+                  value={formik.values.email}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.email && formik.errors.email && (
+                  <p className="text-red-500">{formik.errors.email}</p>
+                )}
+              </div>
+              {/* client Phone */}
+
               <div className="flex flex-col gap-2">
                 <label
                   htmlFor="phone"
@@ -244,63 +263,71 @@ function Contactus() {
                   <p className="text-red-500">{formik.errors.phone}</p>
                 )}
               </div>
-              <div className="flex flex-col gap-2">
+            </div>
+            <div className="flex flex-col gap-2">
+              <div className="flex items-center justify-between">
                 <label
-                  htmlFor="service"
+                  htmlFor="service-options"
                   className="text-[14px] text-[#344054] font-medium cursor-pointer"
                 >
-                  {tLead("service_label")}
+                  Interested in
                 </label>
-                <div className="relative w-full">
-                  <select
-                    id="service"
-                    name="service"
-                    value={formik.values.service}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                    className={`${
-                      formik.touched.service && formik.errors.service
-                        ? "border-red-500"
-                        : "border-[#D0D5DD]"
-                    } w-full border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085] appearance-none cursor-pointer ${
-                      locale === "ar" ? "pl-10" : "pr-10"
-                    }`}
-                  >
-                    <option value="" disabled>
-                      {tLead("service_placeholder")}
-                    </option>
-                    {serviceKeys.map((key) => (
-                      <option key={key} value={tLead(`service_options.${key}`)}>
-                        {tLead(`service_options.${key}`)}
-                      </option>
-                    ))}
-                  </select>
-                  <span
-                    className={`pointer-events-none absolute inset-y-0 flex items-center text-[#667085] ${
-                      locale === "ar" ? "left-3" : "right-3"
-                    }`}
-                    aria-hidden
-                  >
-                    <svg
-                      viewBox="0 0 20 20"
-                      className="w-4 h-4"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M5 7.5L10 12.5L15 7.5"
-                        stroke="currentColor"
-                        strokeWidth="1.7"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </span>
-                </div>
-                {formik.touched.service && formik.errors.service && (
-                  <p className="text-red-500">{formik.errors.service}</p>
-                )}
+                <button
+                  type="button"
+                  onClick={() => {
+                    formik.setFieldValue("service", "");
+                    formik.setFieldTouched("service", true, false);
+                  }}
+                  className="h-10 px-5 rounded-xl border border-[#D0D5DD] text-[#344054] font-medium"
+                >
+                  Clear
+                </button>
               </div>
+              <div
+                id="service-options"
+                className={`rounded-lg border p-3 max-h-[200px] overflow-y-auto ${
+                  formik.touched.service && formik.errors.service
+                    ? "border-red-500"
+                    : "border-[#D0D5DD]"
+                }`}
+              >
+                {[
+                  ["Software Development", softwareDevelopmentOptions],
+                  ["Digital Marketing", digitalMarketingOptions],
+                  ["General", generalOptions],
+                ].map(([title, options]) => (
+                  <div key={title as string} className="mb-4 last:mb-0">
+                    <p className="mb-2 text-xs tracking-[0.12em] uppercase font-semibold text-[#98A2B3]">
+                      {title as string}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {(options as string[]).map((option) => {
+                        const selected = formik.values.service === option;
+                        return (
+                          <button
+                            key={option}
+                            type="button"
+                            onClick={() => {
+                              formik.setFieldValue("service", option);
+                              formik.setFieldTouched("service", true, false);
+                            }}
+                            className={`rounded-full border px-4 py-1.5 text-[16px] leading-6 transition-colors ${
+                              selected
+                                ? "bg-[#4541F1] text-white border-[#4541F1]"
+                                : "bg-[#F9FAFB] text-[#667085] border-[#D0D5DD] hover:border-[#98A2B3]"
+                            }`}
+                          >
+                            {option}
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {formik.touched.service && formik.errors.service && (
+                <p className="text-red-500">{formik.errors.service}</p>
+              )}
             </div>
 
             <div className="flex flex-col gap-2">
