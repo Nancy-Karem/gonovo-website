@@ -17,6 +17,8 @@ const validationSchema = Yup.object({
     )
     .required("Phone number is required"),
 
+  service: Yup.string().required("Service is required"),
+
   message: Yup.string()
     .min(10, "Message must be at least 10 characters")
     .max(500, "Message must be 500 characters or less")

@@ -2,11 +2,8 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { ContactusContext } from "@/components/context/ContactusContext";
 import { Contact } from "@/components/contactcomp/Contact";
-import ServiceLanding from "@/components/ui/servicelanding/ServiceLanding";
-import {
-  getServiceLanding,
-  serviceLandings,
-} from "@/app/data/serviceLandings";
+
+import { getServiceLanding, serviceLandings } from "@/app/data/serviceLandings";
 
 export const dynamicParams = false;
 
@@ -65,7 +62,6 @@ export default async function Page({
 
   return (
     <ContactusContext>
-      <ServiceLanding service={service} />
       <Contact />
     </ContactusContext>
   );
