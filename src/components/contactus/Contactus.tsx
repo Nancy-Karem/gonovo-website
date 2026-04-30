@@ -149,23 +149,23 @@ function Contactus() {
           </div>
         </div>
       </div>
-      <div className="">
-        <div className=" relative flex justify-end border-b border-[#F2F4F7]">
+      <div className="relative">
+        <div className="absolute end-0 top-4">
           <button
             onClick={toggleOpen}
-            className="inline-block relative w-12 h-12 my-2 mx-4"
+            className="inline-block relative w-8 h-8 mx-4"
           >
             <Image src="/svgs/graycloseIcon.svg" alt="" fill />
           </button>
         </div>
         <div className="m-8" dir={locale === "ar" ? "rtl" : "ltr"}>
-          <h1 className="text-[#101828] text-[30px] font-semibold mb-12">
+          <h1 className="text-[#101828] text-[30px] font-semibold mt-12 mb-6 text-center">
             {t("title")}
           </h1>
-          <form onSubmit={formik.handleSubmit} className="flex flex-col gap-8">
+          <form onSubmit={formik.handleSubmit} className="flex flex-col gap-4">
             {/* Name of client */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="name"
                   className="text-[14px] text-[#344054] font-medium cursor-pointer"
@@ -179,7 +179,7 @@ function Contactus() {
                     formik.touched.name && formik.errors.name
                       ? "border-red-500"
                       : "border-[#D0D5DD]"
-                  } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  } border border-[#D0D5DD] px-2 py-2 text-sm rounded-lg outline-none text-[#667085]`}
                   placeholder={t("name_placeholder")}
                   name="name"
                   value={formik.values.name}
@@ -187,10 +187,10 @@ function Contactus() {
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.name && formik.errors.name && (
-                  <p className="text-red-500">{formik.errors.name}</p>
+                  <p className="text-red-500 text-sm">{formik.errors.name}</p>
                 )}
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="company_name"
                   className="text-[14px] text-[#344054] font-medium cursor-pointer"
@@ -204,7 +204,7 @@ function Contactus() {
                     formik.touched.company_name && formik.errors.company_name
                       ? "border-red-500"
                       : "border-[#D0D5DD]"
-                  } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  } border border-[#D0D5DD] px-2 py-2 text-sm rounded-lg outline-none text-[#667085]`}
                   placeholder={t("company_name_placeholder")}
                   name="company_name"
                   value={formik.values.company_name}
@@ -212,13 +212,13 @@ function Contactus() {
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.company_name && formik.errors.company_name && (
-                  <p className="text-red-500">{formik.errors.company_name}</p>
+                  <p className="text-red-500 text-sm">{formik.errors.company_name}</p>
                 )}
               </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
               {/* email of client */}
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="email"
                   className="text-[14px] text-[#344054] font-medium cursor-pointer"
@@ -233,19 +233,19 @@ function Contactus() {
                     formik.touched.email && formik.errors.email
                       ? "border-red-500"
                       : "border-[#D0D5DD]"
-                  } border  px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  } border  px-2 py-2 text-sm rounded-lg outline-none text-[#667085]`}
                   placeholder={t("email_placeholder")}
                   value={formik.values.email}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.email && formik.errors.email && (
-                  <p className="text-red-500">{formik.errors.email}</p>
+                  <p className="text-red-500 text-sm">{formik.errors.email}</p>
                 )}
               </div>
               {/* client Phone */}
 
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="phone"
                   className="text-[14px] text-[#344054] font-medium cursor-pointer"
@@ -260,14 +260,14 @@ function Contactus() {
                     formik.touched.phone && formik.errors.phone
                       ? "border-red-500"
                       : "border-[#D0D5DD]"
-                  }} border  px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  }} border  px-2 py-2 text-sm rounded-lg outline-none text-[#667085]`}
                   placeholder={t("phone_placeholder")}
                   value={formik.values.phone}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.phone && formik.errors.phone && (
-                  <p className="text-red-500">{formik.errors.phone}</p>
+                  <p className="text-red-500 text-sm">{formik.errors.phone}</p>
                 )}
               </div>
             </div>
@@ -285,7 +285,7 @@ function Contactus() {
                     formik.setFieldValue("service", []);
                     formik.setFieldTouched("service", true, false);
                   }}
-                  className="h-10 px-5 rounded-xl border border-[#D0D5DD] text-[#344054] font-medium"
+                  className="h-8 px-5 rounded-xl border border-[#D0D5DD] text-[#344054] font-medium text-sm"
                 >
                   Clear
                 </button>
@@ -322,7 +322,7 @@ function Contactus() {
                               formik.setFieldValue("service", nextServices);
                               formik.setFieldTouched("service", true, false);
                             }}
-                            className={`rounded-full border px-4 py-1.5 text-sm sm:text-[16px] leading-6 transition-colors ${
+                            className={`rounded-full border px-4 py-1.5 text-sm sm:text-[14px] leading-6 transition-colors ${
                               selected
                                 ? "bg-[#4541F1] text-white border-[#4541F1]"
                                 : "bg-[#F9FAFB] text-[#667085] border-[#D0D5DD] hover:border-[#98A2B3]"
@@ -337,12 +337,12 @@ function Contactus() {
                 ))}
               </div>
               {formik.touched.service && formik.errors.service && (
-                <p className="text-red-500">{formik.errors.service}</p>
+                <p className="text-red-500 text-sm">{formik.errors.service}</p>
               )}
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="budget"
                   className="text-[14px] text-[#344054] font-medium cursor-pointer"
@@ -360,7 +360,7 @@ function Contactus() {
                       formik.touched.budget && formik.errors.budget
                         ? "border-red-500"
                         : "border-[#D0D5DD]"
-                    } w-full border border-[#D0D5DD] ps-[14px] pe-[88px] py-[14px] text-lg rounded-lg outline-none text-[#667085] focus:ring-2 focus:ring-[#4541F1]/15 focus:border-[#4541F1]`}
+                    } w-full border border-[#D0D5DD] ps-[14px] pe-[88px] py-2 text-sm rounded-lg outline-none text-[#667085] focus:ring-2 focus:ring-[#4541F1]/15 focus:border-[#4541F1]`}
                     placeholder={t("budget_placeholder")}
                     value={formik.values.budget}
                     onChange={formik.handleChange}
@@ -402,10 +402,10 @@ function Contactus() {
                   </span>
                 </div>
                 {formik.touched.budget && formik.errors.budget && (
-                  <p className="text-red-500">{formik.errors.budget}</p>
+                  <p className="text-red-500 text-sm">{formik.errors.budget}</p>
                 )}
               </div>
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-1">
                 <label
                   htmlFor="timeline"
                   className="text-[14px] text-[#344054] font-medium cursor-pointer"
@@ -422,19 +422,19 @@ function Contactus() {
                     formik.touched.timeline && formik.errors.timeline
                       ? "border-red-500"
                       : "border-[#D0D5DD]"
-                  } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  } border border-[#D0D5DD] px-2 py-2 text-sm rounded-lg outline-none text-[#667085]`}
                   placeholder={t("timeline_placeholder")}
                   value={formik.values.timeline}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 />
                 {formik.touched.timeline && formik.errors.timeline && (
-                  <p className="text-red-500">{formik.errors.timeline}</p>
+                  <p className="text-red-500 text-sm">{formik.errors.timeline}</p>
                 )}
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1">
               <label
                 htmlFor="message"
                 className="text-[14px] text-[#344054] font-medium cursor-pointer"
@@ -448,7 +448,7 @@ function Contactus() {
                   formik.touched.message && formik.errors.message
                     ? "border-red-500"
                     : "border-[#D0D5DD]"
-                } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]  `}
+                } border border-[#D0D5DD] px-2 py-2 text-sm rounded-lg outline-none text-[#667085]`}
                 placeholder={t("message_placeholder")}
                 rows={4}
                 value={formik.values.message}
@@ -468,7 +468,7 @@ function Contactus() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="px-5 py-[14px]  bg-btnbg text-white rounded-3xl font-medium cursor-pointer text-[17px] bg-[#4541F1] w-fit ms-auto outline-none disabled:opacity-60 disabled:cursor-not-allowed"
+              className="px-5 py-[14px]  bg-btnbg text-white rounded-3xl font-medium cursor-pointer bg-[#4541F1] w-fit ms-auto outline-none disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {isSubmitting ? t("submitting") : t("submit_button")}
             </button>
