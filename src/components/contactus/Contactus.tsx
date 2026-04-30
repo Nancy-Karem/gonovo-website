@@ -46,7 +46,10 @@ function Contactus() {
       company_name: "",
       email: "",
       phone: "",
-      service: "",
+      service: [] as string[],
+      budget: "",
+      budget_currency: "USD",
+      timeline: "",
       message: "",
     },
     validationSchema,
@@ -57,7 +60,11 @@ function Contactus() {
         .send(
           "service_ta6dex9",
           "template_ytb78wz",
-          { ...values },
+          {
+            ...values,
+            service: values.service.join(", "),
+            budget: `${values.budget_currency} ${values.budget}`,
+          },
 
           {
             publicKey: "D9Y3Gx-Na5-iUIgIY",
@@ -275,7 +282,7 @@ function Contactus() {
                 <button
                   type="button"
                   onClick={() => {
-                    formik.setFieldValue("service", "");
+                    formik.setFieldValue("service", []);
                     formik.setFieldTouched("service", true, false);
                   }}
                   className="h-10 px-5 rounded-xl border border-[#D0D5DD] text-[#344054] font-medium"
@@ -302,16 +309,20 @@ function Contactus() {
                     </p>
                     <div className="flex flex-wrap gap-2">
                       {(options as string[]).map((option) => {
-                        const selected = formik.values.service === option;
+                        const selected = formik.values.service.includes(option);
                         return (
                           <button
                             key={option}
                             type="button"
                             onClick={() => {
-                              formik.setFieldValue("service", option);
+                              const currentServices = formik.values.service;
+                              const nextServices = currentServices.includes(option)
+                                ? currentServices.filter((item) => item !== option)
+                                : [...currentServices, option];
+                              formik.setFieldValue("service", nextServices);
                               formik.setFieldTouched("service", true, false);
                             }}
-                            className={`rounded-full border px-4 py-1.5 text-[16px] leading-6 transition-colors ${
+                            className={`rounded-full border px-4 py-1.5 text-sm sm:text-[16px] leading-6 transition-colors ${
                               selected
                                 ? "bg-[#4541F1] text-white border-[#4541F1]"
                                 : "bg-[#F9FAFB] text-[#667085] border-[#D0D5DD] hover:border-[#98A2B3]"
@@ -328,6 +339,99 @@ function Contactus() {
               {formik.touched.service && formik.errors.service && (
                 <p className="text-red-500">{formik.errors.service}</p>
               )}
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="budget"
+                  className="text-[14px] text-[#344054] font-medium cursor-pointer"
+                >
+                  {t("budget_label")}
+                </label>
+                <div className="relative">
+                  <input
+                    id="budget"
+                    type="number"
+                    name="budget"
+                    min="0"
+                    step="1"
+                    className={`${
+                      formik.touched.budget && formik.errors.budget
+                        ? "border-red-500"
+                        : "border-[#D0D5DD]"
+                    } w-full border border-[#D0D5DD] ps-[14px] pe-[88px] py-[14px] text-lg rounded-lg outline-none text-[#667085] focus:ring-2 focus:ring-[#4541F1]/15 focus:border-[#4541F1]`}
+                    placeholder={t("budget_placeholder")}
+                    value={formik.values.budget}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  <select
+                    id="budget_currency"
+                    name="budget_currency"
+                    value={formik.values.budget_currency}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    className={`absolute top-1 bottom-1 ${
+                      locale === "ar" ? "left-1" : "right-1"
+                    } w-[78px] rounded-md border-none bg-transparent px-2 text-sm font-semibold text-[#344054] outline-none cursor-pointer appearance-none`}
+                  >
+                    <option value="USD">$ {t("currency_usd")}</option>
+                    <option value="GBP">£ {t("currency_gbp")}</option>
+                  </select>
+                  <span
+                    className={`pointer-events-none absolute top-1/2 -translate-y-1/2 text-[#667085] ${
+                      locale === "ar" ? "left-3" : "right-3"
+                    }`}
+                    aria-hidden
+                  >
+                    <svg
+                      viewBox="0 0 20 20"
+                      className="w-4 h-4"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M5 7.5L10 12.5L15 7.5"
+                        stroke="currentColor"
+                        strokeWidth="1.7"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                  </span>
+                </div>
+                {formik.touched.budget && formik.errors.budget && (
+                  <p className="text-red-500">{formik.errors.budget}</p>
+                )}
+              </div>
+              <div className="flex flex-col gap-2">
+                <label
+                  htmlFor="timeline"
+                  className="text-[14px] text-[#344054] font-medium cursor-pointer"
+                >
+                  {t("timeline_label")}
+                </label>
+                <input
+                  id="timeline"
+                  type="number"
+                  name="timeline"
+                  min="1"
+                  step="1"
+                  className={`${
+                    formik.touched.timeline && formik.errors.timeline
+                      ? "border-red-500"
+                      : "border-[#D0D5DD]"
+                  } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                  placeholder={t("timeline_placeholder")}
+                  value={formik.values.timeline}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                />
+                {formik.touched.timeline && formik.errors.timeline && (
+                  <p className="text-red-500">{formik.errors.timeline}</p>
+                )}
+              </div>
             </div>
 
             <div className="flex flex-col gap-2">

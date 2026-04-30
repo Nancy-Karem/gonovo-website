@@ -22,7 +22,25 @@ const validationSchema = Yup.object({
     )
     .required("Phone number is required"),
 
-  service: Yup.string().required("Service is required"),
+  service: Yup.array()
+    .of(Yup.string())
+    .min(1, "Please select at least one service")
+    .required("Service is required"),
+
+  budget: Yup.number()
+    .typeError("Budget must be a number")
+    .positive("Budget must be greater than 0")
+    .required("Budget is required"),
+
+  budget_currency: Yup.string()
+    .oneOf(["USD", "GBP"], "Invalid currency")
+    .required("Currency is required"),
+
+  timeline: Yup.number()
+    .typeError("Timeline must be a number")
+    .integer("Timeline must be a whole number")
+    .positive("Timeline must be greater than 0")
+    .required("Timeline is required"),
 
   message: Yup.string()
     .min(10, "Message must be at least 10 characters")
