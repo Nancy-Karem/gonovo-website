@@ -77,8 +77,10 @@ declare const messages: {
   },
   "contact_form": {
     "title": "Let's level up your brand, together",
-    "name_label": "Name & Company",
-    "name_placeholder": "Name & Company",
+    "name_label": "Name",
+    "company_name_label": "Company",
+    "company_name_placeholder": "Company",
+    "name_placeholder": "Name",
     "email_label": "Email",
     "email_placeholder": "you@company.com",
     "phone_label": "Phone Number",

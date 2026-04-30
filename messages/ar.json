@@ -75,8 +75,10 @@
   },
   "contact_form": {
     "title": "دعنا نطور علامتك التجارية معاً",
-    "name_label": "الاسم والشركة",
-    "name_placeholder": "الاسم والشركة",
+    "name_label": "الاسم",
+    "company_name_label": "الشركة",
+    "company_name_placeholder": "الشركة",
+    "name_placeholder": "الاسم",
     "email_label": "البريد الإلكتروني",
     "email_placeholder": "you@company.com",
     "phone_label": "رقم الهاتف",

@@ -27,6 +27,7 @@ function Contactus() {
   const formik = useFormik({
     initialValues: {
       name: "",
+      company_name: "",
       email: "",
       phone: "",
       service: "",
@@ -163,6 +164,31 @@ function Contactus() {
               />
               {formik.touched.name && formik.errors.name && (
                 <p className="text-red-500">{formik.errors.name}</p>
+              )}
+            </div>
+            <div className="flex flex-col gap-2">
+              <label
+                htmlFor="company_name"
+                className="text-[14px] text-[#344054] font-medium cursor-pointer"
+              >
+                {t("company_name_label")}
+              </label>
+              <input
+                id="company_name"
+                type="text"
+                className={`${
+                  formik.touched.company_name && formik.errors.company_name
+                    ? "border-red-500"
+                    : "border-[#D0D5DD]"
+                } border border-[#D0D5DD] px-[14px] py-[14px] text-lg rounded-lg outline-none text-[#667085]`}
+                placeholder={t("company_name_placeholder")}
+                name="company_name"
+                value={formik.values.company_name}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+              />
+              {formik.touched.company_name && formik.errors.company_name && (
+                <p className="text-red-500">{formik.errors.company_name}</p>
               )}
             </div>
             {/* email of client */}
